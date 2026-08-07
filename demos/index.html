@@ -1,0 +1,1616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royal Flush Plumbing | 24/7 Master Plumbing Services in Chattanooga, TN</title>
+  <meta name="description" content="Chattanooga's trusted 24/7 emergency plumbing specialists. Fast response, expert pipe & fixture repairs, garbage disposal, and master plumbing services in Hamilton County. Call +1 (423) 933-3390.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* -------------------------------------------------------------
+       DESIGN SYSTEM & COLOR PALETTE
+       - Hex Palette:
+         * #0B192C (Deep Navy/Slate Base)
+         * #0A2647 (Royal Dark Blue Body & Sections)
+         * #144272 (Steel Blue Sub-cards & Borders)
+         * #E2B659 (Royal Crown Gold Accent)
+         * #27E1C1 (Copper Patina Cyan Secondary Accent)
+         * #F1F5F9 (Crisp Ice Blue Light Text)
+         * #94A3B8 (Muted Slate Text)
+       - Typography:
+         * Display: 'Cinzel', serif (Bold, architectural, regal)
+         * Body: 'Plus Jakarta Sans', sans-serif (Clean, highly legible, modern)
+    ------------------------------------------------------------- */
+    :root {
+      --bg-dark: #070F1B;
+      --bg-surface: #0B192C;
+      --bg-card: #0F223D;
+      --bg-card-hover: #162E4E;
+      
+      --color-gold: #E2B659;
+      --color-gold-glow: rgba(226, 182, 89, 0.25);
+      --color-copper: #27E1C1;
+      --color-steel: #1E3E62;
+      --color-steel-light: #2C5282;
+
+      --text-main: #F1F5F9;
+      --text-muted: #94A3B8;
+      --text-gold: #F3CF7A;
+
+      --font-display: 'Cinzel', serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+
+      --max-width: 1200px;
+      --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* TYPOGRAPHY UTILITIES */
+    h1, h2, h3, .brand-font {
+      font-family: var(--font-display);
+      letter-spacing: 0.02em;
+    }
+
+    p {
+      color: var(--text-muted);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* TOP ANNOUNCEMENT BAR */
+    .top-bar {
+      background: linear-gradient(90deg, #070F1B, #0F2643, #070F1B);
+      border-bottom: 1px solid rgba(226, 182, 89, 0.2);
+      padding: 0.6rem 1rem;
+      font-size: 0.875rem;
+      color: var(--text-main);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 100%;
+      position: relative;
+      z-index: 101;
+    }
+
+    .top-bar-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .badge-247 {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      color: var(--color-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 0.8rem;
+    }
+
+    .badge-pulse {
+      width: 8px;
+      height: 8px;
+      background-color: #22c55e;
+      border-radius: 50%;
+      box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+      70% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+    }
+
+    .top-bar-location {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-muted);
+    }
+
+    /* HEADER & NAVIGATION */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(7, 15, 27, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      transition: var(--transition);
+    }
+
+    .nav-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-crown-icon {
+      width: 36px;
+      height: 36px;
+      color: var(--color-gold);
+      filter: drop-shadow(0 2px 8px rgba(226, 182, 89, 0.3));
+    }
+
+    .logo-text {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.35rem;
+      color: var(--text-main);
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    .logo-text span {
+      display: block;
+      font-size: 0.7rem;
+      font-family: var(--font-body);
+      font-weight: 600;
+      color: var(--color-gold);
+      letter-spacing: 0.25em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: var(--transition);
+    }
+
+    .nav-link:hover {
+      color: var(--color-gold);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 0.85rem 1.75rem;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      cursor: pointer;
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, #F3CF7A 0%, #E2B659 50%, #C99933 100%);
+      color: #070F1B;
+      box-shadow: 0 4px 20px var(--color-gold-glow);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(226, 182, 89, 0.45);
+      background: linear-gradient(135deg, #FAD88A 0%, #E8BE65 50%, #D4A33B 100%);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text-main);
+      border: 1px solid rgba(241, 245, 249, 0.2);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--color-gold);
+      color: var(--color-gold);
+      background: rgba(226, 182, 89, 0.05);
+    }
+
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      padding: 5rem 1.5rem 6rem;
+      background: radial-gradient(circle at 70% 30%, #0F2E52 0%, #070F1B 70%);
+      overflow: hidden;
+      border-bottom: 1px solid rgba(226, 182, 89, 0.15);
+    }
+
+    /* Geometric Background Motifs */
+    .hero-bg-pattern {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0.04;
+      background-image: radial-gradient(#E2B659 1px, transparent 1px);
+      background-size: 32px 32px;
+      pointer-events: none;
+    }
+
+    .hero-watermark {
+      position: absolute;
+      right: -5%;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: var(--font-display);
+      font-size: 35vw;
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.015);
+      user-select: none;
+      pointer-events: none;
+      line-height: 0.8;
+    }
+
+    .hero-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3rem;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-content {
+      max-width: 680px;
+    }
+
+    .tagline-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(226, 182, 89, 0.1);
+      border: 1px solid rgba(226, 182, 89, 0.3);
+      color: var(--color-gold);
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: 1.1;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      color: #FFFFFF;
+    }
+
+    .hero-title span {
+      color: var(--color-gold);
+      display: inline-block;
+      position: relative;
+    }
+
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      max-width: 580px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+
+    .hero-stats-row {
+      display: flex;
+      gap: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .hero-stat {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-val {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--color-gold);
+      line-height: 1.2;
+    }
+
+    .stat-lbl {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* SIGNATURE INTERACTIVE HERO CARD (Interactive Pipeline Valve Control) */
+    .hero-interactive-card {
+      background: linear-gradient(145deg, rgba(15, 34, 61, 0.9), rgba(11, 25, 44, 0.95));
+      border: 1px solid rgba(226, 182, 89, 0.25);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-interactive-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--color-gold), var(--color-copper));
+    }
+
+    .interactive-card-title {
+      font-size: 1.2rem;
+      color: var(--text-main);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .interactive-card-title span {
+      font-size: 0.75rem;
+      font-family: var(--font-body);
+      color: var(--color-copper);
+      background: rgba(39, 225, 193, 0.1);
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .pressure-gauge-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem 0;
+      position: relative;
+    }
+
+    .valve-dial-container {
+      position: relative;
+      width: 160px;
+      height: 160px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .valve-wheel {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 6px solid var(--color-steel);
+      box-shadow: 0 0 20px rgba(0,0,0,0.5), inset 0 0 15px rgba(0,0,0,0.5);
+      position: relative;
+      transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle, #162E4E 0%, #0B192C 100%);
+    }
+
+    .valve-spoke {
+      position: absolute;
+      background-color: var(--color-gold);
+      border-radius: 4px;
+    }
+    .spoke-v { width: 8px; height: 100%; }
+    .spoke-h { width: 100%; height: 8px; }
+    .spoke-center {
+      width: 44px;
+      height: 44px;
+      background: var(--color-gold);
+      border-radius: 50%;
+      z-index: 2;
+      box-shadow: 0 0 10px rgba(226, 182, 89, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #070F1B;
+      font-weight: 900;
+      font-size: 0.8rem;
+    }
+
+    .gauge-status {
+      margin-top: 1.25rem;
+      text-align: center;
+    }
+
+    .status-text {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--color-gold);
+      margin-bottom: 0.25rem;
+      transition: var(--transition);
+    }
+
+    .status-sub {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .interactive-card-cta {
+      margin-top: 1.5rem;
+      width: 100%;
+    }
+
+    /* SECTION STYLING BASE */
+    section {
+      padding: 5.5rem 1.5rem;
+      position: relative;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .section-subtitle {
+      color: var(--color-gold);
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      color: #FFFFFF;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .section-desc {
+      margin-top: 1rem;
+      font-size: 1.05rem;
+    }
+
+    /* ABOUT SECTION */
+    .about-section {
+      background-color: var(--bg-surface);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .about-grid {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-content h3 {
+      font-size: 1.8rem;
+      color: var(--text-main);
+      margin-bottom: 1.25rem;
+    }
+
+    .about-text-p {
+      margin-bottom: 1.25rem;
+      font-size: 1.05rem;
+    }
+
+    .features-list {
+      list-style: none;
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .feature-icon-box {
+      width: 32px;
+      height: 32px;
+      background: rgba(226, 182, 89, 0.15);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-gold);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .feature-text strong {
+      display: block;
+      color: var(--text-main);
+      font-size: 0.95rem;
+    }
+
+    .feature-text span {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* ROYAL GUARANTEE BOX */
+    .royal-guarantee-card {
+      background: linear-gradient(135deg, #0F223D 0%, #070F1B 100%);
+      border: 1px solid rgba(226, 182, 89, 0.3);
+      border-radius: 16px;
+      padding: 2.5rem;
+      position: relative;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    }
+
+    .guarantee-badge {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, var(--color-gold), #C99933);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #070F1B;
+      box-shadow: 0 0 25px var(--color-gold-glow);
+      margin-bottom: 1.5rem;
+    }
+
+    .guarantee-title {
+      font-size: 1.5rem;
+      color: var(--color-gold);
+      margin-bottom: 1rem;
+    }
+
+    /* SERVICES SECTION */
+    .services-section {
+      background-color: var(--bg-dark);
+    }
+
+    .services-grid {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      padding: 2.25rem;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(226, 182, 89, 0.4);
+      background: var(--bg-card-hover);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      background: rgba(30, 62, 98, 0.6);
+      border: 1px solid rgba(226, 182, 89, 0.2);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-gold);
+      margin-bottom: 1.5rem;
+      transition: var(--transition);
+    }
+
+    .service-card:hover .service-icon {
+      background: var(--color-gold);
+      color: #070F1B;
+      box-shadow: 0 0 15px var(--color-gold-glow);
+    }
+
+    .service-title {
+      font-size: 1.35rem;
+      color: var(--text-main);
+      margin-bottom: 0.85rem;
+    }
+
+    .service-desc {
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    .service-features {
+      list-style: none;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .service-features li {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .service-features li::before {
+      content: '✓';
+      color: var(--color-copper);
+      font-weight: bold;
+    }
+
+    /* REVIEWS / SOCIAL PROOF SECTION */
+    .reviews-section {
+      background-color: var(--bg-surface);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .rating-overview-bar {
+      max-width: var(--max-width);
+      margin: 0 auto 3rem;
+      background: var(--bg-card);
+      border: 1px solid rgba(226, 182, 89, 0.25);
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .rating-summary-left {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .big-rating-num {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--color-gold);
+      line-height: 1;
+    }
+
+    .stars-flex {
+      display: flex;
+      gap: 0.25rem;
+      color: var(--color-gold);
+    }
+
+    .review-count-lbl {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    .google-verified-tag {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.04);
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+    }
+
+    .reviews-grid {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .review-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .review-card::before {
+      content: '"';
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      font-family: var(--font-display);
+      font-size: 5rem;
+      color: rgba(226, 182, 89, 0.1);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .review-quote {
+      font-size: 0.98rem;
+      color: var(--text-main);
+      font-style: italic;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .reviewer-profile {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .avatar-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--color-steel), var(--color-steel-light));
+      color: var(--color-gold);
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      border: 1px solid rgba(226, 182, 89, 0.3);
+    }
+
+    .reviewer-info h4 {
+      font-size: 0.95rem;
+      color: var(--text-main);
+      font-family: var(--font-body);
+      font-weight: 700;
+    }
+
+    .reviewer-info span {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* HOURS & LOCATION SECTION */
+    .location-section {
+      background-color: var(--bg-dark);
+    }
+
+    .location-grid {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .contact-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(226, 182, 89, 0.2);
+      border-radius: 16px;
+      padding: 2.5rem;
+    }
+
+    .contact-detail-group {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .detail-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(226, 182, 89, 0.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-gold);
+      flex-shrink: 0;
+    }
+
+    .detail-info h4 {
+      font-size: 1.1rem;
+      color: var(--text-main);
+      margin-bottom: 0.25rem;
+    }
+
+    .detail-info p, .detail-info a {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .detail-info a.phone-link {
+      color: var(--color-gold);
+      font-weight: 800;
+      font-size: 1.3rem;
+      display: block;
+      margin-top: 0.2rem;
+      transition: var(--transition);
+    }
+
+    .detail-info a.phone-link:hover {
+      color: #FFFFFF;
+      text-shadow: 0 0 10px var(--color-gold-glow);
+    }
+
+    .map-embed-box {
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 380px;
+      position: relative;
+    }
+
+    .map-placeholder-graphic {
+      flex-grow: 1;
+      background: linear-gradient(135deg, #0A1C33 0%, #070F1B 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .map-placeholder-graphic::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .pin-icon-large {
+      width: 60px;
+      height: 60px;
+      color: var(--color-gold);
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 4px 12px rgba(226, 182, 89, 0.4));
+      animation: floatPin 3s ease-in-out infinite;
+      position: relative;
+      z-index: 2;
+    }
+
+    @keyframes floatPin {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .map-address-title {
+      font-size: 1.2rem;
+      color: var(--text-main);
+      font-weight: 700;
+      position: relative;
+      z-index: 2;
+      margin-bottom: 0.5rem;
+    }
+
+    .map-address-sub {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      position: relative;
+      z-index: 2;
+      margin-bottom: 1.5rem;
+      max-width: 300px;
+    }
+
+    .map-actions {
+      padding: 1.25rem 2rem;
+      background: rgba(11, 25, 44, 0.9);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* FOOTER */
+    .footer {
+      background-color: #040912;
+      border-top: 1px solid rgba(226, 182, 89, 0.15);
+      padding: 4rem 1.5rem 2rem;
+    }
+
+    .footer-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .footer-brand p {
+      margin-top: 1rem;
+      max-width: 380px;
+      font-size: 0.9rem;
+    }
+
+    .footer-col-title {
+      font-family: var(--font-display);
+      color: var(--color-gold);
+      font-size: 1.1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--color-gold);
+    }
+
+    .footer-bottom {
+      max-width: var(--max-width);
+      margin: 2rem auto 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* SCROLL REVEAL ANIMATIONS (INTERSECTION OBSERVER) */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* PREFERS REDUCED MOTION */
+    @media (prefers-reduced-motion: reduce) {
+      .reveal-on-scroll {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+      .badge-pulse, .pin-icon-large, .valve-wheel {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+
+    /* MOBILE RESPONSIVENESS */
+    @media (max-width: 992px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+      }
+      .about-grid, .location-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .footer-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none; /* Can be toggled if needed, keeping mobile UI clean */
+      }
+      .top-bar-inner {
+        flex-direction: column;
+        gap: 0.4rem;
+        text-align: center;
+      }
+      .features-list {
+        grid-template-columns: 1fr;
+      }
+      .hero-stats-row {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+      }
+      .rating-overview-bar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP 24/7 ANNOUNCEMENT BAR -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div class="badge-247">
+        <span class="badge-pulse"></span>
+        24/7 Emergency Service Active in Chattanooga
+      </div>
+      <div class="top-bar-location">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        Serving Hamilton County & Surrounding Areas
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER NAVIGATION -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="#" class="brand-logo" aria-label="Royal Flush Plumbing Home">
+        <svg class="logo-crown-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+        </svg>
+        <div class="logo-text">
+          Royal Flush
+          <span>Plumbing</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About Us</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#reviews" class="nav-link">Reviews</a></li>
+        <li><a href="#location" class="nav-link">Hours & Location</a></li>
+      </ul>
+
+      <a href="tel:+14239333390" class="btn btn-gold">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        (423) 933-3390
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-watermark">RFP</div>
+    
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="tagline-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          Chattanooga's Master Plumbing Specialists
+        </div>
+        <h1 class="hero-title">
+          Royal Treatment for Your Home’s <span>Plumbing Emergencies.</span>
+        </h1>
+        <p class="hero-subtitle">
+          From late-night pipe bursts to swift kitchen disposal repairs, Royal Flush Plumbing delivers fast, precision craftsmanship across Chattanooga around the clock.
+        </p>
+        <div class="hero-ctas">
+          <a href="tel:+14239333390" class="btn btn-gold">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            Call Dispatch: (423) 933-3390
+          </a>
+          <a href="https://maps.app.goo.gl/nehA9FLCwMqNroDX6" target="_blank" rel="noopener" class="btn btn-outline">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Get Directions
+          </a>
+        </div>
+        <div class="hero-stats-row">
+          <div class="hero-stat">
+            <span class="stat-val">24 / 7</span>
+            <span class="stat-lbl">Emergency Response</span>
+          </div>
+          <div class="hero-stat">
+            <span class="stat-val">4.3 ★</span>
+            <span class="stat-lbl">Google Verified</span>
+          </div>
+          <div class="hero-stat">
+            <span class="stat-val">&lt; 30 min</span>
+            <span class="stat-lbl">Rapid Diagnosis</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIGNATURE INTERACTIVE MOMENT: PRESSURE CONTROL DIAL -->
+      <div class="hero-interactive-card">
+        <div class="interactive-card-title">
+          Emergency Valve Status
+          <span>Interactive Sim</span>
+        </div>
+        <div class="pressure-gauge-wrap">
+          <div class="valve-dial-container" id="valveDial" title="Click to cycle valve state">
+            <div class="valve-wheel" id="valveWheel">
+              <div class="valve-spoke spoke-v"></div>
+              <div class="valve-spoke spoke-h"></div>
+              <div class="spoke-center">RFP</div>
+            </div>
+          </div>
+          <div class="gauge-status">
+            <div class="status-text" id="statusText">SYSTEM SECURE</div>
+            <div class="status-sub" id="statusSub">Click wheel to simulate pipe pressure release</div>
+          </div>
+        </div>
+        <a href="tel:+14239333390" class="btn btn-gold interactive-card-cta">
+          Request Rapid Dispatch
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about-section" id="about">
+    <div class="about-grid">
+      <div class="about-content reveal-on-scroll">
+        <span class="section-subtitle">Local Craftsmanship</span>
+        <h3>Built on Speed, Honesty, & Veteran-Grade Respect.</h3>
+        <p class="about-text-p">
+          At Royal Flush Plumbing, we understand that plumbing emergencies don't wait for business hours. Located on Perimeter Drive in Chattanooga, we take pride in offering direct, dependable solutions for homeowners throughout Hamilton County.
+        </p>
+        <p class="about-text-p">
+          Whether it’s replacing a blown kitchen faucet in under half an hour or repairing an unexpected main line leak, our master technicians arrive equipped to solve the problem right the first time — with honest pricing and no high-pressure upsells.
+        </p>
+        
+        <ul class="features-list">
+          <li class="feature-item">
+            <div class="feature-icon-box">✓</div>
+            <div class="feature-text">
+              <strong>Military & Veteran Friendly</strong>
+              <span>Serving our armed forces families with honor.</span>
+            </div>
+          </li>
+          <li class="feature-item">
+            <div class="feature-icon-box">✓</div>
+            <div class="feature-text">
+              <strong>Transparent Rates</strong>
+              <span>Fast diagnostics with predictable pricing.</span>
+            </div>
+          </li>
+          <li class="feature-item">
+            <div class="feature-icon-box">✓</div>
+            <div class="feature-text">
+              <strong>Fully Equipped Vans</strong>
+              <span>Most fixture & disposal fixes done same day.</span>
+            </div>
+          </li>
+          <li class="feature-item">
+            <div class="feature-icon-box">✓</div>
+            <div class="feature-text">
+              <strong>Always Available</strong>
+              <span>24 hours a day, 7 days a week.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="royal-guarantee-card reveal-on-scroll">
+        <div class="guarantee-badge">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-5.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+          </svg>
+        </div>
+        <h4 class="guarantee-title">The Royal Flush Guarantee</h4>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+          When our technician steps into your residence, we treat your property with complete care. Fast diagnosis, tidy work areas, and long-lasting plumbing installations are guaranteed.
+        </p>
+        <div style="display: flex; gap: 1rem; align-items: center; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.25rem;">
+          <div style="font-weight: 800; color: var(--color-gold); font-size: 1.1rem; font-family: var(--font-display);">Chattanooga, TN</div>
+          <div style="font-size: 0.85rem; color: var(--text-muted);">Local Shop • 6234 Perimeter Dr</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES OFFERED SECTION -->
+  <section class="services-section" id="services">
+    <div class="section-header reveal-on-scroll">
+      <span class="section-subtitle">What We Do</span>
+      <h2 class="section-title">Comprehensive Plumbing Services</h2>
+      <p class="section-desc">From urgent middle-of-the-night leaks to planned kitchen upgrades, our experienced Chattanooga crew handles it all.</p>
+    </div>
+
+    <div class="services-grid">
+      <!-- Service 1 -->
+      <div class="service-card reveal-on-scroll">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6m0 8v6M4.93 4.93l4.24 4.24m5.66 5.66l4.24 4.24M2 12h6m8 0h6M4.93 19.07l4.24-4.24m5.66-5.66l4.24-4.24"/></svg>
+        </div>
+        <h3 class="service-title">24/7 Emergency Leaks</h3>
+        <p class="service-desc">Burst pipes, sudden pressure drops, and severe water leaks diagnosed and isolated rapidly to prevent structural water damage.</p>
+        <ul class="service-features">
+          <li>Immediate dispatch capability</li>
+          <li>Pipe line isolation & repair</li>
+          <li>Emergency valve replacement</li>
+        </ul>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card reveal-on-scroll">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h3 class="service-title">Faucet & Fixture Install</h3>
+        <p class="service-desc">Complete installation and repairs for kitchen, bath, and utility faucets. We pick up replacement fixtures or install your custom pick.</p>
+        <ul class="service-features">
+          <li>Kitchen sink & faucet upgrades</li>
+          <li>Showerhead & valve replacement</li>
+          <li>Drip & seal repairs</li>
+        </ul>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card reveal-on-scroll">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3 class="service-title">Garbage Disposals</h3>
+        <p class="service-desc">Jammed, humming, or burnt-out disposal units fixed in 30 minutes or less. Clean, reliable replacement units carried on truck.</p>
+        <ul class="service-features">
+          <li>Fast 30-minute turnarounds</li>
+          <li>Jam clearing & motor reset</li>
+          <li>Heavy-duty unit installation</li>
+        </ul>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-card reveal-on-scroll">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+        </div>
+        <h3 class="service-title">Drain & Pipe Unclogging</h3>
+        <p class="service-desc">Clearing stubborn backups in sinks, toilets, and main drain lines to restore smooth flow throughout your residence.</p>
+        <ul class="service-features">
+          <li>Main line obstruction removal</li>
+          <li>Kitchen & bathroom drain snaking</li>
+          <li>Preventative pipe flush</li>
+        </ul>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="service-card reveal-on-scroll">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+        </div>
+        <h3 class="service-title">Water Heater Maintenance</h3>
+        <p class="service-desc">Diagnostic and component replacements for tank and tankless water heaters so you never have to deal with cold showers.</p>
+        <ul class="service-features">
+          <li>Heating element replacement</li>
+          <li>Thermostat & valve checks</li>
+          <li>Sediment flush & tune-up</li>
+        </ul>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="service-card reveal-on-scroll">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        </div>
+        <h3 class="service-title">Residential Plumbing Inspection</h3>
+        <p class="service-desc">Comprehensive plumbing checkups for home buyers, military families, or general maintenance across Hamilton County.</p>
+        <ul class="service-features">
+          <li>Full pipe integrity checks</li>
+          <li>Pressure regulator testing</li>
+          <li>Clear diagnostic reporting</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF / REVIEWS SECTION -->
+  <section class="reviews-section" id="reviews">
+    <div class="section-header reveal-on-scroll">
+      <span class="section-subtitle">Real Client Feedback</span>
+      <h2 class="section-title">Trusted by Chattanooga Neighbors</h2>
+      <p class="section-desc">Read actual Google reviews from local homeowners who experienced our rapid response and craftsmanship.</p>
+    </div>
+
+    <!-- Rating Summary Bar -->
+    <div class="rating-overview-bar reveal-on-scroll">
+      <div class="rating-summary-left">
+        <div class="big-rating-num">4.3</div>
+        <div>
+          <div class="stars-flex">
+            ★★★★★
+          </div>
+          <div class="review-count-lbl">Based on 27 Verified Google Reviews</div>
+        </div>
+      </div>
+      <div class="google-verified-tag">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        Authentic Google Maps Reviews
+      </div>
+    </div>
+
+    <!-- Review Snippets (Derived directly from images) -->
+    <div class="reviews-grid">
+      <!-- Review 1: Susan -->
+      <div class="review-card reveal-on-scroll">
+        <p class="review-quote">
+          "Fast response to an emergency leak in the kitchen. Jason identified the problem and purchased a new faucet for me and installed it. Later in the week, the disposal stopped working, and Royal Flush dispatched Charles Phillips, who diagnosed and repaired within 30 minutes. I’ll refer friends for fine service from this business."
+        </p>
+        <div class="reviewer-profile">
+          <div class="avatar-circle">S</div>
+          <div class="reviewer-info">
+            <h4>Susan</h4>
+            <span>Google Local Guide • Chattanooga</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 2: Aaron -->
+      <div class="review-card reveal-on-scroll">
+        <p class="review-quote">
+          "Professional and took care of everything we needed in a timely manner. Also very military and veteran friendly. I know that if I’m away for any reason my house will be taken care of and it will be quality work if there are any issues."
+        </p>
+        <div class="reviewer-profile">
+          <div class="avatar-circle">A</div>
+          <div class="reviewer-info">
+            <h4>Aaron</h4>
+            <span>Verified Reviewer • Chattanooga</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 3: Karl -->
+      <div class="review-card reveal-on-scroll">
+        <p class="review-quote">
+          "Outstanding work!! I was skeptical at first with them being a new company but I was more than pleased with the work done by them. The technician was on time and had my problem fixed for a cheaper amount and faster than what I was expecting. Thanks guys!!!"
+        </p>
+        <div class="reviewer-profile">
+          <div class="avatar-circle">K</div>
+          <div class="reviewer-info">
+            <h4>Karl</h4>
+            <span>Verified Reviewer • Chattanooga</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOURS & LOCATION SECTION -->
+  <section class="location-section" id="location">
+    <div class="section-header reveal-on-scroll">
+      <span class="section-subtitle">Find & Contact Us</span>
+      <h2 class="section-title">Ready When You Need Us Most</h2>
+      <p class="section-desc">Located right on Perimeter Drive in Chattanooga. Call anytime for dispatch.</p>
+    </div>
+
+    <div class="location-grid">
+      <!-- Contact Details Card -->
+      <div class="contact-card reveal-on-scroll">
+        <div class="contact-detail-group">
+          <div class="detail-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          </div>
+          <div class="detail-info">
+            <h4>Direct Dispatch Line</h4>
+            <p>Speak directly to a technician:</p>
+            <a href="tel:+14239333390" class="phone-link">+1 (423) 933-3390</a>
+          </div>
+        </div>
+
+        <div class="contact-detail-group">
+          <div class="detail-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <div class="detail-info">
+            <h4>Operating Hours</h4>
+            <p style="color: var(--color-gold); font-weight: 700; font-size: 1.1rem; margin-top: 0.2rem;">
+              Open 24 Hours / 7 Days A Week
+            </p>
+            <p>Including Holidays & Overnight Emergencies</p>
+          </div>
+        </div>
+
+        <div class="contact-detail-group">
+          <div class="detail-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </div>
+          <div class="detail-info">
+            <h4>Shop Location</h4>
+            <p style="color: var(--text-main); font-weight: 600; margin-top: 0.2rem;">
+              6234 Perimeter Dr
+            </p>
+            <p>Chattanooga, TN 37421, United States</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Custom Map View Card -->
+      <div class="map-embed-box reveal-on-scroll">
+        <div class="map-placeholder-graphic">
+          <svg class="pin-icon-large" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+          <div class="map-address-title">Royal Flush Plumbing HQ</div>
+          <div class="map-address-sub">6234 Perimeter Dr, Chattanooga, TN 37421</div>
+          <a href="https://maps.app.goo.gl/nehA9FLCwMqNroDX6" target="_blank" rel="noopener" class="btn btn-gold">
+            Open in Google Maps
+          </a>
+        </div>
+        <div class="map-actions">
+          <span style="font-size: 0.85rem; color: var(--text-muted);">Hamilton County Service Radius</span>
+          <span style="font-size: 0.85rem; color: var(--color-copper); font-weight: 700;">★ 4.3 Star Rated</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="brand-logo">
+          <svg class="logo-crown-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+          </svg>
+          <div class="logo-text">
+            Royal Flush
+            <span>Plumbing</span>
+          </div>
+        </div>
+        <p>
+          Chattanooga's premier 24/7 master plumbing service. Delivering rapid response, veteran-grade respect, and long-lasting craftsmanship to homes across Chattanooga, TN.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#about">About Our Team</a></li>
+          <li><a href="#services">Emergency Services</a></li>
+          <li><a href="#reviews">Google Reviews</a></li>
+          <li><a href="#location">Hours & Location</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Contact</h4>
+        <ul class="footer-links">
+          <li style="color: var(--color-gold); font-weight: 700;">
+            <a href="tel:+14239333390">+1 (423) 933-3390</a>
+          </li>
+          <li>6234 Perimeter Dr</li>
+          <li>Chattanooga, TN 37421</li>
+          <li style="color: var(--color-copper); font-size: 0.85rem; margin-top: 0.5rem;">Open 24 Hours / 7 Days</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© <span id="currentYear"></span> Royal Flush Plumbing. All rights reserved.</div>
+      <div>6234 Perimeter Dr, Chattanooga, TN 37421 • +1 (423) 933-3390</div>
+    </div>
+  </footer>
+
+  <!-- LIGHTWEIGHT VANILLA JS LOGIC -->
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    /* -------------------------------------------------------------
+       1. INTERSECTION OBSERVER FOR SCROLL REVEALS
+          Fulfills signature scroll reveal requirement without libraries.
+    ------------------------------------------------------------- */
+    document.addEventListener('DOMContentLoaded', () => {
+      const revealElements = document.querySelectorAll('.reveal-on-scroll');
+
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            // Unobserve after revealing to optimize performance
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+      });
+
+      revealElements.forEach(el => revealObserver.observe(el));
+    });
+
+    /* -------------------------------------------------------------
+       2. HERO INTERACTIVE PIPELINE VALVE SIMULATOR
+          Custom micro-interaction simulating pipe relief valve.
+    ------------------------------------------------------------- */
+    const valveDial = document.getElementById('valveDial');
+    const valveWheel = document.getElementById('valveWheel');
+    const statusText = document.getElementById('statusText');
+    const statusSub = document.getElementById('statusSub');
+
+    let currentRotation = 0;
+    let valveState = 0; // 0: Normal, 1: Relieving, 2: Fully Open
+
+    const states = [
+      { text: "SYSTEM SECURE", sub: "Click wheel to simulate pipe pressure release", color: "#E2B659" },
+      { text: "VALVE ISOLATED", sub: "Emergency shut-off active — ready for tech", color: "#27E1C1" },
+      { text: "DISPATCH READY", sub: "Call +1 (423) 933-3390 for immediate response", color: "#F3CF7A" }
+    ];
+
+    valveDial.addEventListener('click', () => {
+      currentRotation += 90;
+      valveWheel.style.transform = `rotate(${currentRotation}deg)`;
+
+      valveState = (valveState + 1) % states.length;
+      
+      statusText.style.opacity = '0';
+      setTimeout(() => {
+        statusText.textContent = states[valveState].text;
+        statusText.style.color = states[valveState].color;
+        statusSub.textContent = states[valveState].sub;
+        statusText.style.opacity = '1';
+      }, 150);
+    });
+  </script>
+</body>
+</html>
