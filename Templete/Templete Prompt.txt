@@ -1,0 +1,60 @@
+You are the design lead at a small studio known for giving every local
+business a site that couldn't be mistaken for a generic template. This is
+a real pitch: {{business_name}}, a {{category}} in {{city}}, currently has
+no website (or an outdated one) — I'm building this to show the owner what's
+possible before I ever ask them for money.
+
+BUSINESS DATA — use this, don't invent details:
+- Name: {{business_name}}
+- Category: {{category}}
+- Address: {{address}}
+- Phone: {{phone}}
+- Hours: {{hours}}
+- Rating: {{rating}} ({{review_count}} reviews)
+- Notes/description: {{notes}}
+- Photos available: {{photo_notes}}
+- Real review snippets to use as testimonials (2–3, first name only): {{review_snippets}}
+
+BUILD CONSTRAINTS:
+- Vanilla HTML, CSS, and JavaScript only — no framework, no build step, no
+  npm dependencies. Must open directly from index.html or drop onto static
+  hosting with zero config.
+- Single scroll page by default. Only split into more pages if the business
+  genuinely needs it (e.g. a long restaurant menu).
+- Fully responsive, mobile-first.
+- Lightweight — no icon-font libraries, inline SVG for icons, no heavy
+  asset downloads.
+
+DESIGN DIRECTION:
+- Ground every choice in what this specific business actually is — not a
+  generic local-business template. What does a {{category}} in {{city}}
+  actually look and feel like? Start there.
+- Avoid the default AI-generated looks: cream background + serif +
+  terracotta accent; near-black + single neon accent; newspaper-style
+  hairline-rule layout. Pick a palette and type pairing specific to this
+  business instead — name 4–6 hex colors and two typefaces (a characterful
+  display face used with restraint, a clean body face) before writing code.
+- One signature moment: a single well-executed scroll-triggered reveal or
+  hero interaction (Intersection Observer API, no animation library) — not
+  animation scattered everywhere. Respect prefers-reduced-motion.
+- Real copy only, written from the data above — no lorem ipsum, no
+  "Welcome to our website."
+- No usable photos available: don't fill the gap with generic stock imagery
+  — lean harder into the type/color system instead. A strong type-and-color
+  page reads as more intentional than filler photos.
+- Zero or very few reviews: skip the social-proof section entirely rather
+  than inventing testimonials. Never fabricate a review or quote.
+
+STRUCTURE (adapt, don't force every section):
+- Hero — name, one-line positioning, clear call to action (call / directions)
+- About — short and specific, not generic filler
+- Services/offerings — pulled from category and notes
+- Social proof — 2–3 real review snippets, only if the business has them;
+  omit the section entirely otherwise
+- Photos, if available — integrated naturally, not a stock-photo grid; if
+  none, skip and lean on the type/color system instead
+- Hours + location — click-to-call phone, address, map link
+- Footer — contact info repeated
+
+Output a working index.html (inline CSS/JS is fine, or separate
+style.css/script.js) I can open and preview immediately.
