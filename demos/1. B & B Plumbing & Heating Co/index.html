@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B & B Plumbing & Heating Co | Industrial & Residential Tradesmen in Chattanooga, TN</title>
+  <meta name="description" content="Chattanooga's trusted plumbing and heating contractors since decades. Specializing in mechanical systems, pipe repair, water meters, and heating services on National Ave. Call (423) 622-0405.">
+
+  <!-- Google Fonts: Space Grotesk (Bold, mechanical display) & Inter (Ultra-clean body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* -------------------------------------------------------------
+       DESIGN SYSTEM & COLOR PALETTE
+       Hex Palette:
+         * #121820 (Industrial Charcoal Dark Base)
+         * #1A2330 (Deep Slate Steel Container BG)
+         * #253346 (Forged Steel Border & Sub-card BG)
+         * #FF5F1F (Safety Amber / Copper Flame Accent)
+         * #00E5FF (Cool Hydronic Cyan Secondary Accent)
+         * #F0F4F8 (Industrial Chalk Light Text)
+         * #8CA0B3 (Muted Steel Text)
+       Typography:
+         * Display: 'Space Grotesk', sans-serif (Engineered, bold, mechanical)
+         * Body: 'Inter', sans-serif (Clean, modern, high legibility)
+    ------------------------------------------------------------- */
+    :root {
+      --bg-dark: #121820;
+      --bg-surface: #1A2330;
+      --bg-card: #222D3E;
+      --bg-card-hover: #2B3A4F;
+
+      --color-flame: #FF5F1F;
+      --color-flame-glow: rgba(255, 95, 31, 0.25);
+      --color-cyan: #00E5FF;
+      --color-steel: #384A63;
+
+      --text-main: #F0F4F8;
+      --text-muted: #8CA0B3;
+
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-body: 'Inter', sans-serif;
+
+      --max-width: 1200px;
+      --transition: all 0.25s ease-out;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, .brand-font {
+      font-family: var(--font-display);
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      color: var(--text-muted);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* TOP NOTICE BAR */
+    .top-bar {
+      background: #0B0F15;
+      border-bottom: 1px solid rgba(255, 95, 31, 0.25);
+      padding: 0.65rem 1rem;
+      font-size: 0.85rem;
+    }
+
+    .top-bar-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .status-indicator {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      color: var(--color-flame);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background-color: var(--color-flame);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--color-flame);
+    }
+
+    .top-bar-hours {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    /* HEADER & NAVIGATION */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(18, 24, 32, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .nav-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .logo-mark {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--color-flame), #D14305);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #121820;
+      font-weight: 800;
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      box-shadow: 0 4px 15px var(--color-flame-glow);
+    }
+
+    .logo-text {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: var(--text-main);
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    .logo-text span {
+      display: block;
+      font-size: 0.72rem;
+      font-family: var(--font-body);
+      font-weight: 600;
+      color: var(--color-cyan);
+      letter-spacing: 0.15em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: var(--transition);
+    }
+
+    .nav-link:hover {
+      color: var(--color-flame);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 0.85rem 1.6rem;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      transition: var(--transition);
+      cursor: pointer;
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .btn-flame {
+      background: var(--color-flame);
+      color: #121820;
+      box-shadow: 0 4px 20px var(--color-flame-glow);
+    }
+
+    .btn-flame:hover {
+      background: #FF7538;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(255, 95, 31, 0.4);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text-main);
+      border: 1px solid rgba(240, 244, 248, 0.2);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--color-cyan);
+      color: var(--color-cyan);
+      background: rgba(0, 229, 255, 0.05);
+    }
+
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      padding: 5rem 1.5rem 6rem;
+      background: radial-gradient(circle at 80% 20%, #1A2B40 0%, #121820 70%);
+      overflow: hidden;
+      border-bottom: 1px solid rgba(255, 95, 31, 0.15);
+    }
+
+    .hero-grid-pattern {
+      position: absolute;
+      inset: 0;
+      opacity: 0.05;
+      background-image: linear-gradient(var(--text-main) 1px, transparent 1px), linear-gradient(90deg, var(--text-main) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+
+    .hero-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3.5rem;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 95, 31, 0.12);
+      border: 1px solid rgba(255, 95, 31, 0.3);
+      color: var(--color-flame);
+      padding: 0.4rem 1rem;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 4.5vw, 3.8rem);
+      line-height: 1.1;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      color: #FFFFFF;
+    }
+
+    .hero-title span {
+      color: var(--color-flame);
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 2.25rem;
+      max-width: 580px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+
+    .hero-trust-bar {
+      display: flex;
+      gap: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .trust-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .trust-val {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--color-cyan);
+      line-height: 1.2;
+    }
+
+    .trust-lbl {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* SIGNATURE INTERACTIVE HERO CARD: HVAC & PLUMBING DUAL CONTROLLER */
+    .hero-interactive-box {
+      background: var(--bg-surface);
+      border: 1px solid rgba(0, 229, 255, 0.2);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+      position: relative;
+    }
+
+    .hero-interactive-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--color-flame), var(--color-cyan));
+      border-radius: 12px 12px 0 0;
+    }
+
+    .interactive-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .interactive-header h3 {
+      font-size: 1.1rem;
+      color: var(--text-main);
+    }
+
+    .mode-switch-btn {
+      background: var(--bg-dark);
+      border: 1px solid var(--color-steel);
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      color: var(--color-cyan);
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .mode-switch-btn:hover {
+      border-color: var(--color-cyan);
+      background: rgba(0, 229, 255, 0.1);
+    }
+
+    .interactive-screen {
+      background: #0B0F15;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .gauge-display {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--color-flame);
+      margin-bottom: 0.25rem;
+      transition: var(--transition);
+    }
+
+    .gauge-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .interactive-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    .action-toggle {
+      background: var(--bg-card);
+      border: 1px solid var(--color-steel);
+      padding: 0.75rem;
+      border-radius: 6px;
+      color: var(--text-main);
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+
+    .action-toggle:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--color-flame);
+    }
+
+    /* SECTIONS COMMON */
+    section {
+      padding: 5.5rem 1.5rem;
+      position: relative;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .section-subtitle {
+      color: var(--color-flame);
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 3.2vw, 2.6rem);
+      color: #FFFFFF;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .section-desc {
+      margin-top: 0.85rem;
+      font-size: 1.02rem;
+    }
+
+    /* ABOUT SECTION */
+    .about-section {
+      background-color: var(--bg-surface);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .about-grid {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-content h3 {
+      font-size: 1.75rem;
+      color: var(--text-main);
+      margin-bottom: 1.25rem;
+    }
+
+    .about-text {
+      font-size: 1.02rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .specs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+
+    .spec-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 1.25rem;
+      border-radius: 8px;
+    }
+
+    .spec-card h4 {
+      font-size: 0.95rem;
+      color: var(--color-cyan);
+      margin-bottom: 0.35rem;
+      font-family: var(--font-display);
+    }
+
+    .spec-card p {
+      font-size: 0.85rem;
+    }
+
+    .heritage-card {
+      background: linear-gradient(145deg, #222D3E 0%, #121820 100%);
+      border: 1px solid var(--color-steel);
+      border-radius: 12px;
+      padding: 2.5rem;
+      position: relative;
+    }
+
+    .heritage-card::before {
+      content: 'B&B';
+      position: absolute;
+      right: 1.5rem;
+      bottom: 1rem;
+      font-family: var(--font-display);
+      font-size: 6rem;
+      font-weight: 800;
+      color: rgba(255, 95, 31, 0.04);
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .heritage-badge {
+      display: inline-block;
+      background: rgba(0, 229, 255, 0.1);
+      color: var(--color-cyan);
+      padding: 0.3rem 0.8rem;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .heritage-title {
+      font-size: 1.5rem;
+      color: var(--text-main);
+      margin-bottom: 1rem;
+    }
+
+    /* SERVICES SECTION */
+    .services-section {
+      background-color: var(--bg-dark);
+    }
+
+    .services-grid {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 10px;
+      padding: 2rem;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 95, 31, 0.4);
+      background: var(--bg-card-hover);
+    }
+
+    .service-icon-box {
+      width: 48px;
+      height: 48px;
+      background: rgba(255, 95, 31, 0.1);
+      border: 1px solid rgba(255, 95, 31, 0.25);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-flame);
+      margin-bottom: 1.25rem;
+    }
+
+    .service-title {
+      font-size: 1.3rem;
+      color: var(--text-main);
+      margin-bottom: 0.75rem;
+    }
+
+    .service-desc {
+      font-size: 0.92rem;
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+    }
+
+    .service-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .service-tag {
+      font-size: 0.78rem;
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-muted);
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+    }
+
+    /* REVIEWS SECTION */
+    .reviews-section {
+      background-color: var(--bg-surface);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .rating-summary-banner {
+      max-width: var(--max-width);
+      margin: 0 auto 3rem;
+      background: var(--bg-card);
+      border: 1px solid var(--color-steel);
+      border-radius: 10px;
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .rating-big-group {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .big-score {
+      font-family: var(--font-display);
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--color-flame);
+      line-height: 1;
+    }
+
+    .star-rating-icons {
+      color: var(--color-flame);
+      font-size: 1.1rem;
+    }
+
+    .reviews-grid {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .review-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 10px;
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .review-quote-text {
+      font-size: 0.95rem;
+      color: var(--text-main);
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+
+    .reviewer-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .reviewer-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--color-steel);
+      color: var(--color-flame);
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-family: var(--font-display);
+    }
+
+    .reviewer-info h4 {
+      font-size: 0.92rem;
+      color: var(--text-main);
+      font-family: var(--font-body);
+      font-weight: 700;
+    }
+
+    .reviewer-info span {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* HOURS & LOCATION SECTION */
+    .location-section {
+      background-color: var(--bg-dark);
+    }
+
+    .location-grid {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .info-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--color-steel);
+      border-radius: 12px;
+      padding: 2.25rem;
+    }
+
+    .info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .info-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .info-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(0, 229, 255, 0.1);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-cyan);
+      flex-shrink: 0;
+    }
+
+    .info-details h4 {
+      font-size: 1.05rem;
+      color: var(--text-main);
+      margin-bottom: 0.25rem;
+    }
+
+    .phone-highlight {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--color-flame);
+      display: block;
+      margin-top: 0.2rem;
+    }
+
+    .map-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--color-steel);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 380px;
+    }
+
+    .map-visual {
+      flex-grow: 1;
+      background: linear-gradient(135deg, #16202C 0%, #0D131C 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .map-visual::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(0, 229, 255, 0.1) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+
+    .pin-graphic {
+      width: 56px;
+      height: 56px;
+      color: var(--color-flame);
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .map-title {
+      font-size: 1.25rem;
+      color: var(--text-main);
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .map-sub {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .map-footer {
+      padding: 1.25rem 2rem;
+      background: rgba(18, 24, 32, 0.9);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* FOOTER */
+    .footer {
+      background-color: #0B0F15;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 4rem 1.5rem 2rem;
+    }
+
+    .footer-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .footer-col-title {
+      font-family: var(--font-display);
+      color: var(--color-flame);
+      font-size: 1.05rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--color-flame);
+    }
+
+    .footer-bottom {
+      max-width: var(--max-width);
+      margin: 2rem auto 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* SCROLL REVEAL ANIMATIONS */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal-on-scroll {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .hero-container, .about-grid, .location-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .footer-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .top-bar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP NOTICE BAR -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div class="status-indicator">
+        <span class="status-dot"></span>
+        Chattanooga Shop Open Today: 7:00 AM – 3:00 PM
+      </div>
+      <div class="top-bar-hours">
+        Industrial & Commercial Mechanics • 501 National Ave, Chattanooga
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER NAV -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="#" class="brand-logo" aria-label="B & B Plumbing & Heating Co Home">
+        <div class="logo-mark">B&B</div>
+        <div class="logo-text">
+          B & B Plumbing
+          <span>& HEATING CO.</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About Us</a></li>
+        <li><a href="#services" class="nav-link">Capabilities</a></li>
+        <li><a href="#reviews" class="nav-link">Reviews</a></li>
+        <li><a href="#location" class="nav-link">Hours & Location</a></li>
+      </ul>
+
+      <a href="tel:+14236220405" class="btn btn-flame">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        (423) 622-0405
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-grid-pattern"></div>
+    
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          25+ Years of Proven Local Service
+        </div>
+        <h1 class="hero-title">
+          Master Mechanical <span>Plumbing & Heating</span> Solutions.
+        </h1>
+        <p class="hero-subtitle">
+          From heavy-duty TAWC water meter lines and complex pressure regulation to commercial boiler and residential heating systems — Chattanooga relies on B & B.
+        </p>
+        <div class="hero-ctas">
+          <a href="tel:+14236220405" class="btn btn-flame">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            Call Office: (423) 622-0405
+          </a>
+          <a href="https://maps.app.goo.gl/vuQYpaBMbnpKxhus9" target="_blank" rel="noopener" class="btn btn-outline">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Directions to Shop
+          </a>
+        </div>
+        <div class="hero-trust-bar">
+          <div class="trust-item">
+            <span class="trust-val">25+ Yrs</span>
+            <span class="trust-lbl">Chattanooga Track Record</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-val">4.3 ★</span>
+            <span class="trust-lbl">Google Rating</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-val">7 AM – 3 PM</span>
+            <span class="trust-lbl">Daily Shop Hours</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIGNATURE INTERACTIVE HERO CARD: HVAC & PRESSURE TESTER -->
+      <div class="hero-interactive-box">
+        <div class="interactive-header">
+          <h3>System Diagnostic Console</h3>
+          <button class="mode-switch-btn" id="toggleModeBtn">Toggle Heating / Hydronics</button>
+        </div>
+        <div class="interactive-screen">
+          <div class="gauge-display" id="gaugeVal">65 PSI</div>
+          <div class="gauge-label" id="gaugeLabel">Main Water Line Pressure • Status: Optimal</div>
+        </div>
+        <div class="interactive-actions">
+          <button class="action-toggle" id="btnTestPressure">
+            ⚡ Test Line Pressure
+          </button>
+          <button class="action-toggle" id="btnTestHeat">
+            🔥 Check Boiler Burner
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about-section" id="about">
+    <div class="about-grid">
+      <div class="about-content reveal-on-scroll">
+        <span class="section-subtitle">Local Tradesmen</span>
+        <h3>Decades of Honest Craftsmanship on National Ave.</h3>
+        <p class="about-text">
+          B & B Plumbing & Heating Co. is a cornerstone of Chattanooga’s industrial and residential trades. Operating from our shop at 501 National Ave, we’ve built a reputation over more than 25 years for taking on complex mechanical challenges that others turn away.
+        </p>
+        <p class="about-text">
+          Whether resolving complicated utility meter reinstallations, fixing municipal pressure drops, or installing high-efficiency heating systems, our crew works with precision and local pride.
+        </p>
+
+        <div class="specs-grid">
+          <div class="spec-card">
+            <h4>Industrial Utility Specs</h4>
+            <p>Certified meter reinstatements, high-volume main line repair, and commercial backflow assembly.</p>
+          </div>
+          <div class="spec-card">
+            <h4>Hydronic & Gas Heating</h4>
+            <p>Boiler diagnostics, furnace overhauls, and gas line repairs engineered for long service life.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="heritage-card reveal-on-scroll">
+        <span class="heritage-badge">Chattanooga Mechanical Partner</span>
+        <h4 class="heritage-title">Trusted by Industrial Plants & Homeowners Alike</h4>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+          "Great group of folks here. I have been doing business with them for over 25 years." — Longtime Chattanooga Client
+        </p>
+        <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-size: 0.85rem; color: var(--color-cyan);">501 National Ave, 37404</span>
+          <span style="font-size: 0.85rem; color: var(--text-muted);">Mon–Fri: 7 AM – 3 PM</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPABILITIES / SERVICES SECTION -->
+  <section class="services-section" id="services">
+    <div class="section-header reveal-on-scroll">
+      <span class="section-subtitle">Our Capabilities</span>
+      <h2 class="section-title">Heavy-Duty Plumbing & Heating Services</h2>
+      <p class="section-desc">Full-spectrum mechanical, pipe, and heating solutions for Chattanooga residential & commercial properties.</p>
+    </div>
+
+    <div class="services-grid">
+      <!-- Service 1 -->
+      <div class="service-card reveal-on-scroll">
+        <div class="service-icon-box">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6m0 8v6M4.93 4.93l4.24 4.24m5.66 5.66l4.24 4.24M2 12h6m8 0h6"/></svg>
+        </div>
+        <h3 class="service-title">Water Meter & Line Re-Attachment</h3>
+        <p class="service-desc">Specialized reattachment and line repairs after utility installations (TAWC meter works, municipal line shifts, pressure drops).</p>
+        <div class="service-tags">
+          <span class="service-tag">Meter Repairs</span>
+          <span class="service-tag">Pressure Balance</span>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card reveal-on-scroll">
+        <div class="service-icon-box">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+        </div>
+        <h3 class="service-title">Heating & Boiler Maintenance</h3>
+        <p class="service-desc">Commercial and residential heating system tune-ups, boiler line repairs, radiator diagnostics, and furnace maintenance.</p>
+        <div class="service-tags">
+          <span class="service-tag">Boilers</span>
+          <span class="service-tag">Gas Lines</span>
+          <span class="service-tag">Radiators</span>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card reveal-on-scroll">
+        <div class="service-icon-box">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3 class="service-title">Commercial & Industrial Pipe Repair</h3>
+        <p class="service-desc">Heavy-gauge pipe repiping, valve overhauls, leak detection, and backflow valve testing for local plants and businesses.</p>
+        <div class="service-tags">
+          <span class="service-tag">Heavy Pipe</span>
+          <span class="service-tag">Valves</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF / REVIEWS SECTION -->
+  <section class="reviews-section" id="reviews">
+    <div class="section-header reveal-on-scroll">
+      <span class="section-subtitle">Client Feedback</span>
+      <h2 class="section-title">Verified Reviews from Chattanooga</h2>
+      <p class="section-desc">Real Google reviews from local business partners and long-term customers.</p>
+    </div>
+
+    <div class="rating-summary-banner reveal-on-scroll">
+      <div class="rating-big-group">
+        <div class="big-score">4.3</div>
+        <div>
+          <div class="star-rating-icons">★★★★★</div>
+          <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">11 Verified Google Reviews</div>
+        </div>
+      </div>
+      <div style="font-size: 0.85rem; color: var(--color-cyan); background: rgba(0, 229, 255, 0.08); padding: 0.5rem 1rem; border-radius: 4px;">
+        Authentic Customer Ratings
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+      <!-- Review 1: Gregory Crabtree -->
+      <div class="review-card reveal-on-scroll">
+        <p class="review-quote-text">
+          "We lost water due to TAWC meter installation! B&B Personal was great, worked late on 3/16/20 to reattach. next day to fix pressure problem! SIGNAL Industrial Products Corp! Chattanooga, TN"
+        </p>
+        <div class="reviewer-meta">
+          <div class="reviewer-avatar">G</div>
+          <div class="reviewer-info">
+            <h4>Gregory</h4>
+            <span>SIGNAL Industrial Products Corp • Chattanooga</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 2: Change Orderz -->
+      <div class="review-card reveal-on-scroll">
+        <p class="review-quote-text">
+          "Great group of folks here. I have been doing business with them for over 25 years."
+        </p>
+        <div class="reviewer-meta">
+          <div class="reviewer-avatar">C</div>
+          <div class="reviewer-info">
+            <h4>Local Guide</h4>
+            <span>25+ Year Client • Chattanooga</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 3: Brad Drotts -->
+      <div class="review-card reveal-on-scroll">
+        <p class="review-quote-text">
+          "Great company, great guys! Use them if you can."
+        </p>
+        <div class="reviewer-meta">
+          <div class="reviewer-avatar">B</div>
+          <div class="reviewer-info">
+            <h4>Brad</h4>
+            <span>Google Local Guide • Chattanooga</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOURS & LOCATION SECTION -->
+  <section class="location-section" id="location">
+    <div class="section-header reveal-on-scroll">
+      <span class="section-subtitle">Location & Hours</span>
+      <h2 class="section-title">Visit Our National Ave Shop</h2>
+      <p class="section-desc">Centrally located in Chattanooga for swift service calls across Hamilton County.</p>
+    </div>
+
+    <div class="location-grid">
+      <div class="info-card reveal-on-scroll">
+        <div class="info-row">
+          <div class="info-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          </div>
+          <div class="info-details">
+            <h4>Direct Phone Line</h4>
+            <p>Call our office for service scheduling:</p>
+            <a href="tel:+14236220405" class="phone-highlight">(423) 622-0405</a>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <div class="info-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <div class="info-details">
+            <h4>Shop Operating Hours</h4>
+            <p style="color: var(--color-cyan); font-weight: 700; font-size: 1.1rem; margin-top: 0.2rem;">
+              7:00 AM – 3:00 PM
+            </p>
+            <p>Monday through Friday</p>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <div class="info-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </div>
+          <div class="info-details">
+            <h4>Physical Address</h4>
+            <p style="color: var(--text-main); font-weight: 600; margin-top: 0.2rem;">
+              501 National Ave
+            </p>
+            <p>Chattanooga, TN 37404, United States</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-box reveal-on-scroll">
+        <div class="map-visual">
+          <svg class="pin-graphic" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+          <div class="map-title">B & B Plumbing & Heating HQ</div>
+          <div class="map-sub">501 National Ave, Chattanooga, TN 37404</div>
+          <a href="https://maps.app.goo.gl/vuQYpaBMbnpKxhus9" target="_blank" rel="noopener" class="btn btn-flame">
+            Open Map Directions
+          </a>
+        </div>
+        <div class="map-footer">
+          <span style="font-size: 0.85rem; color: var(--text-muted);">Serving Greater Chattanooga</span>
+          <span style="font-size: 0.85rem; color: var(--color-cyan); font-weight: 700;">★ 4.3 Google Rating</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div>
+        <div class="brand-logo">
+          <div class="logo-mark">B&B</div>
+          <div class="logo-text">
+            B & B Plumbing
+            <span>& HEATING CO.</span>
+          </div>
+        </div>
+        <p style="margin-top: 1rem; max-width: 360px; font-size: 0.88rem;">
+          Chattanooga's trusted mechanical plumbing and heating contractor. Over 25 years of master service for commercial plants and local residences.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="#about">About B & B</a></li>
+          <li><a href="#services">Mechanical Capabilities</a></li>
+          <li><a href="#reviews">Verified Reviews</a></li>
+          <li><a href="#location">Hours & Map</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Contact</h4>
+        <ul class="footer-links">
+          <li style="color: var(--color-flame); font-weight: 700;">
+            <a href="tel:+14236220405">+1 (423) 622-0405</a>
+          </li>
+          <li>501 National Ave</li>
+          <li>Chattanooga, TN 37404</li>
+          <li style="color: var(--color-cyan); font-size: 0.85rem; margin-top: 0.4rem;">Hours: 7:00 AM – 3:00 PM</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© <span id="year"></span> B & B Plumbing & Heating Co. All rights reserved.</div>
+      <div>501 National Ave, Chattanooga, TN 37404 • +1 (423) 622-0405</div>
+    </div>
+  </footer>
+
+  <!-- VANILLA JS -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    /* 1. SCROLL REVEAL OBSERVER */
+    document.addEventListener('DOMContentLoaded', () => {
+      const revealElems = document.querySelectorAll('.reveal-on-scroll');
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealElems.forEach(el => observer.observe(el));
+    });
+
+    /* 2. INTERACTIVE DIAGNOSTIC CONSOLE */
+    const gaugeVal = document.getElementById('gaugeVal');
+    const gaugeLabel = document.getElementById('gaugeLabel');
+    const btnTestPressure = document.getElementById('btnTestPressure');
+    const btnTestHeat = document.getElementById('btnTestHeat');
+    const toggleModeBtn = document.getElementById('toggleModeBtn');
+
+    let mode = 'plumbing'; // plumbing or heating
+
+    toggleModeBtn.addEventListener('click', () => {
+      if (mode === 'plumbing') {
+        mode = 'heating';
+        gaugeVal.textContent = '180° F';
+        gaugeVal.style.color = 'var(--color-flame)';
+        gaugeLabel.textContent = 'Hydronic Boiler Temp • Status: Optimal Burn';
+        toggleModeBtn.textContent = 'Switch to Plumbing Line';
+      } else {
+        mode = 'plumbing';
+        gaugeVal.textContent = '65 PSI';
+        gaugeVal.style.color = 'var(--color-cyan)';
+        gaugeLabel.textContent = 'Main Water Line Pressure • Status: Optimal';
+        toggleModeBtn.textContent = 'Switch to Heating System';
+      }
+    });
+
+    btnTestPressure.addEventListener('click', () => {
+      gaugeVal.textContent = 'CALIBRATING...';
+      setTimeout(() => {
+        const psi = Math.floor(Math.random() * (72 - 58 + 1)) + 58;
+        gaugeVal.textContent = psi + ' PSI';
+        gaugeVal.style.color = 'var(--color-cyan)';
+        gaugeLabel.textContent = 'TAWC Line Pressure Test Complete • Normal Range';
+      }, 500);
+    });
+
+    btnTestHeat.addEventListener('click', () => {
+      gaugeVal.textContent = 'TESTING BURNER...';
+      setTimeout(() => {
+        const temp = Math.floor(Math.random() * (185 - 175 + 1)) + 175;
+        gaugeVal.textContent = temp + '° F';
+        gaugeVal.style.color = 'var(--color-flame)';
+        gaugeLabel.textContent = 'Boiler Thermal Efficiency Check Complete • 98.4%';
+      }, 500);
+    });
+  </script>
+</body>
+</html>
