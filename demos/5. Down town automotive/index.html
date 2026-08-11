@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Downtown Automotive | Auto Repair & Towing Services in Chattanooga, TN</title>
+  <meta name="description" content="Chattanooga's trusted auto repair garage at 1725 Market St. Specializing in mechanical repairs, engine diagnostics, emergency towing, and honest vehicle service by Patrick & crew. Call +1 (423) 756-3935.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* DESIGN SYSTEM & PALETTE */
+    :root {
+      --bg-dark: #121417;        /* Heavy Cast Iron Dark */
+      --bg-surface: #1B1E23;     /* Machine Bay Steel Charcoal */
+      --bg-elevated: #242930;    /* Steel Plate Surface */
+      --text-main: #F0F3F7;      /* Clean Shop Light */
+      --text-muted: #8E98A5;     /* Engine Aluminum Gray */
+      --accent-ember: #E63946;   /* Ignition Red Accent */
+      --accent-amber: #F4A261;   /* Shop Caution Amber Accent */
+      --border-subtle: rgba(240, 243, 247, 0.08);
+
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-body: 'Public Sans', sans-serif;
+
+      --transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* BASE RESET */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: var(--font-body);
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 85% 15%, rgba(230, 57, 70, 0.04) 0%, transparent 40%),
+        radial-gradient(circle at 15% 85%, rgba(244, 162, 97, 0.04) 0%, transparent 50%);
+    }
+
+    /* TYPOGRAPHY */
+    h1, h2, h3, h4, .font-display {
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* UTILITIES & BUTTONS */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1rem;
+      background: var(--bg-elevated);
+      border: 1px solid rgba(230, 57, 70, 0.3);
+      border-radius: 4px;
+      color: var(--accent-ember);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 1rem 2rem;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-radius: 4px;
+      transition: all 0.25s var(--transition-smooth);
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--accent-ember);
+      color: #FFFFFF;
+      box-shadow: 0 4px 20px rgba(230, 57, 70, 0.3);
+    }
+
+    .btn-primary:hover {
+      background: #D62839;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(230, 57, 70, 0.4);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-main);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent-ember);
+      color: var(--accent-ember);
+      background: rgba(230, 57, 70, 0.06);
+      transform: translateY(-2px);
+    }
+
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background: rgba(18, 20, 23, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    .brand-logo {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      color: var(--text-main);
+      line-height: 0.9;
+    }
+
+    .brand-sub {
+      font-size: 0.68rem;
+      color: var(--accent-ember);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-ember);
+    }
+
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      padding-top: 130px;
+      padding-bottom: 60px;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .rating-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      padding: 0.5rem 1.25rem;
+      border-radius: 4px;
+      margin-bottom: 1.75rem;
+    }
+
+    .stars {
+      display: flex;
+      gap: 3px;
+      color: var(--accent-amber);
+    }
+
+    .rating-val {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--text-main);
+    }
+
+    .hero h1 {
+      font-size: clamp(3.25rem, 6.5vw, 5.5rem);
+      line-height: 0.95;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 span.ember {
+      color: var(--accent-ember);
+    }
+
+    .hero-sub {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+      max-width: 680px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .stat-item h3 {
+      font-size: 2.2rem;
+      color: var(--text-main);
+      line-height: 1;
+    }
+
+    .stat-item p {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+    }
+
+    /* SIGNATURE INTERACTIVE MOMENT: DIAGNOSTIC BAY & TOWING DISPATCH REVEAL */
+    .diagnostic-section {
+      padding: 7rem 0;
+      background: var(--bg-surface);
+      border-y: 1px solid var(--border-subtle);
+      position: relative;
+    }
+
+    .diagnostic-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .diagnostic-header h2 {
+      font-size: clamp(2.5rem, 4vw, 3.5rem);
+      margin-top: 0.5rem;
+    }
+
+    .interactive-bay {
+      background: var(--bg-dark);
+      border: 1px solid rgba(230, 57, 70, 0.25);
+      border-radius: 8px;
+      padding: 3rem;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+      position: relative;
+    }
+
+    .bay-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .bay-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      padding: 2.25rem;
+      border-radius: 6px;
+      opacity: 0;
+      transform: translateY(25px);
+      transition: all 0.7s var(--transition-smooth);
+    }
+
+    .interactive-bay.active .bay-card:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0.15s; }
+    .interactive-bay.active .bay-card:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.35s; }
+    .interactive-bay.active .bay-card:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.55s; }
+
+    .bay-icon {
+      width: 52px;
+      height: 52px;
+      background: rgba(230, 57, 70, 0.1);
+      border-radius: 4px;
+      color: var(--accent-ember);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .bay-card h3 {
+      font-size: 1.8rem;
+      margin-bottom: 0.75rem;
+      line-height: 1;
+    }
+
+    .bay-card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* ABOUT SECTION */
+    .about-section {
+      padding: 8rem 0;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .about-text h2 {
+      font-size: clamp(2.5rem, 4vw, 3.5rem);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-text p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+
+    .quote-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-left: 4px solid var(--accent-ember);
+      padding: 2.5rem;
+      border-radius: 4px;
+    }
+
+    .quote-box p {
+      font-size: 1.05rem;
+      color: var(--text-main);
+      line-height: 1.6;
+      font-style: italic;
+      margin-bottom: 1.25rem;
+    }
+
+    .quote-box span {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-ember);
+    }
+
+    /* SERVICES SECTION */
+    .services-section {
+      padding: 8rem 0;
+      background: var(--bg-surface);
+    }
+
+    .services-header {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 4rem;
+    }
+
+    .services-header h2 {
+      font-size: clamp(2.5rem, 4vw, 3.5rem);
+      margin-top: 0.5rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background: var(--bg-dark);
+      border: 1px solid var(--border-subtle);
+      padding: 2.5rem;
+      border-radius: 6px;
+      transition: all 0.3s var(--transition-smooth);
+    }
+
+    .service-card:hover {
+      border-color: rgba(230, 57, 70, 0.4);
+      transform: translateY(-4px);
+    }
+
+    .service-card h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      line-height: 1;
+    }
+
+    .service-card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* REVIEWS SECTION */
+    .reviews-section {
+      padding: 8rem 0;
+    }
+
+    .reviews-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 4rem;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .reviews-header h2 {
+      font-size: clamp(2.5rem, 4vw, 3.5rem);
+      margin-top: 0.5rem;
+    }
+
+    .score-badge {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      padding: 1rem 1.75rem;
+      border-radius: 4px;
+    }
+
+    .score-num {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      color: var(--text-main);
+      line-height: 1;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .review-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      padding: 2.25rem;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .review-text {
+      font-size: 0.98rem;
+      line-height: 1.7;
+      color: var(--text-main);
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 1rem;
+    }
+
+    .author-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--bg-elevated);
+      color: var(--accent-ember);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      border: 1px solid rgba(230, 57, 70, 0.3);
+    }
+
+    .author-info h4 {
+      font-size: 0.95rem;
+      font-family: var(--font-body);
+      font-weight: 700;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    .author-info span {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* LOCATION & HOURS */
+    .contact-section {
+      padding: 8rem 0;
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+
+    .contact-info h2 {
+      font-size: clamp(2.5rem, 4vw, 3.5rem);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      background: var(--bg-dark);
+      padding: 1.5rem;
+      border-radius: 6px;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 4px;
+      background: rgba(230, 57, 70, 0.1);
+      color: var(--accent-ember);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-text h3 {
+      font-size: 0.85rem;
+      color: var(--accent-ember);
+      letter-spacing: 0.08em;
+      margin-bottom: 0.25rem;
+      font-family: var(--font-body);
+      font-weight: 700;
+    }
+
+    .contact-text p, .contact-text a {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .contact-text a:hover {
+      color: var(--accent-ember);
+    }
+
+    .map-card {
+      background: var(--bg-dark);
+      border: 1.5px solid rgba(230, 57, 70, 0.25);
+      padding: 3rem;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .map-card h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .map-card p {
+      margin-bottom: 2rem;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 3rem 0;
+      background: #0A0C0E;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .footer-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .footer-wrapper p {
+      font-size: 0.85rem;
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 992px) {
+      .about-grid, .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .interactive-bay {
+        padding: 1.5rem;
+      }
+    }
+
+    /* REDUCED MOTION */
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .bay-card {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="#" class="brand-logo">
+        <span class="brand-title">DOWNTOWN AUTOMOTIVE</span>
+        <span class="brand-sub">Market St • Chattanooga</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#garage">Garage Standards</a></li>
+        <li><a href="#about">About Patrick & Crew</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Location & Hours</a></li>
+      </ul>
+      <div>
+        <a href="tel:+14237563935" class="btn btn-primary" style="padding: 0.65rem 1.35rem; font-size: 0.82rem;">
+          Call +1 (423) 756-3935
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="rating-badge">
+          <div class="stars">
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <span class="rating-val">4.2 Rating (101 Verified Google Reviews)</span>
+        </div>
+
+        <h1>Honest Auto Repair & <span class="ember">Towing Service</span> on Market Street.</h1>
+
+        <p class="hero-sub">
+          Located at 1725 Market St in Chattanooga, Downtown Automotive provides rapid mechanical repair, engine diagnostics, and reliable emergency towing. Led by Patrick and his crew, we get you back on the road safely and fairly.
+        </p>
+
+        <div class="hero-actions">
+          <a href="tel:+14237563935" class="btn btn-primary">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call (423) 756-3935
+          </a>
+          <a href="https://maps.app.goo.gl/TV8Hra6FN2Sjavzs7" target="_blank" rel="noopener" class="btn btn-secondary">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            Get Directions
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h3>7:30 AM – 6 PM</h3>
+            <p>Mon - Sat Shop Hours</p>
+          </div>
+          <div class="stat-item">
+            <h3>101 Reviews</h3>
+            <p>Trusted Chattanooga Garage</p>
+          </div>
+          <div class="stat-item">
+            <h3>Towing & Repair</h3>
+            <p>Fast Turnaround Service</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE INTERACTIVE MOMENT: GARAGE COMMITMENT BAY REVEAL -->
+  <section class="diagnostic-section" id="garage">
+    <div class="container">
+      <div class="diagnostic-header">
+        <span class="badge">The Downtown Automotive Standard</span>
+        <h2>Built on Technical Expertise & Straight Talk</h2>
+        <p>Scroll down to see what sets our Market Street garage apart from competitors.</p>
+      </div>
+
+      <div class="interactive-bay" id="garageBay">
+        <div class="bay-grid">
+          <!-- Card 1 -->
+          <div class="bay-card">
+            <div class="bay-icon">
+              <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <h3>Expert Mechanical Diagnosis</h3>
+            <p>We fix what others misdiagnose—even rectifying parts installed backwards by other shops, ensuring your engine runs right.</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bay-card">
+            <div class="bay-icon">
+              <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <h3>Same-Day Towing Rescue</h3>
+            <p>Stranded in Chattanooga or visiting from out of town? Patrick & crew provide prompt, friendly towing to bring your vehicle straight to our bays.</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bay-card">
+            <div class="bay-icon">
+              <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3>Fair & Honest Pricing</h3>
+            <p>No unexpected markups or overcharging. We explain the problem directly and deliver top-tier workmanship at competitive rates.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="badge">About The Garage</span>
+          <h2>Market Street's Trusted Mechanics</h2>
+          <p>
+            For years, Downtown Automotive at 1725 Market St has been the go-to independent auto repair shop for local Chattanooga residents and travelers passing through Southside.
+          </p>
+          <p>
+            Under the leadership of Patrick, our team takes pride in old-school mechanical problem solving. We believe in direct communication, quick turnarounds, and treating every customer like a neighbor—whether you need a routine oil service or emergency roadside assistance.
+          </p>
+        </div>
+
+        <div class="quote-box">
+          <p>
+            "These guys saved my car after another mechanic put a part on backwards... Great service and honest work. This experience confirms this is the only shop I should take my car."
+          </p>
+          <span>— Hanneke van Deursen, Verified Client Review</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="services-header">
+        <span class="badge">What We Do</span>
+        <h2>Auto Repair & Towing Services</h2>
+        <p>Comprehensive auto maintenance, heavy mechanical repairs, and roadside dispatch in Chattanooga.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <h3>Emergency Towing & Recovery</h3>
+          <p>Prompt, friendly towing service to bring your broken-down vehicle directly to our Market Street repair bays without delay.</p>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+          <h3>Engine Diagnostics & Repair</h3>
+          <p>Advanced diagnostic checks to identify check engine lights, misfires, noise issues, and complex mechanical breakdowns.</p>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+          <h3>Preventative Maintenance</h3>
+          <p>Oil changes, brake replacements, fluid flushes, and routine safety inspections to keep your car operating smoothly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS SECTION -->
+  <section class="reviews-section" id="reviews">
+    <div class="container">
+      <div class="reviews-header">
+        <div>
+          <span class="badge">Real Customer Feedback</span>
+          <h2>4.2 Rating Across 101 Reviews</h2>
+        </div>
+        <div class="score-badge">
+          <span class="score-num">4.2</span>
+          <div>
+            <div class="stars">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </div>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">101 Google Business Reviews</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+        <!-- Review 1: GA Brown -->
+        <div class="review-card">
+          <p class="review-text">
+            "Downtown Automotive is the only place my vehicles are ever serviced. Their expertise is unmatched, and towing services are friendly and timely. The best shop in the Chattanooga area"
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">G</div>
+            <div class="author-info">
+              <h4>GA Brown</h4>
+              <span>Local Client</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2: Chris Alfonso -->
+        <div class="review-card">
+          <p class="review-text">
+            "Fast, Professional, Friendly local garage. Also, these are really nice guys operating this place. They came to my rescue when other local competitors were overcharging, and I am grateful to them."
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">C</div>
+            <div class="author-info">
+              <h4>Chris Alfonso</h4>
+              <span>Local Guide</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3: Shannon Rainwater -->
+        <div class="review-card">
+          <p class="review-text">
+            "Thank you Patrick and the crew for another awesome job !! They towed my car same day and I was only out of my car for 1 additional day!!! Quality work and FAIR pricing !!!"
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">S</div>
+            <div class="author-info">
+              <h4>Shannon Rainwater</h4>
+              <span>Towing & Repair Client</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 4: Keegan Cargill -->
+        <div class="review-card">
+          <p class="review-text">
+            "We were visiting from out of town and our van broke down. Patrick was able to get us up and running quickly with direct communication about what was going on with the issue and very competitive pricing."
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">K</div>
+            <div class="author-info">
+              <h4>Keegan Cargill</h4>
+              <span>Out-of-Town Traveler</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION & HOURS -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <span class="badge">Visit Garage</span>
+          <h2>Location & Hours</h2>
+          <p>Located on Market Street in Chattanooga, TN. Drop by or give us a call for towing dispatch.</p>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-text">
+                <h3>Garage Address</h3>
+                <p>1725 Market St<br>Chattanooga, TN 37408, United States</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="contact-text">
+                <h3>Direct Phone</h3>
+                <p><a href="tel:+14237563935">+1 (423) 756-3935</a></p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="contact-text">
+                <h3>Operating Hours</h3>
+                <p>Monday – Saturday: 7:30 AM – 6:00 PM<br><span style="color: var(--text-muted); font-size: 0.88rem;">Sunday: Closed</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-card">
+          <h3>Google Maps Directions</h3>
+          <p>Get turn-by-turn directions directly to our shop on Market Street in Chattanooga.</p>
+          <a href="https://maps.app.goo.gl/TV8Hra6FN2Sjavzs7" target="_blank" rel="noopener" class="btn btn-primary">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            Open Map Link
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-wrapper">
+      <p>&copy; Downtown Automotive • 1725 Market St, Chattanooga, TN 37408 • Phone: +1 (423) 756-3935</p>
+    </div>
+  </footer>
+
+  <!-- INTERSECTION OBSERVER SCRIPT -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const garageBay = document.getElementById('garageBay');
+
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              garageBay.classList.add('active');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.2
+        });
+
+        if (garageBay) observer.observe(garageBay);
+      } else {
+        if (garageBay) garageBay.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>

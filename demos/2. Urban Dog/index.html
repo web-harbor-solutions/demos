@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Dog | Gentle & Stress-Free Pet Grooming in Chattanooga, TN</title>
+  <meta name="description" content="Chattanooga's top 4.7-star boutique pet groomer on Riverfront Pkwy. Calm, cage-free environment led by Mattie. Personalized cuts, coat restoration & gentle care. Call +1 (423) 304-9609.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,800;1,9..144,600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* DESIGN SYSTEM & PALETTE */
+    :root {
+      --bg-cream: #FAF6F0;       /* Warm Warm Oats / Organic Cream */
+      --bg-card: #FFFFFF;        /* Fresh Warm White Surface */
+      --bg-elevated: #F3ECE2;    /* Soft Sand / Cashmere Accent */
+      --text-main: #1C2B26;     /* Deep Botanical Forest Slate */
+      --text-muted: #5C6A64;    /* Muted Sage / Moss Gray */
+      --accent-eucalyptus: #2D6A4F; /* Riverfront Eucalyptus Green */
+      --accent-eucalyptus-glow: rgba(45, 106, 79, 0.12);
+      --accent-mustard: #E09F3E; /* Warm Honey Amber Accent */
+      --border-subtle: rgba(28, 43, 38, 0.08);
+
+      --font-display: 'Fraunces', serif;
+      --font-body: 'Outfit', sans-serif;
+
+      --transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* BASE RESET */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: var(--font-body);
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 90% 10%, rgba(45, 106, 79, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 10% 90%, rgba(224, 159, 62, 0.06) 0%, transparent 50%);
+    }
+
+    /* TYPOGRAPHY */
+    h1, h2, h3, h4, .font-display {
+      font-family: var(--font-display);
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* UTILITIES & BUTTONS */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1rem;
+      background: var(--bg-elevated);
+      border: 1px solid rgba(45, 106, 79, 0.2);
+      border-radius: 100px;
+      color: var(--accent-eucalyptus);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 1rem 2rem;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.95rem;
+      border-radius: 100px;
+      transition: all 0.3s var(--transition-smooth);
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--accent-eucalyptus);
+      color: #FFFFFF;
+      box-shadow: 0 4px 20px var(--accent-eucalyptus-glow);
+    }
+
+    .btn-primary:hover {
+      background: #23533E;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(45, 106, 79, 0.25);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-main);
+      border: 1.5px solid var(--border-subtle);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent-eucalyptus);
+      color: var(--accent-eucalyptus);
+      background: rgba(45, 106, 79, 0.05);
+      transform: translateY(-2px);
+    }
+
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background: rgba(250, 246, 240, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-title {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: var(--accent-eucalyptus);
+      line-height: 1;
+    }
+
+    .logo-sub {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-eucalyptus);
+    }
+
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      padding-top: 130px;
+      padding-bottom: 60px;
+    }
+
+    .hero-content {
+      max-width: 780px;
+    }
+
+    .rating-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      padding: 0.5rem 1.25rem;
+      border-radius: 100px;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    }
+
+    .stars {
+      display: flex;
+      gap: 2px;
+      color: var(--accent-mustard);
+    }
+
+    .rating-text {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.75rem, 5.5vw, 4.5rem);
+      line-height: 1.08;
+      margin-bottom: 1.5rem;
+      font-weight: 800;
+    }
+
+    .hero h1 span.green {
+      color: var(--accent-eucalyptus);
+      font-style: italic;
+    }
+
+    .hero-sub {
+      font-size: 1.25rem;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+      max-width: 650px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+    }
+
+    .hero-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .feature-item h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .feature-item p {
+      font-size: 0.9rem;
+    }
+
+    /* SIGNATURE INTERACTIVE MOMENT - THE CALM CAGE-FREE EXPERIENCE REVEAL */
+    .calm-section {
+      padding: 7rem 0;
+      background: var(--bg-card);
+      border-y: 1px solid var(--border-subtle);
+      position: relative;
+    }
+
+    .calm-header {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 4rem;
+    }
+
+    .calm-header h2 {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      margin-top: 0.5rem;
+      font-weight: 800;
+    }
+
+    .interactive-sanctuary {
+      background: var(--bg-cream);
+      border: 1.5px solid rgba(45, 106, 79, 0.2);
+      border-radius: 16px;
+      padding: 3.5rem 3rem;
+      position: relative;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.03);
+    }
+
+    .sanctuary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .sanctuary-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      padding: 2.25rem;
+      border-radius: 12px;
+      opacity: 0;
+      transform: translateY(25px);
+      transition: all 0.7s var(--transition-smooth);
+    }
+
+    .interactive-sanctuary.active .sanctuary-card:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0.15s; }
+    .interactive-sanctuary.active .sanctuary-card:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.35s; }
+    .interactive-sanctuary.active .sanctuary-card:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.55s; }
+
+    .card-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: rgba(45, 106, 79, 0.08);
+      color: var(--accent-eucalyptus);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .sanctuary-card h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .sanctuary-card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* ABOUT SECTION */
+    .about-section {
+      padding: 8rem 0;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .about-text h2 {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+      font-weight: 800;
+    }
+
+    .about-text p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+
+    .mattie-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-left: 4px solid var(--accent-eucalyptus);
+      padding: 3rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    }
+
+    .mattie-card p {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      color: var(--text-main);
+      line-height: 1.5;
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+
+    .mattie-card span {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-eucalyptus);
+    }
+
+    /* SERVICES SECTION */
+    .services-section {
+      padding: 8rem 0;
+      background: var(--bg-card);
+    }
+
+    .services-header {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 4rem;
+    }
+
+    .services-header h2 {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 800;
+      margin-top: 0.5rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background: var(--bg-cream);
+      border: 1px solid var(--border-subtle);
+      padding: 2.5rem;
+      border-radius: 12px;
+      transition: all 0.3s var(--transition-smooth);
+    }
+
+    .service-card:hover {
+      border-color: rgba(45, 106, 79, 0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+    }
+
+    .service-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-mustard);
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .service-card h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .service-card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* REVIEWS / SOCIAL PROOF */
+    .reviews-section {
+      padding: 8rem 0;
+    }
+
+    .reviews-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 4rem;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .reviews-header h2 {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 800;
+      margin-top: 0.5rem;
+    }
+
+    .score-badge {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      padding: 1rem 1.75rem;
+      border-radius: 100px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    }
+
+    .score-num {
+      font-family: var(--font-display);
+      font-size: 2.75rem;
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .review-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      padding: 2.25rem;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    }
+
+    .review-quote {
+      font-size: 0.98rem;
+      line-height: 1.7;
+      color: var(--text-main);
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 1rem;
+    }
+
+    .author-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--bg-elevated);
+      color: var(--accent-eucalyptus);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .author-info h4 {
+      font-size: 0.95rem;
+      font-family: var(--font-body);
+      font-weight: 600;
+    }
+
+    .author-info span {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* LOCATION & HOURS */
+    .contact-section {
+      padding: 8rem 0;
+      background: var(--bg-card);
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+
+    .contact-info h2 {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 800;
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-card-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      background: var(--bg-cream);
+      padding: 1.5rem;
+      border-radius: 10px;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .info-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(45, 106, 79, 0.1);
+      color: var(--accent-eucalyptus);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .info-text h3 {
+      font-size: 0.85rem;
+      color: var(--accent-eucalyptus);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+      font-family: var(--font-body);
+    }
+
+    .info-text p, .info-text a {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .info-text a:hover {
+      color: var(--accent-eucalyptus);
+    }
+
+    .map-card {
+      background: var(--bg-cream);
+      border: 1.5px solid rgba(45, 106, 79, 0.2);
+      padding: 3rem;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .map-card h3 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .map-card p {
+      margin-bottom: 2rem;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 3rem 0;
+      background: #14201C;
+      color: #E2ECE8;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .footer-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .footer-wrapper p {
+      color: #A0B0AA;
+      font-size: 0.88rem;
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 992px) {
+      .about-grid, .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .interactive-sanctuary {
+        padding: 2rem 1.5rem;
+      }
+    }
+
+    /* REDUCED MOTION */
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .sanctuary-card {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="#" class="logo">
+        <span class="logo-title">URBAN DOG</span>
+        <span class="logo-sub">Riverfront Pkwy • Chattanooga</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#sanctuary">Gentle Grooming</a></li>
+        <li><a href="#about">About Mattie</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Location & Hours</a></li>
+      </ul>
+      <div>
+        <a href="tel:+14233049609" class="btn btn-primary" style="padding: 0.65rem 1.35rem; font-size: 0.82rem;">
+          Call +1 (423) 304-9609
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="rating-pill">
+          <div class="stars">
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <span class="rating-text">4.7 Rating (46 Verified Google Reviews)</span>
+        </div>
+
+        <h1>A Calm, Cage-Free <span class="green">Grooming Experience</span> for Chattanooga Pups.</h1>
+
+        <p class="hero-sub">
+          Located at 804 Riverfront Pkwy, Urban Dog provides individualized, low-stress pet grooming. Led by Mattie, we give your dog undivided care, custom coat styling, and a clean, relaxed salon environment.
+        </p>
+
+        <div class="hero-actions">
+          <a href="tel:+14233049609" class="btn btn-primary">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call (423) 304-9609
+          </a>
+          <a href="https://maps.app.goo.gl/Uv2DYeo27BUY6vst7" target="_blank" rel="noopener" class="btn btn-secondary">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            Get Directions
+          </a>
+        </div>
+
+        <div class="hero-features">
+          <div class="feature-item">
+            <h3>Cage-Free Comfort</h3>
+            <p>Pups roam freely in our clean, safe area post-groom.</p>
+          </div>
+          <div class="feature-item">
+            <h3>Custom Doodle Specialists</h3>
+            <p>Experienced in de-matting and precision styled cuts.</p>
+          </div>
+          <div class="feature-item">
+            <h3>8:30 AM – 4:30 PM</h3>
+            <p>Mon - Fri Boutique Salon Hours</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE INTERACTIVE MOMENT: LOW-STRESS SANCTUARY REVEAL -->
+  <section class="calm-section" id="sanctuary">
+    <div class="container">
+      <div class="calm-header">
+        <span class="badge">The Urban Dog Difference</span>
+        <h2>Why Dogs & Owners Love Coming Here</h2>
+        <p>Scroll down to explore how our peaceful salon setup eliminates grooming anxiety.</p>
+      </div>
+
+      <div class="interactive-sanctuary" id="sanctuaryContainer">
+        <div class="sanctuary-grid">
+          <!-- Pillar 1 -->
+          <div class="sanctuary-card">
+            <div class="card-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Cage-Free Lounge Area</h3>
+            <p>Once finished, dogs get to hang out comfortably around the grooming space rather than being stuck in a cage waiting for pickup.</p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="sanctuary-card">
+            <div class="card-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.72-8.72 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3>Gentle & Patient Handlers</h3>
+            <p>Mattie takes time to listen to your specific cut preferences, gently de-mats sensitive coats, and makes first-time puppies feel safe.</p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="sanctuary-card">
+            <div class="card-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3>Consistent Style & Review</h3>
+            <p>We check our work with you before walking out the door and note down feedback so your pup’s coat is perfect every single visit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="badge">Meet The Salon</span>
+          <h2>Personalized Care by Mattie</h2>
+          <p>
+            At Urban Dog, we treat your pet like one of our own. Located in Suite 126 at 804 Riverfront Parkway, our boutique salon was designed to feel calm, quiet, and friendly—a welcome contrast to chaotic high-volume grooming chains.
+          </p>
+          <p>
+            From severe coat de-matting for newly adopted rescues to routine 5-week trims for Goldendoodles, Mini Doodles, and all breeds, Mattie and the Urban Dog team deliver top-notch styling with zero rush and maximum affection.
+          </p>
+        </div>
+
+        <div class="mattie-card">
+          <p>
+            "Mattie cares for my dog like she's one of her own... My favorite thing about Mattie is her consistency! I am so happy I found Urban Dog."
+          </p>
+          <span>— Molly Hilley (Owner of Cwtch the Doodle)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="services-header">
+        <span class="badge">Services</span>
+        <h2>Boutique Pet Grooming Offerings</h2>
+        <p>Tailored treatments suited to your dog's breed, coat condition, and lifestyle.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <span class="service-tag">Full Care Package</span>
+          <h3>Full Grooming & Styling</h3>
+          <p>Includes bath, blow-dry, breed-specific hair cut, nail trim, and ear cleaning with gentle, high-quality shampoos.</p>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+          <span class="service-tag">Doodle & Long-Coat Specialty</span>
+          <h3>De-matting & Coat Recovery</h3>
+          <p>Specialized care for matted coats (Goldendoodles, Poodles, Rescues). We restore coat health comfortably without unnecessary stress.</p>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+          <span class="service-tag">Maintenance & Puppy</span>
+          <h3>Bath & Touch-Up Maintenance</h3>
+          <p>Perfect for intermediate upkeep between full cuts. Keeps face, paws, and sanitary areas clean, tidy, and smelling fresh.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS SECTION -->
+  <section class="reviews-section" id="reviews">
+    <div class="container">
+      <div class="reviews-header">
+        <div>
+          <span class="badge">Verified Feedback</span>
+          <h2>4.7 Rating Across 46 Reviews</h2>
+        </div>
+        <div class="score-badge">
+          <span class="score-num">4.7</span>
+          <div>
+            <div class="stars">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </div>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Verified Google Reviews</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+        <!-- Review 1: Shaina Beeson -->
+        <div class="review-card">
+          <p class="review-quote">
+            "Urban Dog is hands down the best groomer I've ever experienced! Mattie truly takes the time to listen to what you're looking for and does such an amazing job. I've had my mini doodle, Remy, fully groomed twice with her so far and each time has been absolutely perfect. The shop is also extremely clean and welcoming."
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">S</div>
+            <div class="author-info">
+              <h4>Shaina Beeson</h4>
+              <span>Owner of Remy (Mini Doodle)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2: BayLee Long -->
+        <div class="review-card">
+          <p class="review-quote">
+            "We recently adopted a golden doodle who was severely matted and needed love and a good groom! Mattie and team worked their magic and did a fantastic job with Daisy's first cut and made Daisy feel comfortable! Looking forward to taking my other pup to them as well!"
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">B</div>
+            <div class="author-info">
+              <h4>BayLee Long</h4>
+              <span>Owner of Daisy (Goldendoodle)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3: Elizabeth Cole -->
+        <div class="review-card">
+          <p class="review-quote">
+            "Love this place and so do my dogs! They take time to ask questions and listen to what you want. The salon is calm and peaceful and the dogs enjoy it. Gary and Rosie are never mad when we take a trip to Urban Dog!"
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">E</div>
+            <div class="author-info">
+              <h4>Elizabeth Cole</h4>
+              <span>Owner of Gary & Rosie</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 4: Molly Hilley -->
+        <div class="review-card">
+          <p class="review-quote">
+            "I've been taking my 4 year old golden doodle, Cwtch, to see Mattie at Urban Dog for over a year (every 5 weeks). The space is clean and the perfect size. Cwtch gets to hang around the grooming area once she's finished and not stuck in a cage like other places. My favorite thing is her consistency!"
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">M</div>
+            <div class="author-info">
+              <h4>Molly Hilley</h4>
+              <span>Owner of Cwtch</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION & HOURS -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <span class="badge">Visit Us</span>
+          <h2>Riverfront Parkway Studio</h2>
+          <p>We are situated along the Riverfront Parkway corridor in downtown Chattanooga, TN.</p>
+
+          <div class="contact-card-list">
+            <div class="info-item">
+              <div class="info-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="info-text">
+                <h3>Salon Address</h3>
+                <p>804 Riverfront Pkwy #126<br>Chattanooga, TN 37402, United States</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="info-text">
+                <h3>Direct Phone</h3>
+                <p><a href="tel:+14233049609">+1 (423) 304-9609</a></p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="info-text">
+                <h3>Salon Hours</h3>
+                <p>Monday – Friday: 8:30 AM – 4:30 PM<br><span style="color: var(--text-muted); font-size: 0.88rem;">Saturday & Sunday: Closed</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-card">
+          <h3>Find Urban Dog On Maps</h3>
+          <p>Get directions directly to 804 Riverfront Pkwy #126 in downtown Chattanooga.</p>
+          <a href="https://maps.app.goo.gl/Uv2DYeo27BUY6vst7" target="_blank" rel="noopener" class="btn btn-primary">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            Open Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-wrapper">
+      <p>&copy; Urban Dog • 804 Riverfront Pkwy #126, Chattanooga, TN 37402 • Phone: +1 (423) 304-9609</p>
+    </div>
+  </footer>
+
+  <!-- INTERSECTION OBSERVER SCRIPT -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('sanctuaryContainer');
+
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              container.classList.add('active');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.25
+        });
+
+        if (container) observer.observe(container);
+      } else {
+        if (container) container.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>
