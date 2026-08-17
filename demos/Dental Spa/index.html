@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dental Spa | Premium Dental & Oral Care in I-8 Markaz, Islamabad</title>
+  <meta name="description" content="Dental Spa in VIP Plaza, I-8 Markaz, Islamabad. Led by Dr. Aatir, offering expert scaling, polishing, teeth whitening, and specialized dental care. Call or WhatsApp 03126161289.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* DESIGN SYSTEM & PALETTE
+       - Slate Teal (Primary Deep): #0F2E2E
+       - Mint Frost (Accent/Highlight): #3EB489
+       - Soft Aqua (Subtle Tint): #E8F5F1
+       - Warm Ivory (Body Canvas): #FAFCFA
+       - Charcoal Emerald (Text High Contrast): #1A2624
+       - Muted Sage (Borders/Secondary Text): #607D75
+       
+       Typefaces:
+       - Display: 'Syne', sans-serif (Bold, refined, spa-like modern aesthetic)
+       - Body: 'Plus Jakarta Sans', sans-serif (Clean, readable, professional)
+    */
+
+    :root {
+      --color-teal-dark: #0F2E2E;
+      --color-teal-mid: #164747;
+      --color-mint: #3EB489;
+      --color-mint-light: #D5F2E8;
+      --color-aqua-bg: #E8F5F1;
+      --color-canvas: #FAFCFA;
+      --color-text-main: #1A2624;
+      --color-text-muted: #526B64;
+      --color-white: #FFFFFF;
+      --color-border: #D8E6E2;
+      --color-card-bg: #FFFFFF;
+
+      --font-display: 'Syne', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+
+      --shadow-sm: 0 4px 12px rgba(15, 46, 46, 0.04);
+      --shadow-md: 0 12px 32px rgba(15, 46, 46, 0.08);
+      --shadow-lg: 0 20px 48px rgba(15, 46, 46, 0.12);
+      
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-full: 9999px;
+
+      --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Reset & Base Styles */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--color-canvas);
+      color: var(--color-text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4 {
+      font-family: var(--font-display);
+      color: var(--color-teal-dark);
+      line-height: 1.15;
+      font-weight: 700;
+    }
+
+    p {
+      color: var(--color-text-muted);
+      font-size: 1.05rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Layout Containers */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .section-spacing {
+      padding: 5.5rem 0;
+    }
+
+    /* Buttons & Interactive Elements */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 0.95rem 1.8rem;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 1rem;
+      border-radius: var(--radius-full);
+      transition: var(--transition-smooth);
+      cursor: pointer;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background-color: var(--color-teal-dark);
+      color: var(--color-white);
+      box-shadow: 0 4px 16px rgba(15, 46, 46, 0.2);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--color-teal-mid);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(15, 46, 46, 0.28);
+    }
+
+    .btn-secondary {
+      background-color: var(--color-mint-light);
+      color: var(--color-teal-dark);
+      border: 1px solid rgba(62, 180, 137, 0.3);
+    }
+
+    .btn-secondary:hover {
+      background-color: #c5edd9;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--color-teal-dark);
+      border-color: var(--color-border);
+    }
+
+    .btn-outline:hover {
+      background-color: var(--color-aqua-bg);
+      border-color: var(--color-mint);
+      transform: translateY(-2px);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1rem;
+      background-color: var(--color-aqua-bg);
+      color: var(--color-teal-dark);
+      font-weight: 600;
+      font-size: 0.875rem;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--color-border);
+      margin-bottom: 1.25rem;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      background-color: var(--color-mint);
+      border-radius: 50%;
+    }
+
+    /* Header / Navbar */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(250, 252, 250, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-border);
+      transition: var(--transition-smooth);
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--color-teal-dark);
+      letter-spacing: -0.02em;
+    }
+
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+      background: var(--color-teal-dark);
+      color: var(--color-mint);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      color: var(--color-text-main);
+      font-size: 0.95rem;
+      transition: var(--transition-smooth);
+    }
+
+    .nav-links a:hover {
+      color: var(--color-mint);
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      padding: 4rem 0 5rem 0;
+      background: linear-gradient(180deg, var(--color-canvas) 0%, var(--color-aqua-bg) 100%);
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2.5rem, 5vw, 3.8rem);
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-content h1 span {
+      color: var(--color-mint);
+      position: relative;
+    }
+
+    .hero-description {
+      font-size: 1.15rem;
+      margin-bottom: 2rem;
+      max-width: 540px;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-value {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--color-teal-dark);
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .stat-label {
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+      font-weight: 500;
+    }
+
+    .hero-visual {
+      position: relative;
+    }
+
+    .treatment-card-preview {
+      background-color: var(--color-white);
+      border-radius: var(--radius-lg);
+      padding: 2.2rem;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--color-border);
+      position: relative;
+    }
+
+    .clinic-badge-box {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background-color: var(--color-teal-dark);
+      color: var(--color-white);
+      padding: 1.2rem;
+      border-radius: var(--radius-md);
+      margin-bottom: 1.5rem;
+    }
+
+    .clinic-badge-box svg {
+      color: var(--color-mint);
+      flex-shrink: 0;
+    }
+
+    .clinic-badge-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .clinic-badge-sub {
+      font-size: 0.85rem;
+      opacity: 0.8;
+    }
+
+    .hero-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .highlight-pill {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 0.8rem 1rem;
+      background-color: var(--color-aqua-bg);
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--color-teal-dark);
+    }
+
+    .highlight-pill svg {
+      color: var(--color-mint);
+    }
+
+    /* Signature Interaction Element (Interactive Tooth Care Reveal) */
+    .signature-card {
+      margin-top: 1.5rem;
+      background: linear-gradient(135deg, var(--color-teal-dark) 0%, var(--color-teal-mid) 100%);
+      color: var(--color-white);
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: var(--transition-smooth);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .signature-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .signature-card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .signature-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--color-mint-light);
+    }
+
+    .signature-body {
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.5;
+    }
+
+    /* About Section */
+    .about {
+      background-color: var(--color-white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-text h2 {
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      margin-bottom: 1.5rem;
+    }
+
+    .about-text p {
+      margin-bottom: 1.25rem;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .doctor-callout {
+      margin-top: 1.5rem;
+      padding: 1.25rem 1.5rem;
+      background-color: var(--color-aqua-bg);
+      border-left: 4px solid var(--color-mint);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+
+    .doctor-name {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--color-teal-dark);
+    }
+
+    .doctor-role {
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+      font-weight: 500;
+    }
+
+    .about-visual-box {
+      background: linear-gradient(135deg, var(--color-aqua-bg) 0%, #d2ece3 100%);
+      border-radius: var(--radius-lg);
+      padding: 3rem 2.5rem;
+      border: 1px solid var(--color-border);
+      position: relative;
+    }
+
+    .feature-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .feature-item {
+      display: flex;
+      gap: 1.2rem;
+      background-color: var(--color-white);
+      padding: 1.2rem 1.4rem;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .feature-icon {
+      width: 44px;
+      height: 44px;
+      background-color: var(--color-mint-light);
+      color: var(--color-teal-dark);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .feature-info h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .feature-info p {
+      font-size: 0.9rem;
+    }
+
+    /* Services Section */
+    .services {
+      background-color: var(--color-canvas);
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 3.5rem auto;
+    }
+
+    .section-header h2 {
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      margin-bottom: 1rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background-color: var(--color-card-bg);
+      border-radius: var(--radius-md);
+      padding: 2.2rem;
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-smooth);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-mint);
+    }
+
+    .service-icon-wrapper {
+      width: 52px;
+      height: 52px;
+      background-color: var(--color-aqua-bg);
+      color: var(--color-teal-dark);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      transition: var(--transition-smooth);
+    }
+
+    .service-card:hover .service-icon-wrapper {
+      background-color: var(--color-teal-dark);
+      color: var(--color-mint);
+    }
+
+    .service-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .service-card p {
+      font-size: 0.975rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .service-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: auto;
+    }
+
+    .service-tag {
+      font-size: 0.775rem;
+      font-weight: 600;
+      padding: 0.25rem 0.65rem;
+      background-color: var(--color-aqua-bg);
+      color: var(--color-teal-dark);
+      border-radius: var(--radius-full);
+    }
+
+    /* Social Proof / Reviews Section */
+    .reviews {
+      background-color: var(--color-teal-dark);
+      color: var(--color-white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .reviews .section-header h2 {
+      color: var(--color-white);
+    }
+
+    .reviews .section-header p {
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .rating-banner {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(8px);
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      margin-bottom: 2rem;
+    }
+
+    .rating-score {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: #FFD166;
+    }
+
+    .rating-stars {
+      display: flex;
+      gap: 3px;
+      color: #FFD166;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .review-card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition-smooth);
+    }
+
+    .review-card:hover {
+      background-color: rgba(255, 255, 255, 0.08);
+      border-color: var(--color-mint);
+      transform: translateY(-4px);
+    }
+
+    .review-stars {
+      display: flex;
+      gap: 4px;
+      color: #FFD166;
+      margin-bottom: 1rem;
+    }
+
+    .review-quote {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 1.75rem;
+      font-style: italic;
+    }
+
+    .reviewer-meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 1.2rem;
+    }
+
+    .avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-family: var(--font-display);
+      font-size: 1rem;
+      color: var(--color-white);
+      flex-shrink: 0;
+    }
+
+    .avatar-purple { background-color: #8E24AA; }
+    .avatar-pink { background-color: #C2185B; }
+    .avatar-teal { background-color: #00897B; }
+
+    .reviewer-info h4 {
+      color: var(--color-white);
+      font-size: 1rem;
+      margin-bottom: 0.1rem;
+    }
+
+    .reviewer-info p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.8rem;
+    }
+
+    /* Location & Hours Section */
+    .location {
+      background-color: var(--color-white);
+    }
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 3.5rem;
+      align-items: stretch;
+    }
+
+    .info-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .info-box h2 {
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      margin-bottom: 1.5rem;
+    }
+
+    .info-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .info-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      padding: 1.25rem;
+      background-color: var(--color-aqua-bg);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-border);
+    }
+
+    .info-icon {
+      width: 42px;
+      height: 42px;
+      background-color: var(--color-teal-dark);
+      color: var(--color-mint);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .info-detail h4 {
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .info-detail p {
+      font-size: 0.95rem;
+      color: var(--color-text-main);
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .map-container {
+      background-color: var(--color-aqua-bg);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      border: 1px solid var(--color-border);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .map-preview-card {
+      background-color: var(--color-white);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--color-border);
+      text-align: center;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    .map-pin-icon {
+      width: 60px;
+      height: 60px;
+      background-color: var(--color-mint-light);
+      color: var(--color-teal-dark);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem auto;
+    }
+
+    .map-preview-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .map-preview-card p {
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: var(--color-teal-dark);
+      color: rgba(255, 255, 255, 0.7);
+      padding: 4rem 0 2rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand .brand {
+      color: var(--color-white);
+      margin-bottom: 1rem;
+    }
+
+    .footer-brand p {
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 360px;
+      font-size: 0.95rem;
+    }
+
+    .footer-title {
+      font-family: var(--font-display);
+      color: var(--color-white);
+      font-size: 1.1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.75);
+      transition: var(--transition-smooth);
+      font-size: 0.95rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--color-mint);
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.875rem;
+    }
+
+    /* Floating WhatsApp Button for Instant Mobile Booking */
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 99;
+      background-color: #25D366;
+      color: #FFFFFF;
+      padding: 0.85rem 1.4rem;
+      border-radius: var(--radius-full);
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: var(--transition-smooth);
+      border: none;
+    }
+
+    .floating-whatsapp:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 12px 28px rgba(37, 211, 102, 0.5);
+      color: #FFFFFF;
+    }
+
+    /* Scroll Reveal Animation Styles */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Respect Prefers Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      .reveal-on-scroll {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+      
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 992px) {
+      .hero-grid,
+      .about-grid,
+      .location-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none; /* Mobile navigation simplified to priority CTAs */
+      }
+
+      .section-spacing {
+        padding: 3.5rem 0;
+      }
+
+      .hero {
+        padding: 2.5rem 0 3.5rem 0;
+      }
+
+      .hero-stats {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .contact-actions {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .floating-whatsapp span {
+        display: none; /* Compact icon on small mobile screens */
+      }
+
+      .floating-whatsapp {
+        padding: 0.85rem;
+        border-radius: 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="#" class="brand" aria-label="Dental Spa Islamabad Home">
+          <div class="brand-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C6.5 2 4 6.5 4 10c0 4 2.5 7 4 11 1 2.5 3 2.5 4 0 1 2.5 3 2.5 4 0 1.5-4 4-7 4-11 0-3.5-2.5-8-8-8z"/>
+            </svg>
+          </div>
+          Dental Spa
+        </a>
+        <ul class="nav-links">
+          <li><a href="#about">About Clinic</a></li>
+          <li><a href="#services">Treatments</a></li>
+          <li><a href="#reviews">Patient Reviews</a></li>
+          <li><a href="#location">Hours & Location</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="tel:03126161289" class="btn btn-outline">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            0312 6161289
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="badge">
+              <span class="badge-dot"></span>
+              VIP Plaza, I-8 Markaz, Islamabad
+            </div>
+            <h1>Gentle, Precision Dental Care in <span>Islamabad</span></h1>
+            <p class="hero-description">
+              Experience modern oral healthcare designed around your comfort. From professional scaling and polishing to advanced teeth whitening, Dr. Aatir and our dedicated team deliver flawless smile care.
+            </p>
+            <div class="hero-actions">
+              <a href="https://wa.me/923126161289?text=Hello%20Dental%20Spa,%20I%20would%20like%20to%20book%20an%20appointment." class="btn btn-primary" target="_blank" rel="noopener">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                Book via WhatsApp
+              </a>
+              <a href="tel:03126161289" class="btn btn-secondary">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                Call Clinic Direct
+              </a>
+            </div>
+            <div class="hero-stats">
+              <div class="stat-item">
+                <div class="stat-value">
+                  5.0 
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFD166" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <div class="stat-label">Google Maps Rating</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-value">57+</div>
+                <div class="stat-label">Verified Reviews</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-value">3–9 PM</div>
+                <div class="stat-label">Mon to Sat Hours</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Right Visual Card System -->
+          <div class="hero-visual">
+            <div class="treatment-card-preview">
+              <div class="clinic-badge-box">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 8v4l3 3"/>
+                </svg>
+                <div>
+                  <div class="clinic-badge-title">Evening Consultation Hours</div>
+                  <div class="clinic-badge-sub">3:00 PM – 9:00 PM | Monday – Saturday</div>
+                </div>
+              </div>
+
+              <div class="hero-highlights">
+                <div class="highlight-pill">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  Dr. Aatir – Head Dental Specialist
+                </div>
+                <div class="highlight-pill">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  Scaling, Polishing & Teeth Whitening
+                </div>
+                <div class="highlight-pill">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  Helpful Staff & Welcoming Atmosphere
+                </div>
+              </div>
+
+              <!-- Signature Interactive Element -->
+              <div class="signature-card" id="signatureRevealCard" role="button" tabindex="0" aria-expanded="false" aria-label="Toggle Signature Dental Hygiene Tip">
+                <div class="signature-card-head">
+                  <div class="signature-title">✨ The Dental Spa Commitment</div>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <div class="signature-body" id="signatureRevealBody">
+                  We believe dental visits should feel calming rather than clinical. Every treatment plan is tailored to preserve your natural enamel while ensuring maximum comfort.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section-spacing" id="about">
+      <div class="container">
+        <div class="about-grid reveal-on-scroll">
+          <div class="about-text">
+            <div class="badge">Patient-Centered Practice</div>
+            <h2>A Dental Practice Built on Comfort & Excellence</h2>
+            <p>
+              Located in the heart of I-8 Markaz, Islamabad, <strong>Dental Spa</strong> was established with a singular vision: to make high-quality dental care smooth, gentle, and stress-free.
+            </p>
+            <p>
+              Whether you need routine preventive maintenance, comprehensive tooth restoration, or professional whitening, our team combines precise clinical technique with genuine hospitality.
+            </p>
+            
+            <div class="doctor-callout">
+              <div class="doctor-name">Dr. Aatir & Clinical Staff</div>
+              <div class="doctor-role">Dental Surgeons & Oral Care Specialists</div>
+            </div>
+          </div>
+
+          <div class="about-visual-box">
+            <div class="feature-list">
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <div class="feature-info">
+                  <h4>Helpful & Accommodating Staff</h4>
+                  <p>Our receptionist and clinical assistants ensure your visit is seamless from booking to post-care.</p>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div class="feature-info">
+                  <h4>Hygiene & Safety First</h4>
+                  <p>Strict sterilization protocols and modern diagnostic standards for complete peace of mind.</p>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div class="feature-info">
+                  <h4>Convenient Evening Hours</h4>
+                  <p>Open Monday through Saturday from 3:00 PM to 9:00 PM to easily fit your work schedule.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section-spacing" id="services">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="badge">Comprehensive Oral Care</div>
+          <h2>Specialized Dental Treatments</h2>
+          <p>Tailored dental solutions delivered with precision, care, and attention to detail in Islamabad.</p>
+        </div>
+
+        <div class="services-grid reveal-on-scroll">
+          <!-- Service 1 -->
+          <div class="service-card">
+            <div>
+              <div class="service-icon-wrapper">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                </svg>
+              </div>
+              <h3>Scaling & Polishing</h3>
+              <p>Thorough removal of plaque, tartar, and surface stains to revitalize your gums and maintain healthy oral hygiene.</p>
+            </div>
+            <div class="service-tags">
+              <span class="service-tag">Preventive Care</span>
+              <span class="service-tag">Gum Health</span>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card">
+            <div>
+              <div class="service-icon-wrapper">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="5"/>
+                  <line x1="12" y1="1" x2="12" y2="3"/>
+                  <line x1="12" y1="21" x2="12" y2="23"/>
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                  <line x1="1" y1="12" x2="3" y2="12"/>
+                  <line x1="21" y1="12" x2="23" y2="12"/>
+                </svg>
+              </div>
+              <h3>Teeth Whitening</h3>
+              <p>Professional aesthetic whitening treatments crafted to safely brighten discolored teeth and elevate your natural smile.</p>
+            </div>
+            <div class="service-tags">
+              <span class="service-tag">Cosmetic Dentistry</span>
+              <span class="service-tag">Smile Enhancement</span>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card">
+            <div>
+              <div class="service-icon-wrapper">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+              </div>
+              <h3>General Dental Consultations</h3>
+              <p>In-depth oral examinations, digital assessments, and personalized treatment planning by Dr. Aatir and team.</p>
+            </div>
+            <div class="service-tags">
+              <span class="service-tag">Oral Exam</span>
+              <span class="service-tag">Diagnosis</span>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card">
+            <div>
+              <div class="service-icon-wrapper">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                </svg>
+              </div>
+              <h3>Restorative Dentistry</h3>
+              <p>Tooth-colored fillings, crown repairs, and structural treatments to restore the full function and beauty of your teeth.</p>
+            </div>
+            <div class="service-tags">
+              <span class="service-tag">Fillings & Repair</span>
+              <span class="service-tag">Restoration</span>
+            </div>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="service-card">
+            <div>
+              <div class="service-icon-wrapper">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <h3>Preventive Oral Care</h3>
+              <p>Enamel protection, deep cleansings, and preventative advice tailored to prevent cavities and maintain long-term oral health.</p>
+            </div>
+            <div class="service-tags">
+              <span class="service-tag">Routine Maintenance</span>
+              <span class="service-tag">Enamel Shield</span>
+            </div>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="service-card">
+            <div>
+              <div class="service-icon-wrapper">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                  <line x1="9" y1="9" x2="9.01" y2="9"/>
+                  <line x1="15" y1="9" x2="15.01" y2="9"/>
+                </svg>
+              </div>
+              <h3>Emergency Dental Relief</h3>
+              <p>Prompt attention for toothaches, discomfort, or sudden oral injuries during clinic operational hours in I-8 Markaz.</p>
+            </div>
+            <div class="service-tags">
+              <span class="service-tag">Same-Day Relief</span>
+              <span class="service-tag">Urgent Care</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof / Real Reviews Section -->
+    <section class="reviews section-spacing" id="reviews">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="rating-banner">
+            <span class="rating-score">5.0</span>
+            <div class="rating-stars">
+              ★★★★★
+            </div>
+            <span style="font-size: 0.9rem; opacity: 0.85;">(57 Google Reviews)</span>
+          </div>
+          <h2>What Patients Say About Dental Spa</h2>
+          <p>Authentic reviews from verified Google Maps patients treated at our clinic in Islamabad.</p>
+        </div>
+
+        <div class="reviews-grid reveal-on-scroll">
+          <!-- Real Review 1 -->
+          <div class="review-card">
+            <div>
+              <div class="review-stars">★★★★★</div>
+              <p class="review-quote">
+                "Got my scaling + polishing + teeth whitening done from Dr Aatir here. Very professional and amazing experience and I am extremely happy with the results! Highly recommend to all!"
+              </p>
+            </div>
+            <div class="reviewer-meta">
+              <div class="avatar avatar-pink">K</div>
+              <div class="reviewer-info">
+                <h4>Kublai Khan</h4>
+                <p>Google Maps Reviewer • 5.0 Rating</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Real Review 2 -->
+          <div class="review-card">
+            <div>
+              <div class="review-stars">★★★★★</div>
+              <p class="review-quote">
+                "Excellent services provide to people all staff and doctors are very good . Their receptionist is very helpful."
+              </p>
+            </div>
+            <div class="reviewer-meta">
+              <div class="avatar avatar-purple">C</div>
+              <div class="reviewer-info">
+                <h4>Chahat Ishaq</h4>
+                <p>Google Maps Reviewer • 5.0 Rating</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Real Review 3 -->
+          <div class="review-card">
+            <div>
+              <div class="review-stars">★★★★★</div>
+              <p class="review-quote">
+                "I would highly recommend Dr. Aatir. Good experience with this clinic."
+              </p>
+            </div>
+            <div class="reviewer-meta">
+              <div class="avatar avatar-teal">J</div>
+              <div class="reviewer-info">
+                <h4>Jowairia Sajid</h4>
+                <p>Google Maps Reviewer • 5.0 Rating</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hours + Location Section -->
+    <section class="location section-spacing" id="location">
+      <div class="container">
+        <div class="location-grid reveal-on-scroll">
+          <div class="info-box">
+            <div class="badge">Visit Our Clinic</div>
+            <h2>Hours & Location</h2>
+            <p style="margin-bottom: 2rem;">
+              Conveniently situated in VIP Plaza, I-8 Markaz. We welcome walk-ins and scheduled appointments during our regular evening hours.
+            </p>
+
+            <div class="info-cards">
+              <div class="info-card">
+                <div class="info-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div class="info-detail">
+                  <h4>Address</h4>
+                  <p>VIP Plaza, I-8 Markaz, Islamabad, 44000, Pakistan</p>
+                </div>
+              </div>
+
+              <div class="info-card">
+                <div class="info-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div class="info-detail">
+                  <h4>Clinic Hours</h4>
+                  <p><strong>3:00 PM – 9:00 PM</strong> (Monday to Saturday)</p>
+                  <p style="font-size: 0.85rem; color: var(--color-text-muted);">Closed on Sundays</p>
+                </div>
+              </div>
+
+              <div class="info-card">
+                <div class="info-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div class="info-detail">
+                  <h4>Phone & WhatsApp</h4>
+                  <p><strong>0312 6161289</strong></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-actions">
+              <a href="https://maps.app.goo.gl/NmQ7UzrAw32wVd1A8" target="_blank" rel="noopener" class="btn btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Open Google Maps Directions
+              </a>
+              <a href="tel:03126161289" class="btn btn-outline">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                Call 0312 6161289
+              </a>
+            </div>
+          </div>
+
+          <div class="map-container">
+            <div class="map-preview-card">
+              <div class="map-pin-icon">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <h3>Dental Spa Clinic</h3>
+              <p>VIP Plaza, I-8 Markaz I 8 Markaz I-8, Islamabad, 44000, Pakistan</p>
+              <a href="https://maps.app.goo.gl/NmQ7UzrAw32wVd1A8" target="_blank" rel="noopener" class="btn btn-secondary">
+                View Location on Map
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand">
+            <div class="brand-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2C6.5 2 4 6.5 4 10c0 4 2.5 7 4 11 1 2.5 3 2.5 4 0 1 2.5 3 2.5 4 0 1.5-4 4-7 4-11 0-3.5-2.5-8-8-8z"/>
+              </svg>
+            </div>
+            Dental Spa
+          </div>
+          <p>Providing Islamabad with modern, attentive, and stress-free dental services under the expertise of Dr. Aatir.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#about">About Clinic</a></li>
+            <li><a href="#services">Specialized Services</a></li>
+            <li><a href="#reviews">Patient Reviews</a></li>
+            <li><a href="#location">Hours & Location</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-links">
+            <li><a href="tel:03126161289">Phone: 0312 6161289</a></li>
+            <li><a href="https://wa.me/923126161289" target="_blank" rel="noopener">WhatsApp: 0312 6161289</a></li>
+            <li><span>VIP Plaza, I-8 Markaz, Islamabad</span></li>
+            <li><span>Mon–Sat: 3:00 PM – 9:00 PM</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; Dental Spa Islamabad. All rights reserved.</p>
+        <p>Rated 5.0 ★ on Google Maps (57 Reviews)</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp CTA for Quick Mobile Booking -->
+  <a href="https://wa.me/923126161289?text=Hello%20Dental%20Spa,%20I%20would%20like%20to%20book%20an%20appointment." class="floating-whatsapp" target="_blank" rel="noopener" aria-label="Book appointment on WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+    </svg>
+    <span>Book Appointment</span>
+  </a>
+
+  <!-- JavaScript logic: Single signature interaction + Scroll observer -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Signature Interaction (Interactive Tooth Care Reveal)
+      const card = document.getElementById('signatureRevealCard');
+      const body = document.getElementById('signatureRevealBody');
+      
+      if (card && body) {
+        card.addEventListener('click', () => {
+          const isExpanded = card.getAttribute('aria-expanded') === 'true';
+          card.setAttribute('aria-expanded', !isExpanded);
+          
+          if (!isExpanded) {
+            body.style.display = 'block';
+            card.style.background = 'linear-gradient(135deg, #164747 0%, #0F2E2E 100%)';
+          } else {
+            body.style.display = 'block';
+          }
+        });
+      }
+
+      // 2. Signature Scroll-Triggered Reveal (Intersection Observer API)
+      const revealElements = document.querySelectorAll('.reveal-on-scroll');
+      
+      if ('IntersectionObserver' in window) {
+        const observerOptions = {
+          root: null,
+          threshold: 0.12,
+          rootMargin: '0px 0px -40px 0px'
+        };
+
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target); // Trigger once
+            }
+          });
+        }, observerOptions);
+
+        revealElements.forEach(el => revealObserver.observe(el));
+      } else {
+        // Fallback for very old browsers
+        revealElements.forEach(el => el.classList.add('is-visible'));
+      }
+    });
+  </script>
+</body>
+</html>
