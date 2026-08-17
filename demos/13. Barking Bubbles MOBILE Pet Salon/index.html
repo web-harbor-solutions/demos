@@ -1,0 +1,1670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barking Bubbles MOBILE Pet Salon | Doorstep Mobile Dog Grooming in Chattanooga, TN</title>
+  <meta name="description" content="Chattanooga's top-rated mobile pet grooming salon owned by Ashley. 389+ Google reviews with a 4.9 star rating. Stress-free doorstep grooming van, coat restoration, skunk de-skunking & doodle care. Call (423) 203-0393.">
+
+  <!-- Google Fonts: Righteous for vibrant mobile salon display, Plus Jakarta Sans for clean readable body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Righteous&display=swap" rel="stylesheet">
+
+  <style>
+    /* --------------------------------------------------
+       COLOR PALETTE & DESIGN SYSTEM
+       Mobile Aqua Cyan (#08BCBD), Deep River Navy (#0A192F),
+       Bubble Teal (#1E3A8A), Sunshine Gold (#F59E0B),
+       Fresh Foam White (#F8FAFC)
+    -------------------------------------------------- */
+    :root {
+      --bg-dark: #07111E;
+      --bg-surface: #0E1E32;
+      --bg-card: #152A45;
+      --bg-card-hover: #1E385B;
+
+      --text-light: #F8FAFC;
+      --text-muted: #94A3B8;
+      --text-dark: #07111E;
+
+      --accent-aqua: #08BCBD;
+      --accent-aqua-hover: #14E0E1;
+      --accent-bubble: #38BDF8;
+      --accent-gold: #F59E0B;
+      --accent-coral: #F43F5E;
+
+      --border-subtle: rgba(248, 250, 252, 0.12);
+      --border-aqua: rgba(8, 188, 189, 0.35);
+
+      --font-display: 'Righteous', cursive;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+
+      --container-max: 1200px;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: var(--font-body);
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    body {
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 85% 15%, rgba(8, 188, 189, 0.08) 0%, transparent 45%),
+        radial-gradient(circle at 15% 85%, rgba(56, 189, 248, 0.06) 0%, transparent 45%);
+    }
+
+    /* TYPOGRAPHY HELPERS */
+    h1, h2, h3, h4, .brand-title {
+      font-family: var(--font-display);
+      letter-spacing: 0.02em;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 0.95rem 1.8rem;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: all 0.25s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-aqua {
+      background: linear-gradient(135deg, var(--accent-aqua), #059697);
+      color: #FFFFFF;
+      box-shadow: 0 4px 20px rgba(8, 188, 189, 0.4);
+    }
+
+    .btn-aqua:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(8, 188, 189, 0.6);
+      background: linear-gradient(135deg, var(--accent-aqua-hover), var(--accent-aqua));
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text-light);
+      border: 1.5px solid var(--border-subtle);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent-aqua);
+      color: var(--accent-aqua-hover);
+      background: rgba(8, 188, 189, 0.12);
+      transform: translateY(-2px);
+    }
+
+    /* HEADER & NAVIGATION */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: rgba(7, 17, 30, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 84px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      text-decoration: none;
+      color: var(--text-light);
+    }
+
+    .logo-badge {
+      width: 48px;
+      height: 48px;
+      background: var(--bg-card);
+      border: 1.5px solid var(--accent-aqua);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-aqua);
+      box-shadow: 0 0 15px rgba(8, 188, 189, 0.25);
+    }
+
+    .brand-name {
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--text-light);
+    }
+
+    .brand-sub {
+      font-size: 0.74rem;
+      color: var(--accent-bubble);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 700;
+      display: block;
+      margin-top: 2px;
+      font-family: var(--font-body);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-aqua-hover);
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-light);
+      cursor: pointer;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      padding: 6.5rem 0 5rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.45rem 1rem;
+      background: rgba(8, 188, 189, 0.12);
+      border: 1px solid var(--border-aqua);
+      border-radius: 30px;
+      color: var(--accent-aqua-hover);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 4.8vw, 4.2rem);
+      line-height: 1.1;
+      margin-bottom: 1.4rem;
+      color: var(--text-light);
+      font-weight: 400;
+    }
+
+    .hero-title span {
+      color: var(--accent-aqua);
+    }
+
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin-bottom: 2.2rem;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .hero-trust-bar {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .trust-stat {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .trust-num {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      color: var(--accent-gold);
+      line-height: 1;
+    }
+
+    .trust-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .trust-divider {
+      width: 1px;
+      height: 42px;
+      background: var(--border-subtle);
+    }
+
+    /* HERO BLUEPRINT CARD (Right visual component) */
+    .hero-mobile-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-aqua);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      position: relative;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.5);
+    }
+
+    .hero-mobile-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent-aqua), var(--accent-bubble));
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    }
+
+    .mobile-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.8rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px dashed var(--border-subtle);
+    }
+
+    .mobile-card-tag {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      color: var(--accent-bubble);
+    }
+
+    .mobile-status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      color: #2ECC71;
+      background: rgba(46, 204, 113, 0.12);
+      padding: 0.25rem 0.65rem;
+      border-radius: 20px;
+      font-weight: 700;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #2ECC71;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #2ECC71;
+    }
+
+    .mobile-feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+
+    .mobile-feature-item {
+      display: flex;
+      gap: 1.1rem;
+      align-items: flex-start;
+    }
+
+    .mobile-icon-box {
+      width: 42px;
+      height: 42px;
+      background: rgba(8, 188, 189, 0.12);
+      border: 1px solid var(--border-aqua);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-aqua);
+      flex-shrink: 0;
+    }
+
+    .mobile-feature-text h4 {
+      font-size: 1rem;
+      color: var(--text-light);
+      margin-bottom: 0.2rem;
+      font-family: var(--font-body);
+      font-weight: 700;
+    }
+
+    .mobile-feature-text p {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    /* ABOUT SECTION */
+    .about-section {
+      padding: 6.5rem 0;
+      background-color: var(--bg-surface);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4.5rem;
+      align-items: center;
+    }
+
+    .section-eyebrow {
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--accent-aqua);
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+    }
+
+    .about-quote {
+      font-size: 1.15rem;
+      color: var(--text-light);
+      line-height: 1.65;
+      margin-bottom: 1.4rem;
+      font-style: italic;
+      padding-left: 1.2rem;
+      border-left: 3px solid var(--accent-aqua);
+    }
+
+    .about-body {
+      color: var(--text-muted);
+      font-size: 0.96rem;
+      line-height: 1.75;
+      margin-bottom: 2rem;
+    }
+
+    .about-highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+
+    .highlight-box {
+      background: var(--bg-dark);
+      padding: 1.3rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .highlight-box h4 {
+      font-size: 0.95rem;
+      color: var(--accent-bubble);
+      margin-bottom: 0.4rem;
+      font-family: var(--font-body);
+      font-weight: 700;
+    }
+
+    .highlight-box p {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* SIGNATURE CONVENIENCE CARD */
+    .convenience-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    }
+
+    .conv-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.8rem;
+    }
+
+    .conv-header h3 {
+      font-size: 1.05rem;
+      color: var(--text-light);
+      font-family: var(--font-display);
+    }
+
+    .conv-badge {
+      font-size: 0.75rem;
+      background: rgba(56, 189, 248, 0.2);
+      color: var(--accent-bubble);
+      padding: 0.2rem 0.6rem;
+      border-radius: 20px;
+      font-weight: 700;
+    }
+
+    .conv-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+
+    .conv-item {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    .cn-num {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      color: var(--accent-aqua);
+    }
+
+    .cn-content h5 {
+      font-size: 1rem;
+      color: var(--text-light);
+      margin-bottom: 0.2rem;
+      font-family: var(--font-body);
+      font-weight: 700;
+    }
+
+    .cn-content p {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    /* SERVICES & SPECIALTIES SECTION */
+    .services-section {
+      padding: 6.5rem 0;
+      background-color: var(--bg-dark);
+    }
+
+    .services-intro {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 4.5rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2.4rem;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--border-aqua);
+      background-color: var(--bg-card-hover);
+      box-shadow: 0 16px 36px rgba(0,0,0,0.5);
+    }
+
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(8, 188, 189, 0.1);
+      border: 1px solid var(--border-aqua);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-aqua);
+      margin-bottom: 1.8rem;
+      transition: all 0.3s ease;
+    }
+
+    .service-card:hover .service-icon {
+      background: var(--accent-aqua);
+      color: #FFFFFF;
+      transform: scale(1.08);
+    }
+
+    .service-name {
+      font-size: 1.25rem;
+      margin-bottom: 0.9rem;
+      color: var(--text-light);
+      font-family: var(--font-display);
+      font-weight: 400;
+    }
+
+    .service-desc {
+      font-size: 0.94rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 1.8rem;
+      flex-grow: 1;
+    }
+
+    .service-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .service-tag-pill {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      background: rgba(248, 250, 252, 0.04);
+      padding: 0.25rem 0.65rem;
+      border-radius: 4px;
+      border: 1px solid rgba(248, 250, 252, 0.08);
+    }
+
+    /* REVIEWS SECTION */
+    .reviews-section {
+      padding: 6.5rem 0;
+      background-color: var(--bg-surface);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .reviews-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 4rem;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .google-badge {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      background: var(--bg-card);
+      padding: 1rem 1.6rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .google-badge-score {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      color: var(--accent-gold);
+      line-height: 1;
+    }
+
+    .google-badge-info strong {
+      display: block;
+      font-size: 1rem;
+      color: var(--text-light);
+    }
+
+    .google-badge-info span {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .review-card {
+      background-color: var(--bg-dark);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2.2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .review-card:hover {
+      border-color: rgba(8, 188, 189, 0.4);
+    }
+
+    .review-quote-mark {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.8rem;
+      font-size: 3rem;
+      font-family: var(--font-display);
+      color: rgba(248, 250, 252, 0.04);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .review-stars {
+      display: flex;
+      gap: 4px;
+      color: var(--accent-gold);
+      margin-bottom: 1.2rem;
+    }
+
+    .review-content {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.7;
+      margin-bottom: 1.8rem;
+      font-style: italic;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .author-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--bg-card);
+      border: 1px solid var(--accent-aqua);
+      color: var(--text-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .author-details h4 {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      font-family: var(--font-body);
+      font-weight: 700;
+    }
+
+    .author-details span {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: block;
+    }
+
+    .review-verified {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.72rem;
+      color: #2ECC71;
+      margin-top: 2px;
+    }
+
+    /* HOURS & SERVICE AREA SECTION */
+    .location-section {
+      padding: 6.5rem 0;
+      background-color: var(--bg-dark);
+    }
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+    }
+
+    .location-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+    }
+
+    .location-box h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1.6rem;
+      color: var(--text-light);
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-family: var(--font-display);
+    }
+
+    .location-box h3 svg {
+      color: var(--accent-aqua);
+    }
+
+    .hours-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.8rem;
+    }
+
+    .hours-table tr {
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .hours-table tr:last-child {
+      border-bottom: none;
+    }
+
+    .hours-table td {
+      padding: 0.85rem 0;
+      font-size: 0.95rem;
+    }
+
+    .day-label {
+      color: var(--text-light);
+      font-weight: 600;
+    }
+
+    .time-label {
+      color: var(--accent-aqua-hover);
+      text-align: right;
+      font-weight: 600;
+    }
+
+    .closed-label {
+      color: var(--text-muted);
+      text-align: right;
+    }
+
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.1rem;
+    }
+
+    .contact-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(8, 188, 189, 0.1);
+      border: 1px solid var(--border-aqua);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-aqua);
+      flex-shrink: 0;
+    }
+
+    .contact-content label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-content a, .contact-content span {
+      color: var(--text-light);
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .contact-content a:hover {
+      color: var(--accent-aqua);
+    }
+
+    .map-card-link {
+      background: var(--bg-card);
+      border: 1px dashed var(--border-aqua);
+      border-radius: var(--radius-md);
+      padding: 1.4rem;
+      text-decoration: none;
+      color: var(--text-light);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.4rem;
+      transition: all 0.25s ease;
+    }
+
+    .map-card-link:hover {
+      background: var(--bg-card-hover);
+      border-style: solid;
+      transform: translateY(-2px);
+    }
+
+    .map-link-title {
+      font-weight: 700;
+      color: var(--accent-aqua);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.05rem;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #040A12;
+      border-top: 1px solid var(--border-subtle);
+      padding: 4.5rem 0 2.5rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .footer-desc {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-top: 1.2rem;
+      max-width: 420px;
+      line-height: 1.75;
+    }
+
+    .footer-title {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      margin-bottom: 1.4rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-family: var(--font-body);
+      font-weight: 700;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-aqua);
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+    }
+
+    /* REVEAL ANIMATIONS */
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* PREFERS REDUCED MOTION */
+    @media (prefers-reduced-motion: reduce) {
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+      html {
+        scroll-behavior: auto !important;
+      }
+      .btn, .service-card, .map-card-link {
+        transition: none !important;
+      }
+    }
+
+    /* RESPONSIVE BREAKPOINTS */
+    @media (max-width: 992px) {
+      .hero-grid, .about-grid, .location-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta .btn {
+        display: none;
+      }
+
+      .mobile-toggle {
+        display: block;
+      }
+
+      .nav-wrapper {
+        height: 72px;
+      }
+
+      .hero {
+        padding: 4rem 0 3.5rem;
+      }
+
+      .hero-trust-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.2rem;
+      }
+
+      .trust-divider {
+        display: none;
+      }
+
+      .about-highlights {
+        grid-template-columns: 1fr;
+      }
+
+      .reviews-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION HEADER -->
+  <header>
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo" aria-label="Barking Bubbles MOBILE Pet Salon Home">
+          <div class="logo-badge">
+            <!-- Mobile Pet Salon Van / Paw SVG Icon -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13" rx="2"/>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+              <circle cx="5.5" cy="18.5" r="2.5"/>
+              <circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+          </div>
+          <div>
+            <span class="brand-name">BARKING BUBBLES</span>
+            <span class="brand-sub">MOBILE PET SALON &bull; CHATTANOOGA</span>
+          </div>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#about">About Ashley & Van</a></li>
+          <li><a href="#services">Mobile Services</a></li>
+          <li><a href="#reviews">Reviews (389+)</a></li>
+          <li><a href="#location">Hours & Service Area</a></li>
+        </ul>
+
+        <div class="nav-cta">
+          <a href="tel:+14232030393" class="btn btn-aqua">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            (423) 203-0393
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+              Chattanooga's Premier Doorstep Mobile Pet Salon
+            </div>
+
+            <h1 class="hero-title">
+              Doorstep Grooming.<br>
+              <span>Zero Stress for Pups.</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              Owned and operated by Ashley. Barking Bubbles brings a fully equipped, climate-controlled mobile grooming salon right to your driveway anywhere in Chattanooga.
+            </p>
+
+            <div class="hero-actions">
+              <a href="tel:+14232030393" class="btn btn-aqua">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                Call (423) 203-0393
+              </a>
+              <a href="https://maps.app.goo.gl/BJ5tZN7mGMk14cuJ8" target="_blank" rel="noopener" class="btn btn-outline">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                View Service Area & Map
+              </a>
+            </div>
+
+            <div class="hero-trust-bar">
+              <div class="trust-stat">
+                <span class="trust-num">4.9 ★</span>
+                <span class="trust-label">389 Google Reviews</span>
+              </div>
+              <div class="trust-divider"></div>
+              <div class="trust-stat">
+                <span class="trust-num">1-ON-1</span>
+                <span class="trust-label">Quiet Mobile Salon Van</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- HERO BLUEPRINT CARD (Right visual component) -->
+          <div class="hero-mobile-card reveal">
+            <div class="mobile-card-header">
+              <span class="mobile-card-tag">MOBILE SALON ADVANTAGE</span>
+              <span class="mobile-status-badge">
+                <span class="pulse-dot"></span> Open Mon–Fri 9am–5pm
+              </span>
+            </div>
+
+            <ul class="mobile-feature-list">
+              <li class="mobile-feature-item">
+                <div class="mobile-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="1" y="3" width="15" height="13" rx="2"/>
+                    <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                    <circle cx="5.5" cy="18.5" r="2.5"/>
+                    <circle cx="18.5" cy="18.5" r="2.5"/>
+                  </svg>
+                </div>
+                <div class="mobile-feature-text">
+                  <h4>We Come Right To Your Door</h4>
+                  <p>No driving back and forth, no chaotic waiting rooms, no stressful cage time for your pet.</p>
+                </div>
+              </li>
+
+              <li class="mobile-feature-item">
+                <div class="mobile-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.72-8.72 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                  </svg>
+                </div>
+                <div class="mobile-feature-text">
+                  <h4>Gentle Care For Nervous Dogs & Service Pets</h4>
+                  <p>Trusted by local pet parents for patient 1-on-1 attention with anxious dogs, service dogs, and doodles.</p>
+                </div>
+              </li>
+
+              <li class="mobile-feature-item">
+                <div class="mobile-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="m9 12 2 2 4-4"/>
+                  </svg>
+                </div>
+                <div class="mobile-feature-text">
+                  <h4>Coat Restoration & Emergency De-Skunking</h4>
+                  <p>Expert coat repair for ruined trims, doodle coat maintenance advice, and emergency skunk treatment.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-left reveal">
+            <span class="section-eyebrow">Chattanooga Mobile Pet Grooming</span>
+            <h2 class="section-title">Why Chattanooga Pet Owners Rely On Ashley</h2>
+            
+            <p class="about-quote">
+              "The best haircut a baby has ever had. I loved the convenience of having a groomer come right to our door. Our little immediately felt comfortable and could tell he was in safe hands!"
+            </p>
+
+            <p class="about-body">
+              Barking Bubbles MOBILE Pet Salon was created to eliminate the stress and hassle of traditional brick-and-mortar pet grooming shops. Ashley operates a state-of-the-art mobile grooming unit, delivering personalized 1-on-1 care directly outside your home.
+            </p>
+            <p class="about-body">
+              Whether your pup is nervous with groomers, requires specialized doodle coat maintenance, or needs emergency skunk de-odorizing, Ashley takes the time to build trust and educate owners on maintaining healthy coats between visits.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-box">
+                <h4>389+ 5-Star Reviews</h4>
+                <p>One of Chattanooga's most highly reviewed mobile pet services with an outstanding 4.9 star rating.</p>
+              </div>
+              <div class="highlight-box">
+                <h4>Doodle & Service Dog Expert</h4>
+                <p>Teaches owners coat upkeep and recommended product routines between appointments.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- SIGNATURE CONVENIENCE CARD -->
+          <div class="about-right reveal">
+            <div class="convenience-card">
+              <div class="conv-header">
+                <h3>THE BARKING BUBBLES PROMISE</h3>
+                <span class="conv-badge">DOORSTEP SPA</span>
+              </div>
+
+              <ul class="conv-list">
+                <li class="conv-item">
+                  <span class="cn-num">01</span>
+                  <div class="cn-content">
+                    <h5>Unmatched Convenience</h5>
+                    <p>Continue working or relaxing at home while Ashley grooms your pet right in your driveway.</p>
+                  </div>
+                </li>
+
+                <li class="conv-item">
+                  <span class="cn-num">02</span>
+                  <div class="cn-content">
+                    <h5>Zero Cage Waiting</h5>
+                    <p>Your pet receives uninterrupted, dedicated 1-on-1 attention from start to finish.</p>
+                  </div>
+                </li>
+
+                <li class="conv-item">
+                  <span class="cn-num">03</span>
+                  <div class="cn-content">
+                    <h5>Coat Restoration & Care</h5>
+                    <p>Rebuilding damaged coats (e.g. ruined Corgi or Doodle hair) to healthy perfection.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES & OFFERINGS SECTION -->
+    <section id="services" class="services-section">
+      <div class="container">
+        <div class="services-intro reveal">
+          <span class="section-eyebrow">Mobile Spa Services</span>
+          <h2 class="section-title">Complete Mobile Grooming Menu</h2>
+          <p style="color: var(--text-muted);">
+            Full salon services delivered inside our clean, climate-controlled mobile unit right to your home.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Item 1 -->
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
+                <path d="M6.5 13.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
+                <path d="M17.5 13.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
+              </svg>
+            </div>
+            <h3 class="service-name">Full Mobile Grooming & Haircut</h3>
+            <p class="service-desc">
+              Complete luxury bath, warm blow dry, coat brush-out, breed styling or custom haircut, nail trim/grind, and ear cleaning right outside your home.
+            </p>
+            <div class="service-tags">
+              <span class="service-tag-pill">Full Haircut</span>
+              <span class="service-tag-pill">Warm Bath</span>
+              <span class="service-tag-pill">Nail Trim</span>
+              <span class="service-tag-pill">Ear Cleaning</span>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.72-8.72 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+            <h3 class="service-name">Doodle & Double Coat Maintenance</h3>
+            <p class="service-desc">
+              Specialized coat care for doodles, corgis, and double-coated breeds. Ashley restores damaged coats and shares product tips for home maintenance between visits.
+            </p>
+            <div class="service-tags">
+              <span class="service-tag-pill">Doodle Care</span>
+              <span class="service-tag-pill">Coat Restoration</span>
+              <span class="service-tag-pill">Matting Relief</span>
+              <span class="service-tag-pill">De-Shedding</span>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="m9 12 2 2 4-4"/>
+              </svg>
+            </div>
+            <h3 class="service-name">Emergency De-Skunking & Special Baths</h3>
+            <p class="service-desc">
+              Immediate mobile response for pets sprayed by skunks, plus hypoallergenic and soothing medicated baths for sensitive or irritated skin.
+            </p>
+            <div class="service-tags">
+              <span class="service-tag-pill">Skunk Treatment</span>
+              <span class="service-tag-pill">De-Odorizing</span>
+              <span class="service-tag-pill">Sensitive Skin</span>
+              <span class="service-tag-pill">Prompt Response</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+    <section id="reviews" class="reviews-section">
+      <div class="container">
+        <div class="reviews-header reveal">
+          <div>
+            <span class="section-eyebrow">Verified Google Reviews</span>
+            <h2 class="section-title">Hear From 389+ Happy Pet Owners</h2>
+          </div>
+
+          <div class="google-badge">
+            <span class="google-badge-score">4.9</span>
+            <div class="google-badge-info">
+              <strong>★ ★ ★ ★ ★ Rating</strong>
+              <span>389 Reviews on Google Maps</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Review 1 -->
+          <div class="review-card reveal">
+            <span class="review-quote-mark">“</span>
+            <div>
+              <div class="review-stars">★ ★ ★ ★ ★</div>
+              <p class="review-content">
+                "The best haircut a baby has ever had. I loved the convenience of having a groomer come right to our door. Our little immediately felt comfortable and could tell he was in safe hands!"
+              </p>
+            </div>
+            <div class="review-author">
+              <div class="author-avatar" style="background-color: var(--accent-aqua);">S</div>
+              <div class="author-details">
+                <h4>Sheila O'Keefe Lloyd</h4>
+                <span>Doorstep Mobile Client</span>
+                <span class="review-verified">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg> Verified Google Review
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="review-card reveal">
+            <span class="review-quote-mark">“</span>
+            <div>
+              <div class="review-stars">★ ★ ★ ★ ★</div>
+              <p class="review-content">
+                "Ashley is amazing! She was wonderful with our dog who gets nervous with groomers. Our pup loved her and she did a wonderful job. Her services are well priced. She books well in advance but worth it. Would recommend to anyone!"
+              </p>
+            </div>
+            <div class="review-author">
+              <div class="author-avatar" style="background-color: var(--accent-bubble);">S</div>
+              <div class="author-details">
+                <h4>Sarah Kunzel</h4>
+                <span>Google Local Guide</span>
+                <span class="review-verified">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg> Verified Google Review
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="review-card reveal">
+            <span class="review-quote-mark">“</span>
+            <div>
+              <div class="review-stars">★ ★ ★ ★ ★</div>
+              <p class="review-content">
+                "Ashley did a fantastic job for my dog who got sprayed with a skunk. She came out immediately due to a cancellation and took care of our dog. Hear me when I say, do not hesitate to use Ashley and her company. She really did a good job."
+              </p>
+            </div>
+            <div class="review-author">
+              <div class="author-avatar" style="background-color: var(--accent-coral);">T</div>
+              <div class="author-details">
+                <h4>Thomas Evans</h4>
+                <span>Emergency Skunk Treatment</span>
+                <span class="review-verified">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg> Verified Google Review
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 4 -->
+          <div class="review-card reveal">
+            <span class="review-quote-mark">“</span>
+            <div>
+              <div class="review-stars">★ ★ ★ ★ ★</div>
+              <p class="review-content">
+                "Ashley was great. Amazing communications and service. We always took our dogs to the grooming at the vet's office, and they destroyed our corgis hair. Ashley was able to get that coat back. We have three larger dogs that we will getting a visit from Barking Bubbles very soon."
+              </p>
+            </div>
+            <div class="review-author">
+              <div class="author-avatar" style="background-color: #10B981;">A</div>
+              <div class="author-details">
+                <h4>AJ Girardot</h4>
+                <span>Google Local Guide (310 Reviews)</span>
+                <span class="review-verified">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg> Verified Google Review
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 5 -->
+          <div class="review-card reveal">
+            <span class="review-quote-mark">“</span>
+            <div>
+              <div class="review-stars">★ ★ ★ ★ ★</div>
+              <p class="review-content">
+                "Ashley is amazing. Piper adores her and she always takes the best care of him. He is a service dog and she has taught me how to keep up with his doodle coat in between visits. She even shared her product suggestions so he always smells amazing!"
+              </p>
+            </div>
+            <div class="review-author">
+              <div class="author-avatar" style="background-color: var(--accent-gold);">B</div>
+              <div class="author-details">
+                <h4>Becky Jackson</h4>
+                <span>Service Dog Owner</span>
+                <span class="review-verified">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg> Verified Google Review
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOURS & SERVICE AREA SECTION -->
+    <section id="location" class="location-section">
+      <div class="container">
+        <div class="location-grid">
+          <!-- Hours Table -->
+          <div class="location-box reveal">
+            <h3>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              Mobile Salon Hours
+            </h3>
+
+            <table class="hours-table">
+              <tbody>
+                <tr>
+                  <td class="day-label">Monday</td>
+                  <td class="time-label">9:00 AM – 5:00 PM</td>
+                </tr>
+                <tr>
+                  <td class="day-label">Tuesday</td>
+                  <td class="time-label">9:00 AM – 5:00 PM</td>
+                </tr>
+                <tr>
+                  <td class="day-label">Wednesday</td>
+                  <td class="time-label">9:00 AM – 5:00 PM</td>
+                </tr>
+                <tr>
+                  <td class="day-label">Thursday</td>
+                  <td class="time-label">9:00 AM – 5:00 PM</td>
+                </tr>
+                <tr>
+                  <td class="day-label">Friday</td>
+                  <td class="time-label">9:00 AM – 5:00 PM</td>
+                </tr>
+                <tr>
+                  <td class="day-label">Saturday</td>
+                  <td class="closed-label">Closed</td>
+                </tr>
+                <tr>
+                  <td class="day-label">Sunday</td>
+                  <td class="closed-label">Closed</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div style="background: rgba(8, 188, 189, 0.08); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-aqua); font-size: 0.85rem; color: var(--text-muted);">
+              <strong style="color: var(--accent-aqua-hover);">Advance Booking Recommended:</strong> Ashley's mobile schedule fills quickly. Call (423) 203-0393 to reserve your doorstep appointment.
+            </div>
+          </div>
+
+          <!-- Contact & Service Area Box -->
+          <div class="location-box reveal">
+            <h3>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              Base & Greater Chattanooga Service Area
+            </h3>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <div class="contact-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div class="contact-content">
+                  <label>Base Address</label>
+                  <span>905 Spinnaker Way, Chattanooga, TN 37402, USA</span>
+                  <span style="font-size: 0.8rem; color: var(--accent-bubble); display: block;">Serving Greater Chattanooga Doorsteps</span>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </div>
+                <div class="contact-content">
+                  <label>Direct Mobile Phone</label>
+                  <a href="tel:+14232030393">+1 (423) 203-0393</a>
+                </div>
+              </div>
+            </div>
+
+            <a href="https://maps.app.goo.gl/BJ5tZN7mGMk14cuJ8" target="_blank" rel="noopener" class="map-card-link">
+              <div class="map-link-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                  <polyline points="2 17 12 22 22 17"/>
+                  <polyline points="2 12 12 17 22 12"/>
+                </svg>
+                Open Google Maps Service Area Listing
+              </div>
+              <span style="font-size: 0.84rem; color: var(--text-muted);">View location & read all 389+ verified Google reviews</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo">
+            <div class="logo-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="1" y="3" width="15" height="13" rx="2"/>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                <circle cx="5.5" cy="18.5" r="2.5"/>
+                <circle cx="18.5" cy="18.5" r="2.5"/>
+              </svg>
+            </div>
+            <div>
+              <span class="brand-name">BARKING BUBBLES</span>
+              <span class="brand-sub">MOBILE PET SALON &bull; CHATTANOOGA</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Barking Bubbles MOBILE Pet Salon brings doorstep pet grooming directly to your driveway in Chattanooga. Owned by Ashley. 389+ Google Reviews with a 4.9 Star Rating.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#about">About Ashley & Van</a></li>
+            <li><a href="#services">Mobile Services</a></li>
+            <li><a href="#reviews">Client Reviews (389+)</a></li>
+            <li><a href="#location">Hours & Service Area</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-links">
+            <li><a href="https://maps.app.goo.gl/BJ5tZN7mGMk14cuJ8" target="_blank" rel="noopener">905 Spinnaker Way, Chattanooga</a></li>
+            <li><a href="tel:+14232030393">(423) 203-0393</a></li>
+            <li><span style="color: var(--text-muted);">Mon–Fri 9:00am–5:00pm</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; Barking Bubbles MOBILE Pet Salon. All rights reserved.</p>
+        <p>Chattanooga Mobile Pet Groomer &bull; 4.9★ Google Rating (389 Reviews)</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTWEIGHT JS FOR INTERSECTION OBSERVER REVEAL -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const reveals = document.querySelectorAll('.reveal');
+
+      if ('IntersectionObserver' in window) {
+        const observerOptions = {
+          root: null,
+          rootMargin: '0px 0px -40px 0px',
+          threshold: 0.12
+        };
+
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        reveals.forEach(el => observer.observe(el));
+      } else {
+        reveals.forEach(el => el.classList.add('active'));
+      }
+    });
+  </script>
+</body>
+</html>

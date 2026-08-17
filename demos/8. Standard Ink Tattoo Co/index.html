@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Standard Ink Tattoo Co | Custom Tattoos & Professional Body Piercing in Chattanooga, TN</title>
+  <meta name="description" content="Chattanooga's premier tattoo and piercing studio on Frazier Ave. 566+ Google reviews with 4.7 stars. Custom ink, body piercing, sterile environment, walk-ins & appointments. Call (423) 490-9819.">
+
+  <!-- Google Fonts: UnifrakturMaguntika for tattoo shop display heritage, Space Grotesk for bold contemporary sub-titles, Inter for ultra-clean readability -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Syne:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* --------------------------------------------------
+       COLOR PALETTE & DESIGN SYSTEM
+       Rich Black Velvet (#0B0D10), Obsidian Charcoal (#141820),
+       Standard Ink White (#F4F5F7), Blood Crimson (#C0392B),
+       Gold Flash Accent (#D4AC0D), Subdued Steel (#4A5568)
+    -------------------------------------------------- */
+    :root {
+      --bg-void: #090B0E;
+      --bg-surface: #11141B;
+      --bg-card: #171C26;
+      --bg-card-hover: #1E2533;
+
+      --text-bright: #F4F5F7;
+      --text-muted: #9BA4B5;
+      --text-dark: #090B0E;
+
+      --accent-crimson: #C0392B;
+      --accent-crimson-hover: #E74C3C;
+      --accent-gold: #D4AC0D;
+      --accent-steel: #34495E;
+
+      --border-subtle: rgba(244, 245, 247, 0.1);
+      --border-crimson: rgba(192, 57, 43, 0.4);
+      --border-gold: rgba(212, 172, 13, 0.3);
+
+      --font-display: 'Syne', sans-serif;
+      --font-heading: 'Space Grotesk', sans-serif;
+      --font-body: 'Inter', sans-serif;
+
+      --container-max: 1240px;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: var(--font-body);
+      background-color: var(--bg-void);
+      color: var(--text-bright);
+      line-height: 1.6;
+    }
+
+    body {
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(192, 57, 43, 0.04) 0%, transparent 45%),
+        radial-gradient(circle at 85% 85%, rgba(212, 172, 13, 0.03) 0%, transparent 45%);
+    }
+
+    /* TYPOGRAPHY HELPERS */
+    h1, h2, h3, h4, .brand-title {
+      font-family: var(--font-heading);
+      letter-spacing: -0.02em;
+    }
+
+    .display-font {
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 0.95rem 1.8rem;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: var(--radius-sm);
+      transition: all 0.25s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-crimson {
+      background: linear-gradient(135deg, var(--accent-crimson), #962D22);
+      color: #FFFFFF;
+      box-shadow: 0 4px 18px rgba(192, 57, 43, 0.35);
+    }
+
+    .btn-crimson:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(192, 57, 43, 0.55);
+      background: linear-gradient(135deg, var(--accent-crimson-hover), var(--accent-crimson));
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text-bright);
+      border: 1.5px solid var(--border-subtle);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent-gold);
+      color: var(--accent-gold);
+      background: rgba(212, 172, 13, 0.08);
+      transform: translateY(-2px);
+    }
+
+    /* NAVIGATION */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: rgba(9, 11, 14, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 84px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      text-decoration: none;
+      color: var(--text-bright);
+    }
+
+    .logo-badge {
+      width: 46px;
+      height: 46px;
+      background: var(--bg-card);
+      border: 1.5px solid var(--accent-crimson);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-crimson);
+      box-shadow: 0 0 15px rgba(192, 57, 43, 0.2);
+    }
+
+    .brand-name {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: 0.05em;
+    }
+
+    .brand-sub {
+      font-size: 0.72rem;
+      color: var(--accent-gold);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 600;
+      display: block;
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-crimson-hover);
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-bright);
+      cursor: pointer;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      padding: 6.5rem 0 5rem;
+      border-bottom: 1px solid var(--border-subtle);
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.45rem 1rem;
+      background: rgba(192, 57, 43, 0.12);
+      border: 1px solid var(--border-crimson);
+      border-radius: 30px;
+      color: var(--accent-crimson-hover);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 5vw, 4.2rem);
+      line-height: 1.08;
+      font-weight: 800;
+      margin-bottom: 1.4rem;
+      color: var(--text-bright);
+    }
+
+    .hero-title span {
+      color: var(--accent-crimson);
+      position: relative;
+      display: inline-block;
+    }
+
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin-bottom: 2.2rem;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .hero-stats-row {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .hero-stat {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-stat-num {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      line-height: 1;
+    }
+
+    .hero-stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .hero-divider {
+      width: 1px;
+      height: 42px;
+      background: var(--border-subtle);
+    }
+
+    /* HERO ART CARD (Right visual component replacing missing photos) */
+    .hero-art-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-crimson);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      position: relative;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    }
+
+    .hero-art-card::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      right: -1px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-crimson), var(--accent-gold));
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    }
+
+    .art-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.8rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px dashed var(--border-subtle);
+    }
+
+    .art-card-tag {
+      font-family: var(--font-heading);
+      font-size: 0.85rem;
+      color: var(--accent-gold);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .art-card-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      color: #2ECC71;
+      background: rgba(46, 204, 113, 0.1);
+      padding: 0.25rem 0.6rem;
+      border-radius: 20px;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      background-color: #2ECC71;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #2ECC71;
+    }
+
+    .art-feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+
+    .art-feature-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .art-icon-wrap {
+      width: 38px;
+      height: 38px;
+      background: rgba(192, 57, 43, 0.12);
+      border: 1px solid var(--border-crimson);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-crimson);
+      flex-shrink: 0;
+    }
+
+    .art-feature-text h4 {
+      font-size: 1rem;
+      color: var(--text-bright);
+      margin-bottom: 0.2rem;
+    }
+
+    .art-feature-text p {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    /* ABOUT SECTION */
+    .about-section {
+      padding: 6.5rem 0;
+      background-color: var(--bg-surface);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4.5rem;
+      align-items: center;
+    }
+
+    .section-eyebrow {
+      font-family: var(--font-heading);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--accent-crimson);
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-quote {
+      font-size: 1.15rem;
+      color: var(--text-bright);
+      line-height: 1.65;
+      margin-bottom: 1.4rem;
+      font-weight: 500;
+      padding-left: 1.2rem;
+      border-left: 3px solid var(--accent-gold);
+    }
+
+    .about-body {
+      color: var(--text-muted);
+      font-size: 0.96rem;
+      line-height: 1.75;
+      margin-bottom: 2rem;
+    }
+
+    .about-highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+
+    .highlight-box {
+      background: var(--bg-void);
+      padding: 1.3rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .highlight-box h4 {
+      font-size: 0.95rem;
+      color: var(--accent-gold);
+      margin-bottom: 0.4rem;
+    }
+
+    .highlight-box p {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* SIGNATURE INTERACTION CARD */
+    .studio-manifesto-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+      position: relative;
+    }
+
+    .manifesto-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.8rem;
+    }
+
+    .manifesto-header h3 {
+      font-size: 1.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-bright);
+    }
+
+    .manifesto-badge {
+      font-size: 0.75rem;
+      background: rgba(192, 57, 43, 0.15);
+      color: var(--accent-crimson-hover);
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-family: var(--font-heading);
+      letter-spacing: 0.08em;
+    }
+
+    .manifesto-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+
+    .manifesto-item {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    .m-num {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      color: var(--accent-crimson);
+      font-weight: 800;
+    }
+
+    .m-content h5 {
+      font-size: 1rem;
+      color: var(--text-bright);
+      margin-bottom: 0.2rem;
+    }
+
+    .m-content p {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    /* SERVICES SECTION */
+    .services-section {
+      padding: 6.5rem 0;
+      background-color: var(--bg-void);
+    }
+
+    .services-intro {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 4.5rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2.4rem;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--border-crimson);
+      background-color: var(--bg-card-hover);
+      box-shadow: 0 16px 36px rgba(0,0,0,0.5);
+    }
+
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(192, 57, 43, 0.1);
+      border: 1px solid var(--border-crimson);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-crimson);
+      margin-bottom: 1.8rem;
+      transition: all 0.3s ease;
+    }
+
+    .service-card:hover .service-icon {
+      background: var(--accent-crimson);
+      color: #FFFFFF;
+      transform: scale(1.06);
+    }
+
+    .service-name {
+      font-size: 1.35rem;
+      margin-bottom: 0.9rem;
+      color: var(--text-bright);
+    }
+
+    .service-desc {
+      font-size: 0.94rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 1.8rem;
+      flex-grow: 1;
+    }
+
+    .service-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .service-pill {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      background: rgba(244, 245, 247, 0.04);
+      padding: 0.25rem 0.65rem;
+      border-radius: 4px;
+      border: 1px solid rgba(244, 245, 247, 0.08);
+    }
+
+    /* REVIEWS & SOCIAL PROOF */
+    .reviews-section {
+      padding: 6.5rem 0;
+      background-color: var(--bg-surface);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .reviews-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 4rem;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .rating-summary-card {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      background: var(--bg-card);
+      padding: 1rem 1.6rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .rating-big {
+      font-family: var(--font-heading);
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--accent-gold);
+      line-height: 1;
+    }
+
+    .rating-text strong {
+      display: block;
+      font-size: 1rem;
+      color: var(--text-bright);
+    }
+
+    .rating-text span {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .review-card {
+      background-color: var(--bg-void);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2.2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .review-card:hover {
+      border-color: rgba(212, 172, 13, 0.4);
+    }
+
+    .quote-icon {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.8rem;
+      font-size: 3rem;
+      font-family: var(--font-display);
+      color: rgba(244, 245, 247, 0.04);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .review-stars {
+      display: flex;
+      gap: 4px;
+      color: var(--accent-gold);
+      margin-bottom: 1.2rem;
+    }
+
+    .review-content {
+      font-size: 0.96rem;
+      color: var(--text-bright);
+      line-height: 1.7;
+      margin-bottom: 1.8rem;
+      font-style: italic;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .author-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--bg-card);
+      border: 1px solid var(--accent-crimson);
+      color: var(--text-bright);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .author-details h4 {
+      font-size: 0.95rem;
+      color: var(--text-bright);
+      font-family: var(--font-body);
+      font-weight: 700;
+    }
+
+    .author-details span {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: block;
+    }
+
+    .review-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.72rem;
+      color: #2ECC71;
+      margin-top: 2px;
+    }
+
+    /* HOURS & LOCATION SECTION */
+    .location-section {
+      padding: 6.5rem 0;
+      background-color: var(--bg-void);
+    }
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+    }
+
+    .location-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+    }
+
+    .location-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1.6rem;
+      color: var(--text-bright);
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .location-card h3 svg {
+      color: var(--accent-crimson);
+    }
+
+    .hours-list {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.8rem;
+    }
+
+    .hours-list tr {
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .hours-list tr:last-child {
+      border-bottom: none;
+    }
+
+    .hours-list td {
+      padding: 0.85rem 0;
+      font-size: 0.95rem;
+    }
+
+    .day-name {
+      color: var(--text-bright);
+      font-weight: 600;
+    }
+
+    .day-time {
+      color: var(--accent-gold);
+      text-align: right;
+      font-weight: 600;
+    }
+
+    .day-late {
+      color: var(--accent-crimson-hover);
+      text-align: right;
+      font-weight: 700;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-block {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.1rem;
+    }
+
+    .contact-block-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-sm);
+      background: rgba(192, 57, 43, 0.1);
+      border: 1px solid var(--border-crimson);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-crimson);
+      flex-shrink: 0;
+    }
+
+    .contact-block-info label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-block-info a, .contact-block-info span {
+      color: var(--text-bright);
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .contact-block-info a:hover {
+      color: var(--accent-crimson-hover);
+    }
+
+    .map-action-box {
+      background: var(--bg-card);
+      border: 1px dashed var(--border-crimson);
+      border-radius: var(--radius-md);
+      padding: 1.4rem;
+      text-decoration: none;
+      color: var(--text-bright);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.4rem;
+      transition: all 0.25s ease;
+    }
+
+    .map-action-box:hover {
+      background: var(--bg-card-hover);
+      border-style: solid;
+      transform: translateY(-2px);
+    }
+
+    .map-action-title {
+      font-weight: 700;
+      color: var(--accent-gold);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.05rem;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #050709;
+      border-top: 1px solid var(--border-subtle);
+      padding: 4.5rem 0 2.5rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .footer-desc {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-top: 1.2rem;
+      max-width: 420px;
+      line-height: 1.75;
+    }
+
+    .footer-heading {
+      font-size: 0.95rem;
+      color: var(--text-bright);
+      margin-bottom: 1.4rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .footer-nav {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .footer-nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s ease;
+    }
+
+    .footer-nav a:hover {
+      color: var(--accent-crimson-hover);
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+    }
+
+    /* REVEAL ANIMATION SYSTEM */
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* PREFERS REDUCED MOTION */
+    @media (prefers-reduced-motion: reduce) {
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+      html {
+        scroll-behavior: auto !important;
+      }
+      .btn, .service-card, .map-action-box {
+        transition: none !important;
+      }
+    }
+
+    /* RESPONSIVE BREAKPOINTS */
+    @media (max-width: 992px) {
+      .hero-grid, .about-grid, .location-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta .btn {
+        display: none;
+      }
+
+      .mobile-menu-toggle {
+        display: block;
+      }
+
+      .nav-wrapper {
+        height: 72px;
+      }
+
+      .hero {
+        padding: 4rem 0 3.5rem;
+      }
+
+      .hero-stats-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.2rem;
+      }
+
+      .hero-divider {
+        display: none;
+      }
+
+      .about-highlights {
+        grid-template-columns: 1fr;
+      }
+
+      .reviews-top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER NAVIGATION -->
+  <header>
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo" aria-label="Standard Ink Tattoo Co Home">
+          <div class="logo-badge">
+            <!-- Ink Tattoo Needle / Dagger SVG Icon -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 19 21 12 17 5 21 12 2"/>
+              <line x1="12" y1="17" x2="12" y2="22"/>
+            </svg>
+          </div>
+          <div>
+            <span class="brand-name">STANDARD INK</span>
+            <span class="brand-sub">TATTOO CO &bull; CHATTANOOGA</span>
+          </div>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#about">The Studio</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#reviews">Reviews (4.7★)</a></li>
+          <li><a href="#location">Hours & Location</a></li>
+        </ul>
+
+        <div class="nav-cta">
+          <a href="tel:+14234909819" class="btn btn-crimson">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            (423) 490-9819
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+              Chattanooga's Premier Northshore Tattoo & Piercing Studio
+            </div>
+
+            <h1 class="hero-title">
+              Custom Tattoos & Precision Piercing.<br>
+              <span>Immaculate Vibes.</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              Located at 434 Frazier Ave in Northshore Chattanooga. Standard Ink Tattoo Co offers world-class custom tattoo art and gentle, professional body piercings in an inclusive, spotless studio environment.
+            </p>
+
+            <div class="hero-actions">
+              <a href="tel:+14234909819" class="btn btn-crimson">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                Call (423) 490-9819
+              </a>
+              <a href="https://maps.app.goo.gl/zGLgdK3GdJSHSSFH6" target="_blank" rel="noopener" class="btn btn-outline">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                434 Frazier Ave Directions
+              </a>
+            </div>
+
+            <div class="hero-stats-row">
+              <div class="hero-stat">
+                <span class="hero-stat-num">4.7 ★</span>
+                <span class="hero-stat-label">566 Google Reviews</span>
+              </div>
+              <div class="hero-divider"></div>
+              <div class="hero-stat">
+                <span class="hero-stat-num">7 Days</span>
+                <span class="hero-stat-label">Open Late Fri & Sat 'til Midnight</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Art Blueprint Card -->
+          <div class="hero-art-card reveal">
+            <div class="art-card-header">
+              <span class="art-card-tag">THE STANDARD EXPERIENCE</span>
+              <span class="art-card-status">
+                <span class="status-dot"></span> Open Today
+              </span>
+            </div>
+
+            <ul class="art-feature-list">
+              <li class="art-feature-item">
+                <div class="art-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="m9 12 2 2 4-4"/>
+                  </svg>
+                </div>
+                <div class="art-feature-text">
+                  <h4>Hospital-Grade Hygiene & Safety</h4>
+                  <p>100% single-use needles, autoclave sterilization, and strict sanitation standards for total peace of mind.</p>
+                </div>
+              </li>
+
+              <li class="art-feature-item">
+                <div class="art-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z"/>
+                    <path d="M12 8v4l3 3"/>
+                  </svg>
+                </div>
+                <div class="art-feature-text">
+                  <h4>Accommodating & Gentle Care</h4>
+                  <p>Known across Chattanooga for welcoming first-timers, accommodating health needs (POTS), and pain-minimized piercings.</p>
+                </div>
+              </li>
+
+              <li class="art-feature-item">
+                <div class="art-icon-wrap">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                  </svg>
+                </div>
+                <div class="art-feature-text">
+                  <h4>Custom Artwork & Curated Jewelry</h4>
+                  <p>Versatile tattoo artists across all traditional and modern styles plus an impressive selection of body jewelry.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-left reveal">
+            <span class="section-eyebrow">Northshore Chattanooga Studio</span>
+            <h2 class="section-title">Where Professional Artistry Meets Genuine Hospitality</h2>
+            
+            <p class="about-quote">
+              "Everyone is so nice and genuinely cares about you... the vibes were immaculate the entire time."
+            </p>
+
+            <p class="about-body">
+              Standard Ink Tattoo Co was built to redefine what walking into a tattoo and piercing shop feels like. Located in the heart of Frazier Ave, our studio combines master-level body art with an inviting, pressure-free atmosphere.
+            </p>
+            <p class="about-body">
+              Whether you are getting your very first nostril piercing with Dick Cutter or Sav, or spending hours in the chair on a multi-session custom tattoo sleeve, our team takes the extra time to ensure you feel comfortable, listened to, and cared for.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-box">
+                <h4>Relaxing Waiting Lounge</h4>
+                <p>Equipped with space to sit down, read, or color while you wait for your artist or piercer.</p>
+              </div>
+              <div class="highlight-box">
+                <h4>Walk-ins & Appointments</h4>
+                <p>Open 7 days a week with late weekend hours until Midnight for spontaneous ink or planned art.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- SIGNATURE MANIFESTO CARD -->
+          <div class="about-right reveal">
+            <div class="studio-manifesto-card">
+              <div class="manifesto-header">
+                <h3>THE STANDARD CODE</h3>
+                <span class="manifesto-badge">CHAT TATT CO</span>
+              </div>
+
+              <ul class="manifesto-list">
+                <li class="manifesto-item">
+                  <span class="m-num">01</span>
+                  <div class="m-content">
+                    <h5>Absolute Patient & Client Safety</h5>
+                    <p>Every needle is factory-sealed, single-use, and opened directly in front of you prior to starting.</p>
+                  </div>
+                </li>
+
+                <li class="manifesto-item">
+                  <span class="m-num">02</span>
+                  <div class="m-content">
+                    <h5>Inclusive & Empathetic Environment</h5>
+                    <p>We actively accommodate medical conditions, anxiety, or nervous first-timers with patience and warmth.</p>
+                  </div>
+                </li>
+
+                <li class="manifesto-item">
+                  <span class="m-num">03</span>
+                  <div class="m-content">
+                    <h5>Fast-Healing Piercing Protocols</h5>
+                    <p>Using premium implant-grade jewelry and expert placement technique for beautiful, clean healing.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="services-section">
+      <div class="container">
+        <div class="services-intro reveal">
+          <span class="section-eyebrow">Services & Offerings</span>
+          <h2 class="section-title">Custom Ink & Body Piercing</h2>
+          <p style="color: var(--text-muted);">
+            From intricate custom illustration to painless precision piercings, our resident artists and piercers deliver uncompromised quality.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                <path d="M2 2l7.586 7.586"/>
+                <circle cx="11" cy="11" r="2"/>
+              </svg>
+            </div>
+            <h3 class="service-name">Custom Tattoo Design</h3>
+            <p class="service-desc">
+              Collaborate directly with our resident artists to create one-of-a-kind custom body art. From fine-line blackwork and neo-traditional to bold color pieces and cover-ups.
+            </p>
+            <div class="service-details">
+              <span class="service-pill">Fine Line</span>
+              <span class="service-pill">Traditional</span>
+              <span class="service-pill">Black & Grey</span>
+              <span class="service-pill">Custom Sleeves</span>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="9"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </div>
+            <h3 class="service-name">Precision Body Piercing</h3>
+            <p class="service-desc">
+              Expert body piercing by Sav, Dick Cutter, and our dedicated team. Painless technique, meticulous placement, and attentive aftercare instruction for guaranteed clean healing.
+            </p>
+            <div class="service-details">
+              <span class="service-pill">Nasal & Septum</span>
+              <span class="service-pill">Ear Cartilage & Lobe</span>
+              <span class="service-pill">Navel / Belly Button</span>
+              <span class="service-pill">Oral & Facial</span>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Curated Body Jewelry</h3>
+            <p class="service-desc">
+              Explore our extensive selection of high-grade titanium, gold, and custom jewelry. Perfect for initial piercings or upgrading existing piercings with high-end sparkle.
+            </p>
+            <div class="service-details">
+              <span class="service-pill">Implant-Grade Titanium</span>
+              <span class="service-pill">Solid Gold</span>
+              <span class="service-pill">Threadless Tops</span>
+              <span class="service-pill">Jewelry Swaps</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS & SOCIAL PROOF -->
+    <section id="reviews" class="reviews-section">
+      <div class="container">
+        <div class="reviews-top reveal">
+          <div>
+            <span class="section-eyebrow">Verified Google Reviews</span>
+            <h2 class="section-title">What 566+ Clients Say About Us</h2>
+          </div>
+
+          <div class="rating-summary-card">
+            <span class="rating-big">4.7</span>
+            <div class="rating-text">
+              <strong>★ ★ ★ ★ ★ Rating</strong>
+              <span>566 Reviews on Google Maps</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Review 1 -->
+          <div class="review-card reveal">
+            <span class="quote-icon">“</span>
+            <div>
+              <div class="review-stars">★ ★ ★ ★ ★</div>
+              <p class="review-content">
+                "Everyone is so nice and genuinely cares about you. Sav was my piercer and the vibes were immaculate the entire time. I have POTS and they were immediately ready to accommodate if needed. If I ever want another piercing I will be going back to Sav."
+              </p>
+            </div>
+            <div class="review-author">
+              <div class="author-circle">B</div>
+              <div class="author-details">
+                <h4>Bee</h4>
+                <span>Piercing Client</span>
+                <span class="review-tag">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg> Verified Google Review
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="review-card reveal">
+            <span class="quote-icon">“</span>
+            <div>
+              <div class="review-stars">★ ★ ★ ★ ★</div>
+              <p class="review-content">
+                "i’ve gotten multiple piercings from this place and they have all healed beautifully! Dick is an amazing piercer and they are very kind!! it is a good and clean environment, heavily recommend!!!!"
+              </p>
+            </div>
+            <div class="review-author">
+              <div class="author-circle" style="border-color: var(--accent-gold);">K</div>
+              <div class="author-details">
+                <h4>Kai Washington</h4>
+                <span>Repeat Client</span>
+                <span class="review-tag">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg> Verified Google Review
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="review-card reveal">
+            <span class="quote-icon">“</span>
+            <div>
+              <div class="review-stars">★ ★ ★ ★ ★</div>
+              <p class="review-content">
+                "Got my belly button pierced by Dick Cutter It was painless and they had a very good selection of jewelry!! Great environment and a really good waiting area to sit down and color or read!!"
+              </p>
+            </div>
+            <div class="review-author">
+              <div class="author-circle" style="border-color: var(--accent-steel);">M</div>
+              <div class="author-details">
+                <h4>Madilyn Vatter</h4>
+                <span>Google Local Guide</span>
+                <span class="review-tag">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg> Verified Google Review
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOURS & LOCATION SECTION -->
+    <section id="location" class="location-section">
+      <div class="container">
+        <div class="location-grid">
+          <!-- Hours Box -->
+          <div class="location-card reveal">
+            <h3>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              Studio Hours
+            </h3>
+
+            <table class="hours-list">
+              <tbody>
+                <tr>
+                  <td class="day-name">Monday</td>
+                  <td class="day-time">12:00 PM – 9:00 PM</td>
+                </tr>
+                <tr>
+                  <td class="day-name">Tuesday</td>
+                  <td class="day-time">12:00 PM – 9:00 PM</td>
+                </tr>
+                <tr>
+                  <td class="day-name">Wednesday</td>
+                  <td class="day-time">12:00 PM – 9:00 PM</td>
+                </tr>
+                <tr>
+                  <td class="day-name">Thursday</td>
+                  <td class="day-time">12:00 PM – 9:00 PM</td>
+                </tr>
+                <tr>
+                  <td class="day-name">Friday</td>
+                  <td class="day-late">12:00 PM – 12:00 AM (Midnight)</td>
+                </tr>
+                <tr>
+                  <td class="day-name">Saturday</td>
+                  <td class="day-late">12:00 PM – 12:00 AM (Midnight)</td>
+                </tr>
+                <tr>
+                  <td class="day-name">Sunday</td>
+                  <td class="day-time">12:00 PM – 10:00 PM</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div style="background: rgba(192, 57, 43, 0.08); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-crimson); font-size: 0.85rem; color: var(--text-muted);">
+              <strong style="color: var(--accent-crimson-hover);">Walk-In Info:</strong> Walk-ins are always welcomed subject to daily artist availability. Call ahead at (423) 490-9819 to confirm piercer availability for specific body piercings.
+            </div>
+          </div>
+
+          <!-- Location & Address Box -->
+          <div class="location-card reveal">
+            <h3>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              Find The Studio
+            </h3>
+
+            <div class="contact-row">
+              <div class="contact-block">
+                <div class="contact-block-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div class="contact-block-info">
+                  <label>Studio Address</label>
+                  <span>434 Frazier Ave, Chattanooga, TN 37405, USA</span>
+                </div>
+              </div>
+
+              <div class="contact-block">
+                <div class="contact-block-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </div>
+                <div class="contact-block-info">
+                  <label>Phone Number</label>
+                  <a href="tel:+14234909819">+1 (423) 490-9819</a>
+                </div>
+              </div>
+
+              <div class="contact-block">
+                <div class="contact-block-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                  </svg>
+                </div>
+                <div class="contact-block-info">
+                  <label>Social Media</label>
+                  <a href="https://www.facebook.com/standardink" target="_blank" rel="noopener">facebook.com/standardink</a>
+                </div>
+              </div>
+            </div>
+
+            <a href="https://maps.app.goo.gl/zGLgdK3GdJSHSSFH6" target="_blank" rel="noopener" class="map-action-box">
+              <div class="map-action-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                  <polyline points="2 17 12 22 22 17"/>
+                  <polyline points="2 12 12 17 22 12"/>
+                </svg>
+                Open Google Maps Listing
+              </div>
+              <span style="font-size: 0.84rem; color: var(--text-muted);">Get turn-by-turn driving directions to our Frazier Ave studio</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo">
+            <div class="logo-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 19 21 12 17 5 21 12 2"/>
+                <line x1="12" y1="17" x2="12" y2="22"/>
+              </svg>
+            </div>
+            <div>
+              <span class="brand-name">STANDARD INK</span>
+              <span class="brand-sub">TATTOO CO &bull; CHATTANOOGA</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Standard Ink Tattoo Co is Northshore Chattanooga's destination for custom tattoo art, gentle body piercing, and premium jewelry. Clean, welcoming, and open 7 days a week.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Studio Menu</h4>
+          <ul class="footer-nav">
+            <li><a href="#about">About Standard Ink</a></li>
+            <li><a href="#services">Custom Tattoos</a></li>
+            <li><a href="#services">Body Piercing</a></li>
+            <li><a href="#reviews">Client Reviews (566+)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Visit Us</h4>
+          <ul class="footer-nav">
+            <li><a href="https://maps.app.goo.gl/zGLgdK3GdJSHSSFH6" target="_blank" rel="noopener">434 Frazier Ave, Chattanooga</a></li>
+            <li><a href="tel:+14234909819">(423) 490-9819</a></li>
+            <li><a href="https://www.facebook.com/standardink" target="_blank" rel="noopener">Facebook & Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; Standard Ink Tattoo Co. All rights reserved.</p>
+        <p>Chattanooga, TN Tattoo & Piercing Studio &bull; 566+ Google Reviews (4.7★)</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTWEIGHT JS FOR INTERSECTION OBSERVER REVEAL -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const reveals = document.querySelectorAll('.reveal');
+
+      if ('IntersectionObserver' in window) {
+        const observerOptions = {
+          root: null,
+          rootMargin: '0px 0px -40px 0px',
+          threshold: 0.12
+        };
+
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        reveals.forEach(el => observer.observe(el));
+      } else {
+        reveals.forEach(el => el.classList.add('active'));
+      }
+    });
+  </script>
+</body>
+</html>

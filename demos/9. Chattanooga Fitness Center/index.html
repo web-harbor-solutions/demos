@@ -1,0 +1,1748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chattanooga Fitness Center | Community Gym & Free Fitness Classes in Chattanooga, TN</title>
+  <meta name="description" content="Chattanooga's premier free community fitness center located next to the Zoo on E 3rd St. Free weights, cardio, StairMaster, CrossFit tires, free yoga & dance fitness classes. Call (423) 643-6600.">
+
+  <!-- Google Fonts: Oswald for high-energy athletic display, Work Sans for clear friendly body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* --------------------------------------------------
+       COLOR PALETTE & DESIGN SYSTEM
+       Chattanooga River Navy (#111D2B), Energetic Ochre (#E65100),
+       Athletic Electric Cobalt (#1A538C), Concrete Gym Light (#F4F6F8),
+       Pure Chalk Accent (#FFFFFF), Slate Text (#2C3E50)
+    -------------------------------------------------- */
+    :root {
+      --bg-dark: #0D1520;
+      --bg-surface: #152232;
+      --bg-card: #1D2D42;
+      --bg-card-hover: #253852;
+      
+      --bg-light: #F4F6F8;
+      --bg-light-card: #FFFFFF;
+
+      --text-bright: #FFFFFF;
+      --text-muted: #A0B2C6;
+      --text-dark: #1A2533;
+      --text-dark-muted: #5C6E82;
+
+      --accent-ochre: #FF6B00;
+      --accent-ochre-hover: #E05D00;
+      --accent-cobalt: #1E6BB8;
+      --accent-green: #27AE60;
+
+      --border-subtle: rgba(255, 255, 255, 0.1);
+      --border-ochre: rgba(255, 107, 0, 0.35);
+
+      --font-display: 'Oswald', sans-serif;
+      --font-body: 'Work Sans', sans-serif;
+
+      --container-max: 1200px;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: var(--font-body);
+      background-color: var(--bg-dark);
+      color: var(--text-bright);
+      line-height: 1.6;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    /* TYPOGRAPHY HELPERS */
+    h1, h2, h3, h4, .brand-title {
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 0.95rem 1.8rem;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.05rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: var(--radius-sm);
+      transition: all 0.25s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-ochre {
+      background: linear-gradient(135deg, var(--accent-ochre), var(--accent-ochre-hover));
+      color: #FFFFFF;
+      box-shadow: 0 4px 18px rgba(255, 107, 0, 0.35);
+    }
+
+    .btn-ochre:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(255, 107, 0, 0.55);
+      background: linear-gradient(135deg, #FF7B1A, var(--accent-ochre));
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text-bright);
+      border: 1.5px solid var(--border-subtle);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent-ochre);
+      color: var(--accent-ochre);
+      background: rgba(255, 107, 0, 0.08);
+      transform: translateY(-2px);
+    }
+
+    /* HEADER & NAVIGATION */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: rgba(13, 21, 32, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 82px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      text-decoration: none;
+      color: var(--text-bright);
+    }
+
+    .logo-badge {
+      width: 46px;
+      height: 46px;
+      background: var(--bg-card);
+      border: 1.5px solid var(--accent-ochre);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-ochre);
+      box-shadow: 0 0 15px rgba(255, 107, 0, 0.2);
+    }
+
+    .brand-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: 0.05em;
+    }
+
+    .brand-sub {
+      font-size: 0.74rem;
+      color: var(--accent-ochre);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+      display: block;
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-ochre);
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-bright);
+      cursor: pointer;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      padding: 6rem 0 5rem;
+      background: 
+        radial-gradient(circle at 80% 20%, rgba(255, 107, 0, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 20% 80%, rgba(30, 107, 184, 0.12) 0%, transparent 50%);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.45rem 1rem;
+      background: rgba(255, 107, 0, 0.12);
+      border: 1px solid var(--border-ochre);
+      border-radius: 30px;
+      color: var(--accent-ochre);
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 4.8vw, 4.2rem);
+      line-height: 1.05;
+      margin-bottom: 1.4rem;
+      color: var(--text-bright);
+    }
+
+    .hero-title span {
+      color: var(--accent-ochre);
+    }
+
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin-bottom: 2.2rem;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2.8rem;
+    }
+
+    .hero-trust-bar {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .trust-stat {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .trust-num {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--text-bright);
+      line-height: 1;
+    }
+
+    .trust-num span {
+      color: #F1C40F;
+    }
+
+    .trust-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .trust-divider {
+      width: 1px;
+      height: 42px;
+      background: var(--border-subtle);
+    }
+
+    /* HERO BLUEPRINT CARD (Right visual component) */
+    .hero-gym-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      position: relative;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.5);
+    }
+
+    .hero-gym-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent-ochre), var(--accent-cobalt));
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    }
+
+    .gym-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.8rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px dashed var(--border-subtle);
+    }
+
+    .gym-card-tag {
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      color: var(--accent-ochre);
+      letter-spacing: 0.1em;
+    }
+
+    .gym-status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      color: var(--accent-green);
+      background: rgba(39, 174, 96, 0.12);
+      padding: 0.25rem 0.65rem;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background-color: var(--accent-green);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--accent-green);
+    }
+
+    .gym-feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+
+    .gym-feature-item {
+      display: flex;
+      gap: 1.1rem;
+      align-items: flex-start;
+    }
+
+    .gym-icon-box {
+      width: 42px;
+      height: 42px;
+      background: rgba(255, 107, 0, 0.1);
+      border: 1px solid var(--border-ochre);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-ochre);
+      flex-shrink: 0;
+    }
+
+    .gym-feature-text h4 {
+      font-size: 1rem;
+      color: var(--text-bright);
+      margin-bottom: 0.2rem;
+    }
+
+    .gym-feature-text p {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    /* ABOUT SECTION */
+    .about-section {
+      padding: 6.5rem 0;
+      background-color: var(--bg-surface);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4.5rem;
+      align-items: center;
+    }
+
+    .section-eyebrow {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      color: var(--accent-ochre);
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-quote {
+      font-size: 1.15rem;
+      color: var(--text-bright);
+      line-height: 1.65;
+      margin-bottom: 1.4rem;
+      font-weight: 500;
+      padding-left: 1.2rem;
+      border-left: 3px solid var(--accent-ochre);
+    }
+
+    .about-body {
+      color: var(--text-muted);
+      font-size: 0.96rem;
+      line-height: 1.75;
+      margin-bottom: 2rem;
+    }
+
+    .about-highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+
+    .highlight-box {
+      background: var(--bg-dark);
+      padding: 1.3rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .highlight-box h4 {
+      font-size: 0.95rem;
+      color: var(--accent-ochre);
+      margin-bottom: 0.4rem;
+    }
+
+    .highlight-box p {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* SIGNATURE INTERACTION CARD */
+    .community-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    }
+
+    .comm-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.8rem;
+    }
+
+    .comm-header h3 {
+      font-size: 1.1rem;
+      letter-spacing: 0.08em;
+      color: var(--text-bright);
+    }
+
+    .comm-badge {
+      font-size: 0.75rem;
+      background: rgba(30, 107, 184, 0.2);
+      color: #58A6FF;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-family: var(--font-display);
+      letter-spacing: 0.08em;
+    }
+
+    .comm-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+
+    .comm-item {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    .c-num {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      color: var(--accent-ochre);
+      font-weight: 700;
+    }
+
+    .c-content h5 {
+      font-size: 1rem;
+      color: var(--text-bright);
+      margin-bottom: 0.2rem;
+    }
+
+    .c-content p {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    /* SERVICES & AMENITIES SECTION */
+    .services-section {
+      padding: 6.5rem 0;
+      background-color: var(--bg-dark);
+    }
+
+    .services-intro {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 4.5rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2.4rem;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--border-ochre);
+      background-color: var(--bg-card-hover);
+      box-shadow: 0 16px 36px rgba(0,0,0,0.5);
+    }
+
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(255, 107, 0, 0.1);
+      border: 1px solid var(--border-ochre);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-ochre);
+      margin-bottom: 1.8rem;
+      transition: all 0.3s ease;
+    }
+
+    .service-card:hover .service-icon {
+      background: var(--accent-ochre);
+      color: #FFFFFF;
+      transform: scale(1.06);
+    }
+
+    .service-name {
+      font-size: 1.35rem;
+      margin-bottom: 0.9rem;
+      color: var(--text-bright);
+    }
+
+    .service-desc {
+      font-size: 0.94rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 1.8rem;
+      flex-grow: 1;
+    }
+
+    .service-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .service-tag-pill {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.04);
+      padding: 0.25rem 0.65rem;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* CLASSES HIGHLIGHT BANNER */
+    .classes-banner {
+      margin-top: 4rem;
+      background: linear-gradient(135deg, var(--bg-card), var(--bg-surface));
+      border: 1px solid var(--border-ochre);
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .class-info h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--text-bright);
+    }
+
+    .class-info p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .class-list-mini {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .class-item-mini {
+      background: var(--bg-dark);
+      padding: 1.2rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .class-title-text h4 {
+      font-size: 1rem;
+      color: var(--text-bright);
+    }
+
+    .class-title-text span {
+      font-size: 0.8rem;
+      color: var(--accent-ochre);
+    }
+
+    .class-free-tag {
+      background: rgba(39, 174, 96, 0.15);
+      color: var(--accent-green);
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+
+    /* REVIEWS SECTION */
+    .reviews-section {
+      padding: 6.5rem 0;
+      background-color: var(--bg-surface);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .reviews-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 4rem;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .google-badge {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      background: var(--bg-card);
+      padding: 1rem 1.6rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .google-badge-score {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #F1C40F;
+      line-height: 1;
+    }
+
+    .google-badge-info strong {
+      display: block;
+      font-size: 1rem;
+      color: var(--text-bright);
+    }
+
+    .google-badge-info span {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .review-card {
+      background-color: var(--bg-dark);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2.2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .review-card:hover {
+      border-color: rgba(255, 107, 0, 0.4);
+    }
+
+    .review-quote-mark {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.8rem;
+      font-size: 3rem;
+      font-family: var(--font-display);
+      color: rgba(255, 255, 255, 0.04);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .review-stars {
+      display: flex;
+      gap: 4px;
+      color: #F1C40F;
+      margin-bottom: 1.2rem;
+    }
+
+    .review-content {
+      font-size: 0.95rem;
+      color: var(--text-bright);
+      line-height: 1.7;
+      margin-bottom: 1.8rem;
+      font-style: italic;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .author-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--accent-cobalt);
+      color: var(--text-bright);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .author-details h4 {
+      font-size: 0.95rem;
+      color: var(--text-bright);
+      font-family: var(--font-body);
+      font-weight: 700;
+      text-transform: none;
+    }
+
+    .author-details span {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: block;
+    }
+
+    .review-verified {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.72rem;
+      color: var(--accent-green);
+      margin-top: 2px;
+    }
+
+    /* LOCATION & HOURS SECTION */
+    .location-section {
+      padding: 6.5rem 0;
+      background-color: var(--bg-dark);
+    }
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+    }
+
+    .location-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+    }
+
+    .location-box h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1.6rem;
+      color: var(--text-bright);
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .location-box h3 svg {
+      color: var(--accent-ochre);
+    }
+
+    .hours-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.8rem;
+    }
+
+    .hours-table tr {
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .hours-table tr:last-child {
+      border-bottom: none;
+    }
+
+    .hours-table td {
+      padding: 0.85rem 0;
+      font-size: 0.95rem;
+    }
+
+    .day-label {
+      color: var(--text-bright);
+      font-weight: 600;
+    }
+
+    .time-label {
+      color: var(--accent-ochre);
+      text-align: right;
+      font-weight: 600;
+    }
+
+    .closed-label {
+      color: var(--text-muted);
+      text-align: right;
+    }
+
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.1rem;
+    }
+
+    .contact-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-sm);
+      background: rgba(255, 107, 0, 0.1);
+      border: 1px solid var(--border-ochre);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-ochre);
+      flex-shrink: 0;
+    }
+
+    .contact-content label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-content a, .contact-content span {
+      color: var(--text-bright);
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .contact-content a:hover {
+      color: var(--accent-ochre);
+    }
+
+    .map-card-link {
+      background: var(--bg-card);
+      border: 1px dashed var(--border-ochre);
+      border-radius: var(--radius-md);
+      padding: 1.4rem;
+      text-decoration: none;
+      color: var(--text-bright);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.4rem;
+      transition: all 0.25s ease;
+    }
+
+    .map-card-link:hover {
+      background: var(--bg-card-hover);
+      border-style: solid;
+      transform: translateY(-2px);
+    }
+
+    .map-link-title {
+      font-weight: 700;
+      color: var(--accent-ochre);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.05rem;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #080E16;
+      border-top: 1px solid var(--border-subtle);
+      padding: 4.5rem 0 2.5rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .footer-desc {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-top: 1.2rem;
+      max-width: 420px;
+      line-height: 1.75;
+    }
+
+    .footer-title {
+      font-size: 0.95rem;
+      color: var(--text-bright);
+      margin-bottom: 1.4rem;
+      letter-spacing: 0.1em;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-ochre);
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+    }
+
+    /* REVEAL ANIMATIONS */
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* PREFERS REDUCED MOTION */
+    @media (prefers-reduced-motion: reduce) {
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+      html {
+        scroll-behavior: auto !important;
+      }
+      .btn, .service-card, .map-card-link {
+        transition: none !important;
+      }
+    }
+
+    /* RESPONSIVE BREAKPOINTS */
+    @media (max-width: 992px) {
+      .hero-grid, .about-grid, .location-grid, .classes-banner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta .btn {
+        display: none;
+      }
+
+      .mobile-toggle {
+        display: block;
+      }
+
+      .nav-wrapper {
+        height: 72px;
+      }
+
+      .hero {
+        padding: 4rem 0 3.5rem;
+      }
+
+      .hero-trust-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.2rem;
+      }
+
+      .trust-divider {
+        display: none;
+      }
+
+      .about-highlights {
+        grid-template-columns: 1fr;
+      }
+
+      .reviews-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION HEADER -->
+  <header>
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo" aria-label="Chattanooga Fitness Center Home">
+          <div class="logo-badge">
+            <!-- Dumbbell / Athletic SVG Icon -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m6.5 6.5 11 11"/>
+              <path d="m21 21-1-1"/>
+              <path d="m3 3 1 1"/>
+              <path d="m18 22 4-4"/>
+              <path d="m2 6 4-4"/>
+              <path d="m3 10 7-7"/>
+              <path d="m14 21 7-7"/>
+            </svg>
+          </div>
+          <div>
+            <span class="brand-name">CHATTANOOGA</span>
+            <span class="brand-sub">FITNESS CENTER</span>
+          </div>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#about">About Facility</a></li>
+          <li><a href="#services">Equipment & Amenities</a></li>
+          <li><a href="#classes">Free Classes</a></li>
+          <li><a href="#reviews">Reviews (4.8★)</a></li>
+          <li><a href="#location">Hours & Location</a></li>
+        </ul>
+
+        <div class="nav-cta">
+          <a href="tel:+14236436600" class="btn btn-ochre">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            (423) 643-6600
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+              </svg>
+              Chattanooga's Premier Free Community Gym
+            </div>
+
+            <h1 class="hero-title">
+              Old School Strength.<br>
+              <span>Free Community Access.</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              Located right next to the Chattanooga Zoo at 1254 E 3rd St. Fully equipped with heavy free weights, CrossFit tires, StairMaster, cardio decks, and free group fitness classes.
+            </p>
+
+            <div class="hero-actions">
+              <a href="tel:+14236436600" class="btn btn-ochre">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                Call (423) 643-6600
+              </a>
+              <a href="https://maps.app.goo.gl/ecpf6Xy1HRbzit1s5" target="_blank" rel="noopener" class="btn btn-outline">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                1254 E 3rd St Directions
+              </a>
+            </div>
+
+            <div class="hero-trust-bar">
+              <div class="trust-stat">
+                <span class="trust-num">4.8 <span>★</span></span>
+                <span class="trust-label">81 Google Reviews</span>
+              </div>
+              <div class="trust-divider"></div>
+              <div class="trust-stat">
+                <span class="trust-num">100% FREE</span>
+                <span class="trust-label">Public Amenity Resource</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- HERO BLUEPRINT CARD (Right side feature showcase) -->
+          <div class="hero-gym-card reveal">
+            <div class="gym-card-header">
+              <span class="gym-card-tag">FACILITY AT A GLANCE</span>
+              <span class="gym-status-badge">
+                <span class="pulse-dot"></span> Open Mon–Fri 9am–6:30pm
+              </span>
+            </div>
+
+            <ul class="gym-feature-list">
+              <li class="gym-feature-item">
+                <div class="gym-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="m6.5 6.5 11 11"/>
+                    <path d="m21 21-1-1"/>
+                    <path d="m3 3 1 1"/>
+                    <path d="m18 22 4-4"/>
+                    <path d="m2 6 4-4"/>
+                  </svg>
+                </div>
+                <div class="gym-feature-text">
+                  <h4>Heavy Free Weights & CrossFit Setup</h4>
+                  <p>Comprehensive dumbbell racks, barbells, weight benches, and 4 large truck tires for functional training.</p>
+                </div>
+              </li>
+
+              <li class="gym-feature-item">
+                <div class="gym-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                  </svg>
+                </div>
+                <div class="gym-feature-text">
+                  <h4>Free Yoga & Dance Fitness Classes</h4>
+                  <p>Community classes with zero fee, including dance fitness led by Krishna and calm evening yoga.</p>
+                </div>
+              </li>
+
+              <li class="gym-feature-item">
+                <div class="gym-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div class="gym-feature-text">
+                  <h4>Convenient Location Next to Zoo</h4>
+                  <p>Located on East 3rd Street with easy parking, comfortable climate control, and friendly staff.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-left reveal">
+            <span class="section-eyebrow">Public Amenity in Chattanooga</span>
+            <h2 class="section-title">An Incredible Free Resource for All Chattanoogans</h2>
+            
+            <p class="about-quote">
+              "Such an amazing free resource here in Chatt. Gym has always felt very comfy inside even on hot or cold days and everyone is very friendly and respectful."
+            </p>
+
+            <p class="about-body">
+              Chattanooga Fitness Center is one of our city’s finest public amenities—providing high-caliber gym equipment, spacious functional movement areas, and expert group classes completely free to the community.
+            </p>
+            <p class="about-body">
+              Whether you are squeezing in a quick workout right after work, training heavy with free weights, or joining neighbors for lighthearted dance fitness, you’ll find a clean, comfortable, and respectful environment every time you step through our doors.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-box">
+                <h4>Never Over-Crowded</h4>
+                <p>Spacious floor plan ensures you get access to machines and racks without waiting in long lines.</p>
+              </div>
+              <div class="highlight-box">
+                <h4>Climate Controlled Comfort</h4>
+                <p>Consistently comfortable indoor environment so you can train hard regardless of weather outside.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- SIGNATURE COMMUNITY CARD -->
+          <div class="about-right reveal">
+            <div class="community-card">
+              <div class="comm-header">
+                <h3>THE CHATTANOOGA STANDARD</h3>
+                <span class="comm-badge">FREE PUBLIC GYM</span>
+              </div>
+
+              <ul class="comm-list">
+                <li class="comm-item">
+                  <span class="c-num">01</span>
+                  <div class="c-content">
+                    <h5>Zero Membership Fees</h5>
+                    <p>Open access for local residents. Work out, train heavy, or take classes with zero paywalls.</p>
+                  </div>
+                </li>
+
+                <li class="comm-item">
+                  <span class="c-num">02</span>
+                  <div class="c-content">
+                    <h5>All Fitness Levels Welcomed</h5>
+                    <p>From beginners taking their first yoga class to experienced powerlifters and athletes.</p>
+                  </div>
+                </li>
+
+                <li class="comm-item">
+                  <span class="c-num">03</span>
+                  <div class="c-content">
+                    <h5>Welcoming Community Environment</h5>
+                    <p>A friendly, respectful culture where neighbors encourage and support each other.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES & EQUIPMENT SECTION -->
+    <section id="services" class="services-section">
+      <div class="container">
+        <div class="services-intro reveal">
+          <span class="section-eyebrow">Equipment & Amenities</span>
+          <h2 class="section-title">Everything You Need To Build Strength</h2>
+          <p style="color: var(--text-muted);">
+            A true old-school gym lineup combined with modern cardio equipment and wide-open functional turf zones.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Item 1 -->
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="m6.5 6.5 11 11"/>
+                <path d="m21 21-1-1"/>
+                <path d="m3 3 1 1"/>
+                <path d="m18 22 4-4"/>
+                <path d="m2 6 4-4"/>
+              </svg>
+            </div>
+            <h3 class="service-name">Free Weights & Power Training</h3>
+            <p class="service-desc">
+              Extensive selection of dumbbells, barbells, squat racks, weight plates, and bench press stations for progressive strength development.
+            </p>
+            <div class="service-tags">
+              <span class="service-tag-pill">Dumbbells</span>
+              <span class="service-tag-pill">Barbells</span>
+              <span class="service-tag-pill">Bench Press</span>
+              <span class="service-tag-pill">Squat Racks</span>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+            </div>
+            <h3 class="service-name">Cardio Suite & StairMaster</h3>
+            <p class="service-desc">
+              Full suite of cardio machinery including StairMaster, cross-country ski machines, rowers, treadmills, stationary bikes, and ellipticals.
+            </p>
+            <div class="service-tags">
+              <span class="service-tag-pill">StairMaster</span>
+              <span class="service-tag-pill">Rowing Machines</span>
+              <span class="service-tag-pill">Cross Country Ski</span>
+              <span class="service-tag-pill">Treadmills & Bikes</span>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 3v18"/>
+                <path d="M3 12h18"/>
+              </svg>
+            </div>
+            <h3 class="service-name">CrossFit & Functional HIIT Zone</h3>
+            <p class="service-desc">
+              Spacious open floor plan equipped with 4 large truck tires, jump ropes, resistance bands, and space for jumping jacks, HIIT, and agility work.
+            </p>
+            <div class="service-tags">
+              <span class="service-tag-pill">Truck Tires</span>
+              <span class="service-tag-pill">HIIT Floor</span>
+              <span class="service-tag-pill">Jump Ropes</span>
+              <span class="service-tag-pill">Bodyweight Zone</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CLASSES HIGHLIGHT BANNER -->
+        <div id="classes" class="classes-banner reveal">
+          <div class="class-info">
+            <span class="section-eyebrow">Group Fitness Schedule</span>
+            <h3>Free Community Fitness Classes</h3>
+            <p>
+              Join certified instructors for energizing group classes. Designed for all ages and fitness levels to come together, move, and have fun.
+            </p>
+            <a href="tel:+14236436600" class="btn btn-ochre">
+              Inquire About Class Schedule
+            </a>
+          </div>
+
+          <div class="class-list-mini">
+            <div class="class-item-mini">
+              <div class="class-title-text">
+                <h4>Krishna's Dance Fitness</h4>
+                <span>High-energy, fun workout for all ages</span>
+              </div>
+              <span class="class-free-tag">100% FREE</span>
+            </div>
+
+            <div class="class-item-mini">
+              <div class="class-title-text">
+                <h4>Community Yoga</h4>
+                <span>Stretch, strengthen & unwind after work</span>
+              </div>
+              <span class="class-free-tag">100% FREE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS & SOCIAL PROOF -->
+    <section id="reviews" class="reviews-section">
+      <div class="container">
+        <div class="reviews-header reveal">
+          <div>
+            <span class="section-eyebrow">Verified Google Reviews</span>
+            <h2 class="section-title">What Chattanooga Members Say</h2>
+          </div>
+
+          <div class="google-badge">
+            <span class="google-badge-score">4.8</span>
+            <div class="google-badge-info">
+              <strong>★ ★ ★ ★ ★ Rating</strong>
+              <span>81 Reviews on Google Maps</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Review 1 -->
+          <div class="review-card reveal">
+            <span class="review-quote-mark">“</span>
+            <div>
+              <div class="review-stars">★ ★ ★ ★ ★</div>
+              <p class="review-content">
+                "I wish more people knew about this incredible free public amenity in our city! Krishna’s dance fitness class is so fun and an incredible workout, and I love how it brings people of all ages together for lighthearted fun. Singing 'I Just Wanna Dance With Somebody' out loud with other women while pumping our two-pound weights is one of my most treasured memories."
+              </p>
+            </div>
+            <div class="review-author">
+              <div class="author-avatar" style="background-color: var(--accent-ochre);">H</div>
+              <div class="author-details">
+                <h4>Hope Henchey</h4>
+                <span>Dance Fitness Participant</span>
+                <span class="review-verified">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg> Verified Google Review
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="review-card reveal">
+            <span class="review-quote-mark">“</span>
+            <div>
+              <div class="review-stars">★ ★ ★ ★ ★</div>
+              <p class="review-content">
+                "An old School gym located next to the Zoo. Lots of free weights, 4 large truck tires (for crossfit), and most of the basic weight machines. A good selection of cardio equipment including a StairMaster, cross country ski machines, several rowers, and of course treadmills, bikes, ellipticals, etc."
+              </p>
+            </div>
+            <div class="review-author">
+              <div class="author-avatar">A</div>
+              <div class="author-details">
+                <h4>A.B. Maynard IV</h4>
+                <span>Google Local Guide</span>
+                <span class="review-verified">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg> Verified Google Review
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="review-card reveal">
+            <span class="review-quote-mark">“</span>
+            <div>
+              <div class="review-stars">★ ★ ★ ★ ★</div>
+              <p class="review-content">
+                "Been going to yoga here the last couple of weeks and love it. The instructor is great, the class is free. I don’t use the equipment but there’s a lot of it and it looks fairly new and never too crowded and I go right after work."
+              </p>
+            </div>
+            <div class="review-author">
+              <div class="author-avatar" style="background-color: #8E44AD;">M</div>
+              <div class="author-details">
+                <h4>Melissa Mitchell</h4>
+                <span>Yoga Class Member</span>
+                <span class="review-verified">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg> Verified Google Review
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 4 -->
+          <div class="review-card reveal">
+            <span class="review-quote-mark">“</span>
+            <div>
+              <div class="review-stars">★ ★ ★ ★ ★</div>
+              <p class="review-content">
+                "Such an amazing free resource here in Chatt. Lots of equipment for whatever kind of workout you are looking to get in. Gym has always felt very comfy inside even on hot or cold days and everyone is very friendly and respectful."
+              </p>
+            </div>
+            <div class="review-author">
+              <div class="author-avatar" style="background-color: var(--accent-green);">B</div>
+              <div class="author-details">
+                <h4>Bryan Kozak</h4>
+                <span>Chattanooga Resident</span>
+                <span class="review-verified">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg> Verified Google Review
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOURS & LOCATION SECTION -->
+    <section id="location" class="location-section">
+      <div class="container">
+        <div class="location-grid">
+          <!-- Hours Table -->
+          <div class="location-box reveal">
+            <h3>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              Operating Hours
+            </h3>
+
+            <table class="hours-table">
+              <tbody>
+                <tr>
+                  <td class="day-label">Monday</td>
+                  <td class="time-label">9:00 AM – 6:30 PM</td>
+                </tr>
+                <tr>
+                  <td class="day-label">Tuesday</td>
+                  <td class="time-label">9:00 AM – 6:30 PM</td>
+                </tr>
+                <tr>
+                  <td class="day-label">Wednesday</td>
+                  <td class="time-label">9:00 AM – 6:30 PM</td>
+                </tr>
+                <tr>
+                  <td class="day-label">Thursday</td>
+                  <td class="time-label">9:00 AM – 6:30 PM</td>
+                </tr>
+                <tr>
+                  <td class="day-label">Friday</td>
+                  <td class="time-label">9:00 AM – 6:30 PM</td>
+                </tr>
+                <tr>
+                  <td class="day-label">Saturday</td>
+                  <td class="closed-label">Closed</td>
+                </tr>
+                <tr>
+                  <td class="day-label">Sunday</td>
+                  <td class="closed-label">Closed</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div style="background: rgba(255, 107, 0, 0.08); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-ochre); font-size: 0.85rem; color: var(--text-muted);">
+              <strong style="color: var(--accent-ochre);">After-Work Workout:</strong> Perfect operating hours to get in a training session right after work during weekdays.
+            </div>
+          </div>
+
+          <!-- Contact & Location Info -->
+          <div class="location-box reveal">
+            <h3>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              Address & Contact
+            </h3>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <div class="contact-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div class="contact-content">
+                  <label>Facility Address</label>
+                  <span>1254 E 3rd St, Chattanooga, TN 37404, USA</span>
+                  <span style="font-size: 0.8rem; color: var(--accent-ochre); display: block;">Located right next to the Chattanooga Zoo</span>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </div>
+                <div class="contact-content">
+                  <label>Phone Line</label>
+                  <a href="tel:+14236436600">+1 (423) 643-6600</a>
+                </div>
+              </div>
+            </div>
+
+            <a href="https://maps.app.goo.gl/ecpf6Xy1HRbzit1s5" target="_blank" rel="noopener" class="map-card-link">
+              <div class="map-link-title">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                  <polyline points="2 17 12 22 22 17"/>
+                  <polyline points="2 12 12 17 22 12"/>
+                </svg>
+                Open Google Maps Listing
+              </div>
+              <span style="font-size: 0.84rem; color: var(--text-muted);">Get directions directly to 1254 E 3rd St next to the Zoo</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo">
+            <div class="logo-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="m6.5 6.5 11 11"/>
+                <path d="m21 21-1-1"/>
+                <path d="m3 3 1 1"/>
+                <path d="m18 22 4-4"/>
+                <path d="m2 6 4-4"/>
+              </svg>
+            </div>
+            <div>
+              <span class="brand-name">CHATTANOOGA</span>
+              <span class="brand-sub">FITNESS CENTER</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Chattanooga's free public gym amenity on East 3rd Street. Equipped with heavy free weights, CrossFit tires, StairMaster, cardio decks, and free yoga & dance fitness classes.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#about">About Facility</a></li>
+            <li><a href="#services">Equipment & Amenities</a></li>
+            <li><a href="#classes">Free Classes</a></li>
+            <li><a href="#reviews">Member Reviews (4.8★)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact & Location</h4>
+          <ul class="footer-links">
+            <li><a href="https://maps.app.goo.gl/ecpf6Xy1HRbzit1s5" target="_blank" rel="noopener">1254 E 3rd St, Chattanooga</a></li>
+            <li><a href="tel:+14236436600">(423) 643-6600</a></li>
+            <li><span style="color: var(--text-muted);">Mon–Fri: 9:00am–6:30pm</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; Chattanooga Fitness Center. All rights reserved.</p>
+        <p>Free Community Gym Amenity &bull; Chattanooga, TN (4.8★)</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTWEIGHT JS FOR INTERSECTION OBSERVER REVEAL -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const reveals = document.querySelectorAll('.reveal');
+
+      if ('IntersectionObserver' in window) {
+        const observerOptions = {
+          root: null,
+          rootMargin: '0px 0px -40px 0px',
+          threshold: 0.12
+        };
+
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        reveals.forEach(el => observer.observe(el));
+      } else {
+        reveals.forEach(el => el.classList.add('active'));
+      }
+    });
+  </script>
+</body>
+</html>
